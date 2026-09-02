@@ -6,7 +6,7 @@
 
 ## The concrete person
 
-**Jane** — trained and qualified in Mathematics and Physics, teaching at a school in Murang'a. Grade 10's rollout (2026) assigns her **Computer Science**, a brand-new STEM pathway elective, alongside her own **Core Mathematics** classes. She has the KICD curriculum design document but:
+**Jane** — trained and qualified in Mathematics and Physics, teaching at a school in Murang'a. Grade 10's rollout (2026) assigns her **Computer Science**, a brand-new STEM pathway elective, alongside her own **Mathematics** classes. She has the KICD curriculum design document but:
 
 - no internet in the classroom to look anything up mid-lesson,
 - no textbook yet for the new strand,
@@ -25,4 +25,4 @@ This is real, not hypothetical: a 2026 survey found only 6.3% of schools fully s
 
 ## Why she teaches two things, not one
 
-Kenyan secondary teachers routinely carry more than one subject and more than one class. Jane's own bio — trained in Math/Physics, assigned Computer Science — is the norm, not the edge case. The corpus and UI are built around `{grade, subject, strand, lesson length}` as a selectable combination for exactly this reason: Jane needs to switch between "confidently teaching Core Mathematics" and "one lesson ahead of her students in Computer Science" inside the same tool, in the same day — and get one ready-to-carry pack either way.
+Kenyan secondary teachers routinely carry more than one subject and more than one class. Jane's own bio — trained in Math/Physics, assigned Computer Science — is the norm, not the edge case. The corpus and UI are built around `{grade, subject, strand, lesson length}` as a selectable combination for exactly this reason: Jane needs to switch between "confidently teaching Mathematics" and "one lesson ahead of her students in Computer Science" inside the same tool, in the same day — and get one ready-to-carry pack either way.
