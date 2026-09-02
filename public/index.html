@@ -1,3 +1,11 @@
+<!--
+THESIS: A lesson pack reads with the plain authority of an exam paper, not a chat app or an admin dashboard.
+OWN-WORLD: paper-white ground, near-black ink, one marking-pen maroon accent used only for the primary action and status marks; workhorse system sans; tabular numerals for marks and minutes; 1px rules, no card chrome, no shadows-as-decoration.
+STORY: teacher fills one official-feeling form, presses one action, receives one document she trusts.
+FIRST VIEWPORT: calm disclosure strip, single-column labeled form, one full-width maroon action; the generated pack renders below as a single ruled document.
+FORM: restrained/document world, code-led, no image generation.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,66 +15,93 @@
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <header class="disclosure">
-    <strong>AI is involved in this session.</strong> This tool runs fully offline on this device, uses no internet, and stores nothing after you close it — no learner names, no learner work, ever. It never invents content: a pack is only produced when the exact topic you picked is actually loaded.
-  </header>
+  <div class="disclosure no-print">
+    <p><strong>AI is involved in this session.</strong> Runs fully offline on this device, stores nothing after you close it — no learner names, no learner work, ever. It never invents content: a pack is only produced when the exact topic you picked is actually loaded.</p>
+  </div>
 
   <main>
-    <h1>Elimu, Mwalimu wa Grade 10</h1>
-    <p class="subtitle">Kwa mwalimu Jane — pick your strand and lesson length, get one lesson pack. Not a menu — one answer.</p>
+    <header class="masthead no-print">
+      <h1>Elimu</h1>
+      <p class="masthead-sub">Mwalimu wa Grade 10 — one lesson pack, not a menu.</p>
+    </header>
 
-    <section class="picker">
-      <label>Grade
-        <select id="grade"></select>
-      </label>
-      <label>Subject
-        <select id="subject"></select>
-      </label>
-      <label>Strand
-        <select id="strand"></select>
-      </label>
-      <label>Sub-strand
-        <select id="subStrand"></select>
-      </label>
-      <label>Lesson length
+    <form class="picker-form no-print" id="pickerForm">
+      <div class="field-row">
+        <label class="field">
+          <span class="field-label">Grade</span>
+          <select id="grade"></select>
+        </label>
+        <label class="field">
+          <span class="field-label">Subject</span>
+          <select id="subject"></select>
+        </label>
+      </div>
+      <div class="field-row">
+        <label class="field">
+          <span class="field-label">Strand</span>
+          <select id="strand"></select>
+        </label>
+        <label class="field">
+          <span class="field-label">Sub-strand</span>
+          <select id="subStrand"></select>
+        </label>
+      </div>
+      <label class="field field-length">
+        <span class="field-label">Lesson length</span>
         <select id="length"></select>
       </label>
-    </section>
 
-    <button id="generate" class="generate-btn">Generate my lesson pack</button>
+      <button type="submit" id="generate" class="generate-btn">Generate my lesson pack</button>
+    </form>
 
     <section id="result" class="result hidden">
       <div class="pack-actions no-print">
-        <button id="printPack">Print / save this pack</button>
+        <button id="printPack" type="button">Print / save this pack</button>
       </div>
 
-      <div id="sijuiBox" class="sijui-box hidden"></div>
+      <div id="sijuiBox" class="sijui-box hidden" role="alert"></div>
 
       <article id="packBox" class="pack hidden">
-        <div class="badge" id="verifiedBadge"></div>
-        <h2 id="packTitle"></h2>
-        <p class="citation" id="packCitation"></p>
+        <div class="pack-head">
+          <h2 id="packTitle"></h2>
+          <p class="citation">
+            <span id="packCitation"></span>
+            <span class="pack-status" id="verifiedBadge"></span>
+          </p>
+        </div>
 
-        <h3>Lesson timeline</h3>
-        <ul class="plain" id="packTimeline"></ul>
+        <section class="pack-section">
+          <h3>Lesson timeline</h3>
+          <ul class="timeline" id="packTimeline"></ul>
+        </section>
 
-        <h3>What to teach</h3>
-        <ul class="plain" id="packOutcomes"></ul>
+        <section class="pack-section">
+          <h3>What to teach</h3>
+          <ul class="plain" id="packOutcomes"></ul>
+        </section>
 
-        <h3>Board notes</h3>
-        <ul class="plain" id="packBoard"></ul>
+        <section class="pack-section">
+          <h3>Board notes</h3>
+          <ul class="plain" id="packBoard"></ul>
+        </section>
 
-        <h3>Activity (no materials needed)</h3>
-        <p id="packActivity"></p>
-        <p class="materials" id="packMaterials"></p>
+        <section class="pack-section">
+          <h3>Activity — no materials needed</h3>
+          <p id="packActivity"></p>
+          <p class="materials" id="packMaterials"></p>
+        </section>
 
-        <h3>5 questions to check understanding, with marking scheme</h3>
-        <ol id="packQuestions"></ol>
+        <section class="pack-section">
+          <h3>Check for understanding <span class="marks-total">5 questions</span></h3>
+          <ol class="questions" id="packQuestions"></ol>
+        </section>
 
-        <h3>If you're not confident on this topic yourself</h3>
-        <p id="packExplainer"></p>
+        <section class="pack-section">
+          <h3>If you're not confident on this topic yourself</h3>
+          <p id="packExplainer"></p>
+        </section>
 
-        <details id="sourceNoteWrap">
+        <details class="source-note-wrap no-print" id="sourceNoteWrap">
           <summary>Source note</summary>
           <p id="sourceNote"></p>
         </details>
