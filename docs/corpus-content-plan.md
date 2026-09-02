@@ -247,7 +247,7 @@ the subject.
 
 1.1 Real Numbers · 1.2 Indices and Logarithms · 1.3 Quadratic Expressions and Equations 1
 
-### M6 — Measurements and Geometry (9 sub-strands)
+### M6 — Measurements and Geometry (9 sub-strands) ✅ done
 
 2.1 Similarity and Enlargement · 2.2 Reflection and Congruence · 2.3 Rotation ·
 2.4 Trigonometry 1 · 2.5 Area of Polygons · 2.6 Area of a Part of a Circle ·

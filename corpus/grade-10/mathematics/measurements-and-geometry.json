@@ -1,0 +1,469 @@
+{
+  "grade": "Grade 10",
+  "subject": "Mathematics",
+  "pathway": "Compulsory core (all pathways)",
+  "strand": "Measurements and Geometry",
+  "sourceNote": "Strand and sub-strand names, lesson allocations and every entry's learningOutcomes are taken verbatim from the official KICD Grade 10 Mathematics Curriculum Design, 'STRAND 2.0: MEASUREMENTS AND GEOMETRY'. The extracted text is committed at corpus/_source/mathematics-grade10-kicd.txt. IMPORTANT NAMING NOTE: the design's index page lists a sub-strand '2.4 Angle Properties of a Circle' which does not exist anywhere in the body of the document — that phrase occurs exactly once in the whole design, on the index page itself — while the body carries a full 'Sub Strand 8: Vectors I' with its own outcomes, learning experiences and assessment rubric that the index omits. Both lists are nine sub-strands long, so it is a substitution rather than an omission. This file follows the body, including its numbering, in which Trigonometry 1 is 2.4 and Vectors I is 2.8. Angle Properties of a Circle is therefore not offered, because the design provides nothing to teach it from. One further gap: the lesson allocation for 2.2 Reflection and Congruence is not legible in the extracted text; it is 14 by subtraction from the 180-lesson total, but since that is derived rather than read it is omitted from that entry's citation. Board notes follow the sub-topic lists the design prints beside each sub-strand, and retain mathematical tables alongside calculators because the outcomes require both. Board notes, activity, assessment questions and explainer are NOT from the design — it specifies what a learner must be able to do, not what a teacher writes on the board or how to mark it. Those fields are illustrative teaching content written to serve the quoted outcomes, and every pack says so.",
+  "subStrands": [
+    {
+      "id": "math-geometry-similarity-enlargement",
+      "subStrand": "Similarity and Enlargement",
+      "citation": "KICD Grade 10 Mathematics Curriculum Design — Strand 2.0 Measurements and Geometry — Sub Strand 2.1 Similarity and enlargement (12 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "determine the centre of enlargement and the linear scale factor for similar figures",
+        "construct the image of an object under an enlargement given the centre and the linear scale factor",
+        "determine the area and volume scale factor of different figures and solids",
+        "relate linear scale factor, area scale factor, and volume scale factor in enlargements",
+        "apply similarity and enlargement to real-life situations",
+        "appreciate the use of similarity and enlargement in real-life situations"
+      ],
+      "boardNotes": [
+        "Similar figures: same shape, different size. Angles equal, corresponding sides in the same ratio",
+        "Linear scale factor (L.S.F) k = image length / object length",
+        "Area scale factor = k^2. Volume scale factor = k^3",
+        "So if lengths double, area is 4 times and volume is 8 times",
+        "To enlarge: join centre O to each point P, extend so that OP' = k x OP",
+        "Negative k means the image is on the opposite side of the centre and inverted",
+        "To find the centre: join each point to its image and extend — the lines all meet at the centre"
+      ],
+      "activity": {
+        "description": "Each learner draws a small triangle in their exercise book and marks a point O outside it as the centre. They enlarge it by scale factor 2 by measuring and doubling each distance from O, then measure the base and height of both triangles and compute both areas. The class compares results and states the relationship between the linear scale factor and the area scale factor without being told it. Finish by asking what the volume factor would be if the shape were a solid.",
+        "materialsNeeded": "None — learners' exercise books and the ruler in their geometry set; no special materials."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Two similar rectangles have corresponding sides 3 cm and 12 cm. State the linear scale factor.",
+          "markingScheme": "1 mark for 4."
+        },
+        {
+          "question": "The linear scale factor of an enlargement is 3. State the area scale factor and the volume scale factor.",
+          "markingScheme": "2 marks — 1 for 9, 1 for 27."
+        },
+        {
+          "question": "A triangle of area 5 cm squared is enlarged by a linear scale factor of 4. Find the area of the image.",
+          "markingScheme": "2 marks for 80 cm squared; 1 mark for using 4 squared correctly but making an arithmetic error, or for answering 20 by using the linear factor."
+        },
+        {
+          "question": "Explain how you would locate the centre of enlargement given an object and its image.",
+          "markingScheme": "2 marks for joining each point of the object to its corresponding image point and extending the lines until they intersect; 1 mark for joining corresponding points with no mention of where they meet."
+        },
+        {
+          "question": "Two similar water tanks hold 8 litres and 216 litres. Find the ratio of their heights, showing your reasoning.",
+          "markingScheme": "4 marks — 1 for recognising volumes are in the ratio k cubed, 1 for 216/8 = 27, 1 for k = cube root of 27 = 3, 1 for the height ratio 1 : 3."
+        }
+      ],
+      "explainer": "Similarity means same shape, different size, and every result in this sub-strand comes from one number — the linear scale factor, the amount by which every length is multiplied. The part learners get wrong is assuming areas and volumes scale by the same number. They do not: double the lengths and you get four times the area and eight times the volume, because area involves two lengths multiplied and volume involves three. Make learners discover that by measuring rather than telling them, and it sticks. Working backwards from a volume ratio to a length ratio, by taking a cube root, is the hardest thing here and is worth a full worked example."
+    },
+    {
+      "id": "math-geometry-reflection-congruence",
+      "subStrand": "Reflection and Congruence",
+      "citation": "KICD Grade 10 Mathematics Curriculum Design — Strand 2.0 Measurements and Geometry — Sub Strand 2.2 Reflection and congruence. Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative. Lesson allocation omitted: not legible in the extracted design text.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "identify lines of symmetry in plane figures",
+        "determine the properties of reflection in different situations",
+        "draw an image given an object and a mirror line on plane surface and Cartesian plane",
+        "determine the equation of the mirror line given an object and its image",
+        "carry out congruence tests for triangles",
+        "appreciate use of reflection and congruence in real-life situations"
+      ],
+      "boardNotes": [
+        "Line of symmetry: a fold line where the two halves match exactly. Square has 4, rectangle 2, circle infinitely many",
+        "Properties of reflection: image is the same size and shape, but laterally inverted (handedness flips)",
+        "The mirror line is the perpendicular bisector of the line joining any point to its image",
+        "Distance from object to mirror = distance from mirror to image. Points ON the mirror do not move",
+        "On the Cartesian plane: reflect in the x-axis, (x, y) becomes (x, -y). In the y-axis, (x, y) becomes (-x, y)",
+        "Reflection in y = x maps (x, y) to (y, x)",
+        "Congruence tests for triangles: SSS, SAS, ASA, AAS, RHS. Note AAA is NOT a congruence test — it gives similarity only"
+      ],
+      "activity": {
+        "description": "Learners fold a page of their exercise book down the middle, draw a triangle on one half, and press hard enough to show through, then trace it on the other side to make the reflection. They mark three pairs of corresponding points, measure each point's distance to the fold, and confirm the two distances match. On a hand-drawn set of axes they then reflect the point (3, 2) in the x-axis, the y-axis and the line y = x, writing the three image coordinates.",
+        "materialsNeeded": "None — the fold in a learner's own exercise-book page acts as the mirror line."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "State the number of lines of symmetry in a square and in a rectangle that is not a square.",
+          "markingScheme": "2 marks — 1 for 4, 1 for 2."
+        },
+        {
+          "question": "The point (5, -3) is reflected in the x-axis. State the coordinates of the image.",
+          "markingScheme": "1 mark for (5, 3)."
+        },
+        {
+          "question": "Name any four congruence tests for triangles.",
+          "markingScheme": "4 marks, 1 each for any of SSS, SAS, ASA, AAS, RHS. No mark for AAA."
+        },
+        {
+          "question": "A point and its image under a reflection are (2, 1) and (2, 7). Find the equation of the mirror line.",
+          "markingScheme": "3 marks — 1 for recognising the mirror line is the perpendicular bisector, 1 for the midpoint (2, 4), 1 for the equation y = 4."
+        },
+        {
+          "question": "Explain why AAA proves two triangles are similar but not congruent.",
+          "markingScheme": "3 marks — 1 for equal angles fixing the shape, 1 for nothing in AAA fixing any length, 2 marks total if a valid example of two equiangular triangles of different sizes is given instead of the general argument; award the third mark for stating that congruence requires equal size as well as equal shape."
+        }
+      ],
+      "explainer": "Reflection is the transformation learners already understand physically, so start with a fold in a page rather than a definition. Everything follows from one property: the mirror line sits exactly halfway between every point and its image, at right angles to the line joining them. That single fact lets you draw an image, and it lets you work backwards to find the mirror line, which is really a midpoint calculation in disguise. Congruence attaches here because a reflected figure is congruent to the original. The one thing to be firm about is that AAA is not a congruence test — equal angles fix the shape but say nothing about size, which is exactly the difference between congruent and similar."
+    },
+    {
+      "id": "math-geometry-rotation",
+      "subStrand": "Rotation",
+      "citation": "KICD Grade 10 Mathematics Curriculum Design — Strand 2.0 Measurements and Geometry — Sub Strand 2.3 Rotation (10 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "determine the properties of rotation in different situations",
+        "rotate an object, given the centre and angle of rotation on a plane surface and the Cartesian plane",
+        "determine the centre and angle of rotation given an object and its image",
+        "determine the order of rotational symmetry of plane figures",
+        "determine the axis and order of rotational symmetry in solids",
+        "deduce congruence from rotation",
+        "appreciate the application of rotation in real-life situations"
+      ],
+      "boardNotes": [
+        "A rotation needs three things: a CENTRE, an ANGLE, and a DIRECTION (anticlockwise is positive)",
+        "Properties: size and shape unchanged, so object and image are congruent. Handedness is NOT flipped",
+        "Every point stays the same distance from the centre. The centre itself does not move",
+        "About the origin: 90 degrees anticlockwise maps (x, y) to (-y, x); 180 degrees maps (x, y) to (-x, -y)",
+        "Order of rotational symmetry: how many times a figure fits onto itself in one full turn",
+        "Square has order 4, equilateral triangle order 3, rectangle order 2, circle infinite",
+        "To find the centre: join two object-image pairs, draw the perpendicular bisector of each — they cross at the centre"
+      ],
+      "activity": {
+        "description": "Learners hold their closed exercise book flat, put a finger on one corner as the centre, and turn it a quarter, half and three-quarter turn, noting after each whether the book looks the same. They record the order of rotational symmetry of a rectangle from what they observed. They then draw axes, plot the point (4, 1), and write its image after rotations of 90, 180 and 270 degrees anticlockwise about the origin, checking each by turning the page rather than by formula.",
+        "materialsNeeded": "None — a learner's own exercise book is the object being rotated."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "State the three pieces of information needed to fully describe a rotation.",
+          "markingScheme": "3 marks, 1 each for centre of rotation, angle of rotation, direction."
+        },
+        {
+          "question": "State the order of rotational symmetry of an equilateral triangle and of a regular hexagon.",
+          "markingScheme": "2 marks — 1 for 3, 1 for 6."
+        },
+        {
+          "question": "The point (2, 5) is rotated 180 degrees about the origin. State the coordinates of the image.",
+          "markingScheme": "1 mark for (-2, -5)."
+        },
+        {
+          "question": "Describe how to find the centre of rotation given an object and its image.",
+          "markingScheme": "3 marks — 1 for joining a point to its image, 1 for constructing the perpendicular bisector of that line, 1 for repeating with a second pair and taking the intersection as the centre."
+        },
+        {
+          "question": "Explain why a rotated figure is congruent to the original, and state one way rotation differs from reflection.",
+          "markingScheme": "3 marks — 2 for explaining that every point keeps its distance from the centre so all lengths and angles are preserved, 1 for a valid difference such as rotation preserves handedness while reflection reverses it, or reflection needs a line while rotation needs a point."
+        }
+      ],
+      "explainer": "Rotation is turning about a fixed point, and it is worth insisting from the start that three pieces of information are needed — a centre, an angle and a direction — because learners routinely give only the angle and lose marks for it. The defining property is that every point keeps its distance from the centre, which is why nothing is stretched and object and image are congruent. Rotational symmetry is a separate idea sharing the same word: the order is simply how many times a shape looks unchanged during one full turn. Finding the centre from an object and its image is the hardest outcome; it is a perpendicular-bisector construction done twice, and drawing it slowly once on the board is worth more than three worked examples."
+    },
+    {
+      "id": "math-geometry-trigonometry",
+      "subStrand": "Trigonometry 1",
+      "citation": "KICD Grade 10 Mathematics Curriculum Design — Strand 2.0 Measurements and Geometry — Sub Strand 2.4 Trigonometry 1 (15 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "determine the trigonometric ratios of acute angles from mathematical tables and calculators",
+        "relate sines and cosines of complementary angles",
+        "relate the sine, cosine and tangent of acute angles",
+        "determine trigonometric ratios of special angles: 30o, 45o, 60o and 90o using triangles",
+        "apply trigonometric ratios to angles of elevation and depression",
+        "reflect on the use of trigonometry in real-life situations"
+      ],
+      "boardNotes": [
+        "In a right-angled triangle: sin = opposite/hypotenuse, cos = adjacent/hypotenuse, tan = opposite/adjacent (SOH CAH TOA)",
+        "Complementary angles add to 90. sin x = cos(90 - x), so sin 30 = cos 60",
+        "tan x = sin x / cos x",
+        "Special angles from the half-square: sin 45 = cos 45 = 1/root 2, tan 45 = 1",
+        "From the half equilateral triangle: sin 30 = 1/2, cos 30 = root 3/2, sin 60 = root 3/2, cos 60 = 1/2",
+        "tan 30 = 1/root 3, tan 60 = root 3. sin 90 = 1, cos 90 = 0, tan 90 undefined",
+        "Angle of ELEVATION looks up from the horizontal; angle of DEPRESSION looks down from the horizontal"
+      ],
+      "activity": {
+        "description": "Draw one square and one equilateral triangle on the board, each of side 2, and cut each in half with a line. Learners copy both, use Pythagoras to fill in the missing side, and read off sin, cos and tan for 30, 45 and 60 degrees from the triangles themselves rather than from tables. They then check two of their results against the sine and cosine of the complementary angle and write what they notice.",
+        "materialsNeeded": "None — blackboard diagrams and learners' exercise books; no tables or calculator needed for this derivation."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "In a right-angled triangle the side opposite an angle is 3 cm and the hypotenuse is 5 cm. Find the sine of the angle.",
+          "markingScheme": "1 mark for 3/5 or 0.6."
+        },
+        {
+          "question": "Given that sin 40 = 0.6428, state the value of cos 50 and explain your answer.",
+          "markingScheme": "2 marks — 1 for 0.6428, 1 for explaining that 40 and 50 are complementary so sin x = cos(90 - x)."
+        },
+        {
+          "question": "State the exact values of sin 30, cos 60 and tan 45.",
+          "markingScheme": "3 marks, 1 each for 1/2, 1/2, 1."
+        },
+        {
+          "question": "A ladder leans against a wall making an angle of 60 degrees with the ground. The foot of the ladder is 2 m from the wall. Find the length of the ladder.",
+          "markingScheme": "3 marks — 1 for identifying cos 60 = 2/L, 1 for L = 2/cos 60, 1 for 4 m. Award 2 if the correct ratio is used with an arithmetic error."
+        },
+        {
+          "question": "From the top of a 30 m tower, the angle of depression of a car is 25 degrees. Explain why the angle of elevation of the tower top from the car is also 25 degrees, then find the distance of the car from the foot of the tower.",
+          "markingScheme": "4 marks — 1 for the two angles being alternate angles between parallel horizontals, 1 for tan 25 = 30/d, 1 for d = 30/tan 25, 1 for approximately 64.3 m."
+        }
+      ],
+      "explainer": "Trigonometry connects the angles of a right-angled triangle to the ratios of its sides, and the whole of Grade 10 rests on three of those ratios, remembered as SOH CAH TOA. Two things are worth extra time. The first is that the special angles do not need memorising: cut a square in half and you get 45 degrees, cut an equilateral triangle in half and you get 30 and 60, and Pythagoras fills in the rest — derive them once and learners can rebuild them in an exam. The second is that elevation and depression are the same angle seen from the two ends, which is why the standard tower-and-car question works at all. If a class has mathematical tables, use them, but the derivation above needs nothing but a blackboard."
+    },
+    {
+      "id": "math-geometry-area-polygons",
+      "subStrand": "Area of Polygons",
+      "citation": "KICD Grade 10 Mathematics Curriculum Design — Strand 2.0 Measurements and Geometry — Sub Strand 2.5 Area of Polygons (14 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "derive the formula for the area of a triangle given two sides and an included angle",
+        "work out the area of a triangle given two sides and an included angle",
+        "determine the area of a triangle using Heron's formula",
+        "determine the area of quadrilaterals in different situations",
+        "work out the area of regular polygons of heptagon and octagon",
+        "determine the area of irregular polygons in different situations",
+        "explore the area of polygons as used in real-life situations"
+      ],
+      "boardNotes": [
+        "Area of a triangle with two sides and the included angle: A = (1/2) a b sin C",
+        "Heron's formula: A = root of s(s-a)(s-b)(s-c), where s = (a+b+c)/2",
+        "Use (1/2)ab sin C when you know an angle; use Heron when you know all three sides and no angle",
+        "Quadrilaterals: parallelogram = base x height; trapezium = (1/2)(a+b)h; rhombus = (1/2) x product of diagonals",
+        "Regular polygon of n sides: split into n identical triangles from the centre, each with apex angle 360/n",
+        "Heptagon n = 7, octagon n = 8. Area = n x (1/2) r^2 sin(360/n) using the distance r from centre to vertex",
+        "Irregular polygon: divide into triangles and rectangles, find each area, add them"
+      ],
+      "activity": {
+        "description": "Draw an irregular five-sided field on the board with all its measurements marked. Learners copy it and split it into triangles and rectangles — different learners will split it differently on purpose. Each finds the total area their own way, then three learners with different splits read out their totals. The class checks that all three agree, and writes one sentence on why the answer cannot depend on how the shape was divided.",
+        "materialsNeeded": "None — blackboard diagram and learners' exercise books."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Find the area of a triangle with sides 8 cm and 6 cm and an included angle of 30 degrees.",
+          "markingScheme": "2 marks for 12 cm squared; 1 mark for correct substitution into (1/2)ab sin C with an arithmetic error."
+        },
+        {
+          "question": "State Heron's formula and define s.",
+          "markingScheme": "2 marks — 1 for A = root of s(s-a)(s-b)(s-c), 1 for s being half the perimeter."
+        },
+        {
+          "question": "Use Heron's formula to find the area of a triangle with sides 3 cm, 4 cm and 5 cm.",
+          "markingScheme": "3 marks — 1 for s = 6, 1 for 6 x 3 x 2 x 1 = 36, 1 for area 6 cm squared."
+        },
+        {
+          "question": "Find the area of a trapezium with parallel sides 7 cm and 11 cm and a height of 5 cm.",
+          "markingScheme": "2 marks for 45 cm squared; 1 mark for correct substitution with an arithmetic slip."
+        },
+        {
+          "question": "A regular octagon is divided into triangles from its centre. State how many triangles there are and the angle at the centre of each, then explain why this method works for any regular polygon.",
+          "markingScheme": "4 marks — 1 for 8 triangles, 1 for 45 degrees, 2 for explaining that a regular polygon has all sides and angles equal so the triangles are identical, and the angles at the centre must share the full 360 degrees equally."
+        }
+      ],
+      "explainer": "This sub-strand is a toolbox, and the skill being assessed is choosing the right tool. If you know two sides and the angle between them, use half a b sin C. If you know all three sides and no angle at all, use Heron's formula. If the shape is not a triangle, cut it into shapes you can already handle. That last idea covers everything else in the sub-strand: a regular octagon is eight identical triangles meeting at the centre, and an irregular field is whatever mixture of triangles and rectangles you choose to see in it. Learners worry that splitting a shape differently will give a different answer — set the activity that proves it does not, and the topic loses its mystery."
+    },
+    {
+      "id": "math-geometry-area-part-circle",
+      "subStrand": "Area of a Part of a Circle",
+      "citation": "KICD Grade 10 Mathematics Curriculum Design — Strand 2.0 Measurements and Geometry — Sub Strand 2.6 Area of a Part of a Circle (12 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "determine the area of an annulus in different situations",
+        "work out the area of a sector of a circle in real-life situations",
+        "determine the area of an annular sector in different situations",
+        "work out the area of a segment of a circle",
+        "determine the area of common region between two intersecting circles",
+        "apply the area of a part of a circle in real-life situations",
+        "explore the use of the area of a part of a circle in real-life situations"
+      ],
+      "boardNotes": [
+        "Circle: A = pi r^2. Every formula below is a fraction of that",
+        "ANNULUS — the ring between two circles: A = pi(R^2 - r^2)",
+        "SECTOR — a slice: A = (theta/360) x pi r^2",
+        "ANNULAR SECTOR — a slice of a ring: A = (theta/360) x pi(R^2 - r^2)",
+        "SEGMENT — the piece cut off by a chord: A = area of sector minus area of the triangle",
+        "So segment = (theta/360) pi r^2 - (1/2) r^2 sin theta",
+        "COMMON REGION of two overlapping circles = the two segments cut off by the shared chord, added"
+      ],
+      "activity": {
+        "description": "Draw a circle on the board and shade a sector, then a segment, then an annulus, asking after each which formula applies and why. Learners then work one numerical example of each in their exercise books using r = 7 and theta = 90. Finally, draw two overlapping circles, have learners mark the shared chord, and write which two shapes they must add to get the shaded overlap — no calculation required, just the decomposition.",
+        "materialsNeeded": "None — blackboard diagrams and learners' exercise books."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Find the area of a sector of radius 7 cm subtending an angle of 90 degrees at the centre. Take pi as 22/7.",
+          "markingScheme": "3 marks — 1 for the fraction 90/360, 1 for correct substitution, 1 for 38.5 cm squared."
+        },
+        {
+          "question": "Find the area of an annulus with outer radius 10 cm and inner radius 6 cm, leaving your answer in terms of pi.",
+          "markingScheme": "2 marks for 64 pi cm squared; 1 mark for correctly writing pi(100 - 36) with an arithmetic error."
+        },
+        {
+          "question": "State how the area of a segment is obtained from the area of a sector.",
+          "markingScheme": "2 marks for subtracting the area of the triangle formed by the two radii and the chord from the area of the sector; 1 mark for 'subtract a triangle' with no description of which triangle."
+        },
+        {
+          "question": "A goat is tethered by a 5 m rope to a corner post of a large field and can graze through a quarter circle. Find the grazing area, taking pi as 3.142.",
+          "markingScheme": "3 marks — 1 for identifying a sector with theta = 90, 1 for (1/4) x pi x 25, 1 for approximately 19.6 m squared."
+        },
+        {
+          "question": "Explain why the area of the region common to two overlapping circles is found by adding two segments rather than by subtracting one circle from the other.",
+          "markingScheme": "3 marks — 1 for the common region being bounded by two arcs, one from each circle, 1 for the shared chord splitting it into exactly two segments, one belonging to each circle, 1 for noting that subtracting circles would remove the overlap entirely rather than isolate it."
+        }
+      ],
+      "explainer": "Every formula in this sub-strand is the area of a full circle with something done to it, and teaching it that way turns five formulas into one idea plus four adjustments. A sector is a fraction of the circle, so multiply by theta over 360. An annulus is a big circle with a small one removed, so subtract. A segment is a sector with a triangle taken off it. And the overlap of two circles is just two segments back to back, which is the only one learners cannot see immediately — draw the shared chord and it becomes obvious. Insist on drawing and shading before any calculation, because almost every lost mark in this topic comes from computing the right formula for the wrong region."
+    },
+    {
+      "id": "math-geometry-surface-area-volume",
+      "subStrand": "Surface Area and Volume of Solids",
+      "citation": "KICD Grade 10 Mathematics Curriculum Design — Strand 2.0 Measurements and Geometry — Sub Strand 2.7 Surface Area and Volume of Solids (15 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "determine the surface area of prisms, pyramids, cones, frustums, and spheres",
+        "calculate the surface area of composite solids",
+        "calculate the volume of prisms, pyramids, cones, frustums, and spheres",
+        "determine the volume of composite solids",
+        "explore the use of the surface area and volume of solids in real-life situations"
+      ],
+      "boardNotes": [
+        "PRISM: volume = area of cross-section x length. Surface area = sum of all faces",
+        "CYLINDER: V = pi r^2 h. Curved surface = 2 pi r h; total = 2 pi r h + 2 pi r^2",
+        "CONE: V = (1/3) pi r^2 h. Curved surface = pi r l, where l is the SLANT height; total = pi r l + pi r^2",
+        "PYRAMID: V = (1/3) x base area x height",
+        "SPHERE: V = (4/3) pi r^3. Surface area = 4 pi r^2",
+        "FRUSTUM: a cone or pyramid with the top cut off. Volume = whole cone minus the small cone removed",
+        "COMPOSITE solid: split it into standard solids, work each out, then add — but do NOT count hidden joining faces in surface area"
+      ],
+      "activity": {
+        "description": "Learners each choose one real object in the room built from more than one solid — a bottle, a pencil with its sharpened tip, a bucket — and sketch it in their exercise book, labelling which standard solids it decomposes into. They write the volume formula for the whole object as a sum, without numbers. Three learners draw theirs on the board and the class checks each decomposition, paying particular attention to which faces disappear where the parts join.",
+        "materialsNeeded": "None — objects already in the room are used as examples; sketches go in exercise books."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "State the formula for the volume of a cone and the formula for the volume of a sphere.",
+          "markingScheme": "2 marks — 1 for (1/3) pi r squared h, 1 for (4/3) pi r cubed."
+        },
+        {
+          "question": "Find the volume of a cylinder of radius 7 cm and height 10 cm, taking pi as 22/7.",
+          "markingScheme": "3 marks — 1 for correct substitution, 1 for 22/7 x 49 x 10, 1 for 1540 cm cubed."
+        },
+        {
+          "question": "A cone has base radius 6 cm and slant height 10 cm. Find its curved surface area in terms of pi.",
+          "markingScheme": "2 marks for 60 pi cm squared; 1 mark for using pi r l correctly but substituting the vertical height instead of the slant height."
+        },
+        {
+          "question": "Explain what a frustum is and describe how its volume is calculated.",
+          "markingScheme": "3 marks — 1 for a solid left when the top of a cone or pyramid is cut off parallel to the base, 2 for finding the volume of the complete original solid and subtracting the volume of the small solid removed."
+        },
+        {
+          "question": "A solid consists of a hemisphere joined to a cylinder of the same radius. Explain why the total surface area is not simply the surface area of the hemisphere added to the surface area of the cylinder.",
+          "markingScheme": "3 marks — 1 for the flat circular faces where the two meet being internal to the solid, 1 for those faces not being part of the outer surface, 1 for the correct total being the curved surfaces plus only the one exposed circular base."
+        }
+      ],
+      "explainer": "There are only six solids here and each has two formulas, so the sub-strand looks like memorisation, but two ideas cut the work down. First, volume of any prism or cylinder is just the cross-section repeated along a length, and anything that comes to a point — cone or pyramid — is one third of the equivalent flat-topped solid. Second, every hard question is a composite: split it into standard solids, do each, add. The trap, and the place most marks are lost, is surface area of a composite. When two parts are joined, the faces where they meet vanish inside the solid and must not be counted. Volume never has this problem, which is why learners who are fine with volume still get surface area wrong."
+    },
+    {
+      "id": "math-geometry-vectors",
+      "subStrand": "Vectors I",
+      "citation": "KICD Grade 10 Mathematics Curriculum Design — Strand 2.0 Measurements and Geometry — Sub Strand 2.8 Vectors I (15 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative. Note this sub-strand is absent from the design's index page, which lists 'Angle Properties of a Circle' in its place; the body of the design carries Vectors I in full and carries no Angle Properties section at all.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "explain vector and scalar quantities with illustrations",
+        "use vector notations in different ways",
+        "represent vectors geometrically in different situations",
+        "identify equivalent vectors in different situations",
+        "add vectors in different situations",
+        "multiply vectors by scalars",
+        "determine column vectors in different situations",
+        "determine position vectors in different situations",
+        "work out magnitude of a vector in different situations",
+        "determine the midpoint of a vector in different situations",
+        "determine translation vector as a transformation",
+        "appreciate the use of vectors in real life situations"
+      ],
+      "boardNotes": [
+        "SCALAR has size only (mass, time, speed). VECTOR has size AND direction (force, velocity, displacement)",
+        "Notation: AB with an arrow above, or bold a, or underlined a in handwriting",
+        "Column vector: the top number is movement in x, the bottom is movement in y",
+        "Equivalent vectors have the same magnitude and the same direction — position on the page does not matter",
+        "Addition: add the corresponding components. Nose-to-tail on a diagram gives the same result",
+        "Scalar multiple: k times a vector multiplies both components by k; direction reverses if k is negative",
+        "Magnitude of a column vector with components x and y = root of (x^2 + y^2), by Pythagoras"
+      ],
+      "activity": {
+        "description": "Give directions across the classroom as a sequence of steps — four desks right, three desks forward — and have one learner walk it while the class writes it as a column vector. Repeat with a second journey from the endpoint, then ask the class for the single column vector that would have gone straight there, and confirm by walking it. Learners then draw both journeys on squared lines in their exercise books and verify that adding the two column vectors gives the direct one.",
+        "materialsNeeded": "None — the classroom floor and desks provide the grid; column vectors are written in exercise books."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Classify each of the following as a scalar or a vector: mass, velocity, temperature, force.",
+          "markingScheme": "4 marks, 1 each — scalar, vector, scalar, vector."
+        },
+        {
+          "question": "Given the column vectors a with components 3 and 4, and b with components -1 and 2, find a + b.",
+          "markingScheme": "2 marks for components 2 and 6; 1 mark if only one component is correct."
+        },
+        {
+          "question": "Find the magnitude of the column vector with components 6 and 8.",
+          "markingScheme": "2 marks for 10; 1 mark for correctly writing root of (36 + 64) with an arithmetic error."
+        },
+        {
+          "question": "Given the column vector a with components 2 and -3, find 3a.",
+          "markingScheme": "2 marks for components 6 and -9; 1 mark if the sign of the second component is lost."
+        },
+        {
+          "question": "Points A and B have position vectors with components 1, 2 and 7, 10 respectively. Find the position vector of the midpoint of AB, and explain why this is the average of the two position vectors.",
+          "markingScheme": "4 marks — 1 for components 4 and 6, 1 for showing the method as half of the sum, 2 for explaining that the midpoint lies half of the way along the vector AB from A, so its position is the position of A plus half of AB, which simplifies to the average of the two positions."
+        }
+      ],
+      "explainer": "A vector is a quantity that needs a direction as well as a size, and the column form makes that concrete: the top number says how far across, the bottom how far up. Once learners accept that, almost every operation is just arithmetic on the two components — add them to add vectors, multiply them both to scale a vector, and use Pythagoras on them to find the length. The idea that takes longest is that a vector does not have a fixed home on the page: two arrows in different places are the same vector if they have the same length and direction. A position vector is the special case where the arrow starts at the origin. Walk the classroom journeys before writing anything down; the addition rule stops being a rule and becomes obvious."
+    },
+    {
+      "id": "math-geometry-linear-motion",
+      "subStrand": "Linear Motion",
+      "citation": "KICD Grade 10 Mathematics Curriculum Design — Strand 2.0 Measurements and Geometry — Sub Strand 2.9 Linear Motion (15 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "explain the terms distance, displacement, speed, velocity and acceleration in real life situations",
+        "determine velocity and acceleration in different situations",
+        "draw a displacement-time graph of different situations",
+        "interpret displacement-time graph in different situations",
+        "draw a velocity-time graph from given tables in different situations",
+        "interpret velocity-time graph in different situations",
+        "determine relative speed of two moving bodies in different situations",
+        "appreciate use of linear motion in real life situations"
+      ],
+      "boardNotes": [
+        "DISTANCE is how far travelled (scalar). DISPLACEMENT is how far from the start, with direction (vector)",
+        "SPEED = distance / time (scalar). VELOCITY = displacement / time (vector)",
+        "ACCELERATION = change in velocity / time. Negative acceleration is deceleration",
+        "Displacement-time graph: the GRADIENT is the velocity. A flat line means at rest",
+        "Velocity-time graph: the GRADIENT is the acceleration, and the AREA UNDER the graph is the distance",
+        "Relative speed, same direction: subtract the speeds. Opposite directions: add them",
+        "Walk a full circuit and return: distance is the whole path, displacement is zero"
+      ],
+      "activity": {
+        "description": "One learner walks from the board to the back wall and returns to the start while the class counts seconds aloud in unison. The class records the total path length and the final displacement, and computes both average speed and average velocity, discovering that the velocity is zero. They then sketch the displacement-time graph of that journey in their exercise books and mark the point where the gradient changes sign, saying what the walker did at that instant.",
+        "materialsNeeded": "None — the classroom floor and the class counting aloud serve as the measuring instruments."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "State the difference between distance and displacement.",
+          "markingScheme": "2 marks — 1 for distance being the total path length travelled with no direction, 1 for displacement being the straight-line change in position from start to finish, with direction."
+        },
+        {
+          "question": "A car travels 180 km in 3 hours. Find its average speed.",
+          "markingScheme": "1 mark for 60 km/h."
+        },
+        {
+          "question": "State what the gradient of a displacement-time graph represents, and what the area under a velocity-time graph represents.",
+          "markingScheme": "2 marks — 1 for velocity, 1 for distance travelled."
+        },
+        {
+          "question": "Two cars travel towards each other at 60 km/h and 40 km/h. Find their relative speed and the time taken to meet if they start 200 km apart.",
+          "markingScheme": "3 marks — 1 for relative speed 100 km/h, 1 for time = 200/100, 1 for 2 hours."
+        },
+        {
+          "question": "A learner walks 40 m to a gate and returns to the starting point, taking 80 seconds in total. Find the average speed and the average velocity, and explain why the two answers differ.",
+          "markingScheme": "4 marks — 1 for average speed 1 m/s from a total distance of 80 m, 1 for average velocity 0, 2 for explaining that speed uses total path length while velocity uses displacement, which is zero because the walker finished where they started."
+        }
+      ],
+      "explainer": "The whole sub-strand turns on one distinction that learners find pedantic until they see it demonstrated: distance is how far you walked, displacement is how far you ended up from where you started. Walk to the back of the room and return and the distance is large while the displacement is zero — do it in front of the class once and every subsequent definition follows. Speed pairs with distance, velocity pairs with displacement, and acceleration is how quickly velocity changes. The graph work is the part worth most marks and rests on two facts worth writing large: on a displacement-time graph the gradient is the velocity, and on a velocity-time graph the area underneath is the distance. Learners regularly try to read distance off the vertical axis of a velocity-time graph, and naming that error in advance prevents it."
+    }
+  ]
+}
