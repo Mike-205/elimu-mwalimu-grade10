@@ -78,7 +78,7 @@ main {
 
 .field-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 1rem;
 }
 
@@ -87,6 +87,7 @@ main {
   flex-direction: column;
   gap: 0.35rem;
   margin-bottom: 1rem;
+  min-width: 0;
 }
 
 .field-length { max-width: 50%; }
@@ -100,6 +101,9 @@ main {
 }
 
 select {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   font-family: inherit;
   font-size: 1rem;
   padding: 0.55rem 0.6rem;
@@ -107,6 +111,9 @@ select {
   border-radius: 3px;
   background: var(--paper);
   color: var(--ink);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 select:hover { border-color: var(--ink-soft); }
