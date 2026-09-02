@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { loadCorpus, getOptions, findChunk } = require('./corpus');
 const { buildPack } = require('./packBuilder');
+const ai = require('./ai'); // ai-integration branch only; nothing above depends on it
 
 const PORT = process.env.PORT || 4173;
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
@@ -59,6 +60,26 @@ const server = http.createServer(async (req, res) => {
     }
 
     return sendJSON(res, 200, { sijui: false, pack: buildPack(chunk, length) });
+  }
+
+  // --- ai-integration branch only: additive, optional, never in the /api/pack path ---
+  // Both routes below can be deleted without affecting anything above them. With no
+  // model installed, /api/ai-status reports unavailable and the frontend hides the
+  // feature entirely, so the guaranteed offline demo path is unchanged.
+
+  if (req.method === 'GET' && req.url === '/api/ai-status') {
+    return sendJSON(res, 200, await ai.isAvailable());
+  }
+
+  if (req.method === 'POST' && req.url === '/api/ask') {
+    const { grade, subject, strand, subStrand, question } = await readBody(req);
+
+    // Same exact-match gate as /api/pack. A question about a sub-strand we do not have
+    // is refused before a model is ever asked, not after.
+    const chunk = findChunk(chunks, { grade, subject, strand, subStrand });
+    if (!chunk) return sendJSON(res, 200, { sijui: true, message: ai.REFUSAL, reason: 'no such sub-strand' });
+
+    return sendJSON(res, 200, await ai.askGrounded(chunk, question));
   }
 
   return serveStatic(req, res);

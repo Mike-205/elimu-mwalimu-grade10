@@ -82,6 +82,8 @@ function renderPack(pack) {
 
   document.getElementById('packExplainer').textContent = pack.ifYoureNotConfident;
   document.getElementById('sourceNote').textContent = pack.meta.sourceNote;
+
+  showAiPanelFor(pack); // ai-integration branch only; no-op when no local model
 }
 
 function renderSijui(message) {
@@ -89,6 +91,7 @@ function renderSijui(message) {
   packBox.classList.add('hidden');
   sijuiBox.classList.remove('hidden');
   sijuiBox.textContent = message;
+  aiPanel.classList.add('hidden'); // nothing to ask about when nothing was loaded
 }
 
 document.getElementById('generate').addEventListener('click', async () => {
@@ -109,6 +112,81 @@ document.getElementById('generate').addEventListener('click', async () => {
 });
 
 document.getElementById('printPack').addEventListener('click', () => window.print());
+
+// --- ai-integration branch only ---------------------------------------------------
+// Everything below is inert when no local model is reachable: aiEnabled stays false,
+// the panel is never unhidden, and nothing here runs during pack generation.
+
+let aiEnabled = false;
+
+const aiPanel = document.getElementById('aiPanel');
+const aiQuestion = document.getElementById('aiQuestion');
+const aiAsk = document.getElementById('aiAsk');
+const aiStatus = document.getElementById('aiStatus');
+const aiAnswer = document.getElementById('aiAnswer');
+
+function showAiPanelFor(pack) {
+  aiAnswer.classList.add('hidden');
+  aiStatus.classList.add('hidden');
+  aiQuestion.value = '';
+  aiPanel.dataset.grade = pack.meta.grade;
+  aiPanel.dataset.subject = pack.meta.subject;
+  aiPanel.dataset.strand = pack.meta.strand;
+  aiPanel.dataset.subStrand = pack.meta.subStrand;
+  if (aiEnabled) aiPanel.classList.remove('hidden');
+}
+
+async function askAi() {
+  const question = aiQuestion.value.trim();
+  if (!question) return;
+
+  aiAnswer.classList.add('hidden');
+  aiStatus.classList.remove('hidden');
+  // A local 3B model on CPU runs at roughly 6 tokens/sec, so this is a real wait and
+  // the teacher is told so rather than left watching a dead button.
+  aiStatus.textContent = 'Thinking locally — this can take up to a minute on a slow machine…';
+  aiAsk.disabled = true;
+
+  try {
+    const res = await fetch('/api/ask', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        grade: aiPanel.dataset.grade,
+        subject: aiPanel.dataset.subject,
+        strand: aiPanel.dataset.strand,
+        subStrand: aiPanel.dataset.subStrand,
+        question
+      })
+    });
+    const data = await res.json();
+
+    if (data.sijui) {
+      aiStatus.textContent = data.message;
+    } else {
+      aiStatus.textContent = data.warning;
+      aiAnswer.textContent = data.answer;
+      aiAnswer.classList.remove('hidden');
+    }
+  } catch (err) {
+    // Never fall back to anything that could read as an answer.
+    aiStatus.textContent = 'Sijui — the local model could not be reached.';
+  } finally {
+    aiAsk.disabled = false;
+  }
+}
+
+aiAsk.addEventListener('click', askAi);
+aiQuestion.addEventListener('keydown', (e) => { if (e.key === 'Enter') askAi(); });
+
+(async function initAi() {
+  try {
+    const res = await fetch('/api/ai-status');
+    aiEnabled = (await res.json()).available === true;
+  } catch {
+    aiEnabled = false;
+  }
+})();
 
 (async function init() {
   const res = await fetch('/api/options');

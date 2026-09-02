@@ -71,6 +71,28 @@
           <p id="sourceNote"></p>
         </details>
       </article>
+
+      <!--
+        ai-integration branch only. Deliberately OUTSIDE <article id="packBox"> and
+        marked no-print: model output never reaches the page the teacher carries into
+        the classroom, so the printed pack stays entirely corpus-sourced. Hidden unless
+        /api/ai-status reports a local model, and hidden until a pack has been
+        generated, so it never sits between the teacher and her plan.
+      -->
+      <aside id="aiPanel" class="ai-panel no-print hidden">
+        <h3>Ask about this sub-strand <span class="badge ai">AI · not KICD text</span></h3>
+        <p class="ai-note">
+          Answered by a local AI model using only this sub-strand's loaded material. It
+          refuses rather than guessing, but check anything it says before you teach it.
+          This section is never printed.
+        </p>
+        <div class="ai-row">
+          <input id="aiQuestion" type="text" maxlength="300" placeholder="e.g. what does the control unit actually do?" />
+          <button id="aiAsk" type="button">Ask</button>
+        </div>
+        <p id="aiStatus" class="ai-status hidden"></p>
+        <blockquote id="aiAnswer" class="ai-answer hidden"></blockquote>
+      </aside>
     </section>
   </main>
 
