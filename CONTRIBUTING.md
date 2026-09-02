@@ -26,8 +26,42 @@ docs/                   <- required deliverable sheets + project writeups
 - `corpus-content` — add or extend curriculum sub-strands. Pure JSON, no code changes needed.
 - `ui-polish` — visual/UX polish, Kiswahili labels, print-stylesheet tweaks. Touches `public/` only.
 - `docs-review` — tighten the two required sheets (`docs/who-this-helps.md`, `docs/ai-bill-2026-risk-sheet.md`) and the two writeups (`docs/project-overview.md`, `docs/technical-design.md`).
+- `ai-integration` — exploratory local-model work (see below). Not part of the core app; the app must work correctly with this branch never merged.
+
+### Who owns what
+
+| Branch | Owner |
+|---|---|
+| `corpus-content` | Ronald-Wesh |
+| `ui-polish` | Evarline |
+| `docs-review` | NgushSavio |
+| `ai-integration` | Mike-205 |
+
+Tracked as GitHub issues assigned to each owner — see the repo's Issues tab.
 
 Pull the latest `main` into your branch before starting work each session (`git checkout <branch> && git merge main`) — `server/` changes on `main` should propagate to you, not the other way around.
+
+## The `ai-integration` branch specifically
+
+This is the one place in the repo allowed to experiment with a local LLM (e.g. via Ollama) — everywhere else, "no generative step in the request path" is a hard rule (see the two rules at the top of this file). Ground rules for this branch specifically:
+
+- It must stay **additive and optional**. `main`'s pack-generation flow (`/api/pack`) must keep working, unchanged, with zero setup and no model installed — that's the guaranteed offline demo path, and it doesn't get weaker because this branch exists.
+- Whatever it produces must be clearly labelled as AI-generated and distinct from the grounded, corpus-sourced pack content — don't blur the two together in the UI, since the whole compliance argument in `docs/ai-bill-2026-risk-sheet.md` rests on being able to say precisely what is template-filled from a cited source versus what a model produced.
+- If it can't say "sijui" / refuse cleanly when it's unsure, it isn't ready to be offered to a teacher — refuse-over-guess applies here too, it just has to be enforced in a prompt/response-checking layer instead of by construction.
+- Local setup (no root needed):
+
+```
+mkdir -p ~/.local/ollama
+curl -fsSL -o /tmp/ollama.tar.zst \
+  "https://github.com/ollama/ollama/releases/latest/download/ollama-linux-amd64.tar.zst"
+tar --zstd -xf /tmp/ollama.tar.zst -C ~/.local/ollama
+
+export OLLAMA_MODELS=~/.local/ollama/models
+~/.local/ollama/bin/ollama serve &
+
+export PATH="$HOME/.local/ollama/bin:$PATH"
+ollama pull llama3.2:3b   # ~2GB, one-time, needs internet; runs fully offline after
+```
 
 ## Adding corpus content (the `corpus-content` branch)
 
