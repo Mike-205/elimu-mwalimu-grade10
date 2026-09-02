@@ -323,6 +323,12 @@ select:hover { border-color: var(--ink-soft); }
 
 /* ai-integration branch only. Visually separated from the pack on purpose: a dashed
    border and a warning tint so nothing here can be mistaken for cited KICD material. */
+/* `.hidden` is not a generic utility in this stylesheet — it is only defined per
+   component (.result.hidden, .pack.hidden, .sijui-box.hidden). The AI elements need
+   their own rule or they render regardless of the class, which is how the panel leaked
+   into default builds where AI is switched off. */
+.ai-panel.hidden, .ai-status.hidden, .ai-answer.hidden { display: none; }
+
 .ai-panel {
   margin-top: 1.5rem;
   padding: 1rem 1.25rem;
