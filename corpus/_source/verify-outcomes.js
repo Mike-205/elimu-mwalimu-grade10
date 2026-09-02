@@ -5,13 +5,17 @@ const fs = require('fs');
 const {loadCorpus} = require('../../server/corpus.js');
 
 const norm = s => s.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean);
-const src = norm(fs.readFileSync(process.argv[2], 'utf8'));
+// Accepts one or more source files; an outcome counts as traced if it is found in
+// any of them, so the whole corpus can be checked in a single run across subjects.
+const sources = process.argv.slice(2).map(f => ({ name: f.split('/').pop(), words: norm(fs.readFileSync(f, 'utf8')) }));
+if (!sources.length) { console.error('usage: node verify-outcomes.js <source.txt> [source.txt ...]'); process.exit(2); }
 
 let fail = 0, clean = 0, deinter = 0;
 for (const chunk of loadCorpus()) {
   for (const outcome of chunk.learningOutcomes) {
     const want = norm(outcome);
     let best = null;
+    for (const { words: src } of sources) {
     for (let start = 0; start < src.length; start++) {
       if (src[start] !== want[0]) continue;
       let wi = 0, si = start;
@@ -24,6 +28,7 @@ for (const chunk of loadCorpus()) {
         si++;
       }
       if (wi === want.length && (!best || si - start < best)) best = si - start;
+    }
     }
     if (best === null) { fail++; console.log(`UNTRACED  ${chunk.id}: ${outcome}`); }
     else if (best === want.length) clean++;

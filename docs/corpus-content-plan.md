@@ -142,16 +142,39 @@ says "Foundations".
 | 2.1 | Measurements and Geometry | Similarity and Enlargement |
 | 2.2 | Measurements and Geometry | Reflection and Congruence |
 | 2.3 | Measurements and Geometry | Rotation |
-| 2.4 | Measurements and Geometry | Angle Properties of a Circle |
-| 2.5 | Measurements and Geometry | Trigonometry 1 |
-| 2.6 | Measurements and Geometry | Area of Polygons |
-| 2.7 | Measurements and Geometry | Area of a Part of a Circle |
-| 2.8 | Measurements and Geometry | Surface Area and Volume of Solids |
+| 2.4 | Measurements and Geometry | Trigonometry 1 |
+| 2.5 | Measurements and Geometry | Area of Polygons |
+| 2.6 | Measurements and Geometry | Area of a Part of a Circle |
+| 2.7 | Measurements and Geometry | Surface Area and Volume of Solids |
+| 2.8 | Measurements and Geometry | Vectors I |
 | 2.9 | Measurements and Geometry | Linear Motion |
 | 3.1 | Statistics and Probability | Statistics I |
 | 3.2 | Statistics and Probability | Probability 1 |
 
 The subject is titled **"Mathematics"** in the design, not "Core Mathematics".
+
+#### The index page and the body disagree — the body wins
+
+The design's "Summary of Strands and Sub Strands" page lists **2.4 Angle Properties of a
+Circle** and does not mention vectors. The body of the design has no Angle Properties
+section at all, and instead carries a full **Sub Strand 8: Vectors I** with its own
+learning outcomes, learning experiences and assessment rubric. Both lists are nine
+sub-strands long, so this is a substitution, not an omission.
+
+```bash
+grep -ci "angle properties" corpus/_source/mathematics-grade10-kicd.txt   # 1 — the index page only
+grep -ci "vectors"          corpus/_source/mathematics-grade10-kicd.txt   # 46 — a full section
+```
+
+The table above follows the body and renumbers 2.4 to 2.9 accordingly. Rationale: only
+the body carries learning outcomes, and an outcome is the one field this corpus quotes
+verbatim — a sub-strand that exists only as a line on a contents page has nothing to
+quote. Teaching Angle Properties of a Circle from this design is not possible; teaching
+Vectors I is.
+
+**The rule this sets, for the rest of the branch:** the index page wins on *spelling and
+capitalisation* (it is the tidier of the two), the body wins on *what exists*. Where they
+differ, say so in the file's `sourceNote` rather than silently picking one.
 
 **Target: 31 sub-strands total.**
 
@@ -220,15 +243,15 @@ now whole: 3 strands, 17 sub-strands.
 **Done when:** every Computer Science combination generates a pack — no refusals inside
 the subject.
 
-### M5 — Numbers and Algebra (3 sub-strands)
+### M5 — Numbers and Algebra (3 sub-strands) ✅ done
 
 1.1 Real Numbers · 1.2 Indices and Logarithms · 1.3 Quadratic Expressions and Equations 1
 
 ### M6 — Measurements and Geometry (9 sub-strands)
 
 2.1 Similarity and Enlargement · 2.2 Reflection and Congruence · 2.3 Rotation ·
-2.4 Angle Properties of a Circle · 2.5 Trigonometry 1 · 2.6 Area of Polygons ·
-2.7 Area of a Part of a Circle · 2.8 Surface Area and Volume of Solids · 2.9 Linear Motion
+2.4 Trigonometry 1 · 2.5 Area of Polygons · 2.6 Area of a Part of a Circle ·
+2.7 Surface Area and Volume of Solids · 2.8 Vectors I · 2.9 Linear Motion
 
 Largest milestone by count. Split across commits if it helps; the "done when" is the same.
 
@@ -284,9 +307,12 @@ words appear in the source **in order**, tolerating foreign words from the neigh
 column between them, and reports how many it had to skip:
 
 ```bash
-node corpus/_source/verify-outcomes.js corpus/_source/computer-science-grade10-kicd.txt
-node corpus/_source/verify-outcomes.js corpus/_source/mathematics-grade10-kicd.txt
+node corpus/_source/verify-outcomes.js corpus/_source/*.txt
 ```
+
+Pass every source file in one run. An outcome counts as traced if it is found in any of
+them, so checking the whole corpus against a single subject's design reports every other
+subject as untraced.
 
 Exits non-zero on any untraced outcome. A high "foreign words removed" count is normal
 and just means that sub-strand's table cell was badly interleaved — an *untraced* outcome
