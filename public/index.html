@@ -1,136 +1,273 @@
-<!--
-THESIS: A lesson pack reads with the plain authority of an exam paper, not a chat app or an admin dashboard.
-OWN-WORLD: paper-white ground, near-black ink, one marking-pen maroon accent used only for the primary action and status marks; workhorse system sans; tabular numerals for marks and minutes; 1px rules, no card chrome, no shadows-as-decoration.
-STORY: teacher fills one official-feeling form, presses one action, receives one document she trusts.
-FIRST VIEWPORT: calm disclosure strip, single-column labeled form, one full-width maroon action; the generated pack renders below as a single ruled document.
-FORM: restrained/document world, code-led, no image generation.
-FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Offline lesson-pack generator for a Kenyan Grade 10 teacher. Pick a strand and a lesson length, get one complete lesson pack.">
 <title>Elimu — Mwalimu wa Grade 10</title>
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div class="disclosure no-print">
-    <p><strong>AI is involved in this session.</strong> Runs fully offline on this device, stores nothing after you close it — no learner names, no learner work, ever. It never invents content: a pack is only produced when the exact topic you picked is actually loaded.</p>
+
+<!-- Icon sprite. Inlined rather than served as an .svg file because the static
+     handler in server/index.js only maps .html/.js/.css/.json, and server/ is frozen. -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="icon-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2.5 8.6 12 4.2l9.5 4.4L12 13z"/>
+    <path d="M6.3 10.8v4.4c0 1.5 2.6 2.6 5.7 2.6s5.7-1.1 5.7-2.6v-4.4"/>
+    <path d="M21.5 9.4v4.2"/>
+  </symbol>
+
+  <symbol id="icon-book-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 6.9S9.6 5.3 6.2 5.3H3.2v12.4h3c3.4 0 5.8 1.6 5.8 1.6s2.4-1.6 5.8-1.6h3V5.3h-3C14.4 5.3 12 6.9 12 6.9z"/>
+    <path d="M12 6.9v12.4"/>
+  </symbol>
+
+  <symbol id="icon-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3.2 21 8l-9 4.8L3 8z"/>
+    <path d="m3.4 12.4 8.6 4.6 8.6-4.6"/>
+    <path d="m3.4 16.6 8.6 4.6 8.6-4.6"/>
+  </symbol>
+
+  <symbol id="icon-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="8.6"/>
+    <circle cx="12" cy="12" r="4.6"/>
+    <circle cx="12" cy="12" r="1"/>
+  </symbol>
+
+  <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="8.6"/>
+    <path d="M12 7.2V12l3.2 2"/>
+  </symbol>
+
+  <symbol id="icon-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10.4 3.2l1.5 4.2 4.2 1.5-4.2 1.5-1.5 4.2-1.5-4.2L4.7 8.9l4.2-1.5z"/>
+    <path d="M17.8 14.6l.8 2.1 2.1.8-2.1.8-.8 2.1-.8-2.1-2.1-.8 2.1-.8z"/>
+  </symbol>
+
+  <symbol id="icon-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="8.6"/>
+    <path d="M12 11.2v5"/>
+    <path d="M12 7.9h.01"/>
+  </symbol>
+
+  <symbol id="icon-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9.4 18.4h5.2"/>
+    <path d="M10.6 21.2h2.8"/>
+    <path d="M12 2.8a6.1 6.1 0 0 0-3.6 11 2 2 0 0 1 .8 1.6v.6h5.6V15.4a2 2 0 0 1 .8-1.6A6.1 6.1 0 0 0 12 2.8z"/>
+  </symbol>
+
+  <symbol id="icon-printer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6.6 9.2V3.4h10.8v5.8"/>
+    <path d="M6.6 18.2H4.4a1 1 0 0 1-1-1v-5a2 2 0 0 1 2-2h13.2a2 2 0 0 1 2 2v5a1 1 0 0 1-1 1h-2.2"/>
+    <rect x="6.6" y="14" width="10.8" height="6.6" rx="1"/>
+  </symbol>
+
+  <symbol id="icon-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3.6 2.6 19.8h18.8z"/>
+    <path d="M12 9.6v4.2"/>
+    <path d="M12 17h.01"/>
+  </symbol>
+
+  <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="8.6"/>
+    <path d="m8.4 12.2 2.6 2.6 4.6-5"/>
+  </symbol>
+</svg>
+
+<a class="skip-link" href="#builder">Skip to the lesson builder</a>
+
+<!-- Required disclosure. Stays the first thing in the document because
+     docs/ai-bill-2026-risk-sheet.md commits to disclosing this before any answer is shown. -->
+<aside class="disclosure" aria-label="Transparency notice">
+  <div class="shell disclosure__inner">
+    <svg class="disclosure__icon" aria-hidden="true" focusable="false"><use href="#icon-info"/></svg>
+    <p class="disclosure__text">
+      <strong>AI is involved in this session.</strong>
+      Runs fully offline on this device · stores nothing · never invents content.
+    </p>
+    <details class="disclosure__more">
+      <summary>Full notice</summary>
+      <p>
+        This tool runs fully offline on this device, uses no internet, and stores nothing after
+        you close it — no learner names, no learner work, ever. It never invents content: a pack
+        is only produced when the exact topic you picked is actually loaded.
+      </p>
+    </details>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <div class="logo">
+      <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <path d="M15 8.8v18.4a5 5 0 0 0-3.6-1.5H4.2a1 1 0 0 1-1-1V6.1a1 1 0 0 1 1-1h6.2A4.6 4.6 0 0 1 15 8.8z" fill="#14432c"/>
+        <path d="M17 8.8v18.4a5 5 0 0 1 3.6-1.5h7.2a1 1 0 0 0 1-1V6.1a1 1 0 0 0-1-1h-6.2A4.6 4.6 0 0 0 17 8.8z" fill="#b1441e"/>
+      </svg>
+      <span class="logo__words">
+        <span class="logo__line-1">Elimu</span>
+        <span class="logo__line-2">Mwalimu</span>
+      </span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="hero-band">
+    <svg class="hero__art" viewBox="0 0 268 190" aria-hidden="true" focusable="false">
+      <!-- Decorative: a potted plant beside a stack of books. No data, no interaction. -->
+      <ellipse cx="132" cy="176" rx="120" ry="9" fill="#e9e0cc" opacity=".55"/>
+      <path d="M118 168h132a4 4 0 0 1 0 8H118z" fill="#e3d9c2"/>
+      <g fill="none" stroke="#1f6b4a" stroke-width="2.4" stroke-linecap="round">
+        <path d="M58 168V92"/>
+      </g>
+      <path d="M58 128c-22 2-34-12-33-30 19-3 32 10 33 30z" fill="#2b7a52"/>
+      <path d="M58 116c20-1 31-14 29-31-18-2-29 11-29 31z" fill="#3f8f63"/>
+      <path d="M58 100c-16 1-25-10-24-23 14-2 24 8 24 23z" fill="#1f6b4a"/>
+      <path d="M58 90c15-1 23-11 22-24-14-1-22 9-22 24z" fill="#2b7a52"/>
+      <path d="M34 132h48l-6 34a6 6 0 0 1-6 5H46a6 6 0 0 1-6-5z" fill="#c1552c"/>
+      <path d="M30 124h56a4 4 0 0 1 4 4v3a4 4 0 0 1-4 4H30a4 4 0 0 1-4-4v-3a4 4 0 0 1 4-4z" fill="#b1441e"/>
+      <rect x="110" y="148" width="120" height="20" rx="4" fill="#14432c"/>
+      <rect x="118" y="152" width="8" height="12" rx="2" fill="#f6f0e2" opacity=".7"/>
+      <rect x="118" y="130" width="112" height="18" rx="4" fill="#1f6b4a"/>
+      <rect x="126" y="134" width="8" height="10" rx="2" fill="#f6f0e2" opacity=".7"/>
+      <rect x="126" y="112" width="98" height="18" rx="4" fill="#2b7a52"/>
+      <rect x="134" y="116" width="8" height="10" rx="2" fill="#f6f0e2" opacity=".7"/>
+      <path d="M232 112h4a3 3 0 0 1 3 3v50a3 3 0 0 1-3 3h-4z" fill="#c1552c" opacity=".85"/>
+    </svg>
+
+    <div class="shell hero">
+      <h1 class="hero__title">
+        <span class="hero__title-lead">Elimu,</span>
+        <span class="hero__title-rest" lang="sw">Mwalimu wa Grade 10</span>
+      </h1>
+      <p class="hero__subtitle">
+        <span lang="sw">Kwa mwalimu Jane</span> — pick your strand and lesson length,
+        get one lesson pack. Not a menu — one answer.
+      </p>
+    </div>
   </div>
 
-  <main>
-    <header class="masthead no-print">
-      <h1>Elimu</h1>
-      <p class="masthead-sub">Mwalimu wa Grade 10 — one lesson pack, not a menu.</p>
-    </header>
-
-    <form class="picker-form no-print" id="pickerForm">
-      <div class="field-row">
-        <label class="field">
-          <span class="field-label">Grade</span>
-          <select id="grade"></select>
-        </label>
-        <label class="field">
-          <span class="field-label">Subject</span>
-          <select id="subject"></select>
-        </label>
+  <div class="shell">
+    <form class="builder" id="builder" novalidate>
+      <div class="builder__head">
+        <span class="builder__mark" aria-hidden="true">
+          <svg focusable="false"><use href="#icon-book-open"/></svg>
+        </span>
+        <div class="builder__headings">
+          <h2 class="builder__title">Build your lesson pack</h2>
+          <p class="builder__subtitle">Choose your learning context and we'll prepare one lesson pack for you.</p>
+        </div>
       </div>
-      <div class="field-row">
-        <label class="field">
-          <span class="field-label">Strand</span>
-          <select id="strand"></select>
-        </label>
-        <label class="field">
-          <span class="field-label">Sub-strand</span>
-          <select id="subStrand"></select>
-        </label>
-      </div>
-      <label class="field field-length">
-        <span class="field-label">Lesson length</span>
-        <select id="length"></select>
-      </label>
 
-      <button type="submit" id="generate" class="generate-btn">Generate my lesson pack</button>
+      <fieldset class="builder__fields">
+        <legend class="sr-only">Your learning context</legend>
+
+        <div class="field">
+          <label class="field__label" for="grade">
+            <svg class="field__icon" aria-hidden="true" focusable="false"><use href="#icon-cap"/></svg>
+            Grade
+          </label>
+          <div class="select">
+            <select id="grade" name="grade"></select>
+            <svg class="select__chevron" aria-hidden="true" focusable="false" viewBox="0 0 20 20">
+              <path d="m5 8 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="subject">
+            <svg class="field__icon" aria-hidden="true" focusable="false"><use href="#icon-book-open"/></svg>
+            Subject
+          </label>
+          <div class="select">
+            <select id="subject" name="subject"></select>
+            <svg class="select__chevron" aria-hidden="true" focusable="false" viewBox="0 0 20 20">
+              <path d="m5 8 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="strand">
+            <svg class="field__icon" aria-hidden="true" focusable="false"><use href="#icon-layers"/></svg>
+            Strand
+          </label>
+          <div class="select">
+            <select id="strand" name="strand"></select>
+            <svg class="select__chevron" aria-hidden="true" focusable="false" viewBox="0 0 20 20">
+              <path d="m5 8 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="subStrand">
+            <svg class="field__icon" aria-hidden="true" focusable="false"><use href="#icon-target"/></svg>
+            Sub-strand
+          </label>
+          <div class="select">
+            <select id="subStrand" name="subStrand"></select>
+            <svg class="select__chevron" aria-hidden="true" focusable="false" viewBox="0 0 20 20">
+              <path d="m5 8 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="field field--wide">
+          <label class="field__label" for="length">
+            <svg class="field__icon" aria-hidden="true" focusable="false"><use href="#icon-clock"/></svg>
+            Lesson length
+          </label>
+          <div class="select">
+            <select id="length" name="length"></select>
+            <svg class="select__chevron" aria-hidden="true" focusable="false" viewBox="0 0 20 20">
+              <path d="m5 8 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn btn--primary" id="generate">
+        <svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-sparkle"/></svg>
+        <span class="btn__label">Generate my lesson pack</span>
+      </button>
+
+      <p class="builder__notice" id="builderNotice" hidden></p>
     </form>
 
-    <section id="result" class="result hidden">
-      <div class="pack-actions no-print">
-        <button id="printPack" type="button">Print / save this pack</button>
+    <aside class="promise">
+      <span class="promise__mark" aria-hidden="true">
+        <svg focusable="false"><use href="#icon-bulb"/></svg>
+      </span>
+      <div class="promise__copy">
+        <p class="promise__title">From curriculum to classroom</p>
+        <p class="promise__text">We help you turn what you're teaching into a ready-to-use lesson pack.</p>
       </div>
+      <svg class="promise__art" viewBox="0 0 172 56" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="#1f6b4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".55">
+          <path d="M6 14c6-3 14-3 20 0v30c-6-3-14-3-20 0z"/>
+          <path d="M26 14c6-3 14-3 20 0v30c-6-3-14-3-20 0z"/>
+          <path d="M26 14v30"/>
+          <path d="M62 29h34"/>
+          <path d="m90 23 6 6-6 6"/>
+          <rect x="112" y="10" width="54" height="26" rx="3"/>
+          <path d="M120 18h20M120 24h30M120 30h14"/>
+          <path d="M139 36v6"/>
+          <path d="M126 48h26"/>
+          <circle cx="126" cy="45" r="3"/>
+          <circle cx="139" cy="45" r="3"/>
+          <circle cx="152" cy="45" r="3"/>
+        </g>
+      </svg>
+    </aside>
 
-      <div id="sijuiBox" class="sijui-box hidden" role="alert"></div>
+    <section class="result" id="result" aria-live="polite" aria-busy="false" aria-label="Your lesson pack"></section>
+  </div>
+</main>
 
-      <article id="packBox" class="pack hidden">
-        <div class="pack-head">
-          <h2 id="packTitle"></h2>
-          <p class="citation">
-            <span id="packCitation"></span>
-            <span class="pack-status" id="verifiedBadge"></span>
-          </p>
-        </div>
-
-        <section class="pack-section">
-          <h3>Lesson timeline</h3>
-          <ul class="timeline" id="packTimeline"></ul>
-        </section>
-
-        <section class="pack-section">
-          <h3>What to teach</h3>
-          <ul class="plain" id="packOutcomes"></ul>
-        </section>
-
-        <section class="pack-section">
-          <h3>Board notes</h3>
-          <ul class="plain" id="packBoard"></ul>
-        </section>
-
-        <section class="pack-section">
-          <h3>Activity — no materials needed</h3>
-          <p id="packActivity"></p>
-          <p class="materials" id="packMaterials"></p>
-        </section>
-
-        <section class="pack-section">
-          <h3>Check for understanding <span class="marks-total">5 questions</span></h3>
-          <ol class="questions" id="packQuestions"></ol>
-        </section>
-
-        <section class="pack-section">
-          <h3>If you're not confident on this topic yourself</h3>
-          <p id="packExplainer"></p>
-        </section>
-
-        <details class="source-note-wrap no-print" id="sourceNoteWrap">
-          <summary>Source note</summary>
-          <p id="sourceNote"></p>
-        </details>
-      </article>
-
-      <!--
-        ai-integration branch only. Deliberately OUTSIDE <article id="packBox"> and
-        marked no-print: model output never reaches the page the teacher carries into
-        the classroom, so the printed pack stays entirely corpus-sourced. Hidden unless
-        /api/ai-status reports a local model, and hidden until a pack has been
-        generated, so it never sits between the teacher and her plan.
-      -->
-      <aside id="aiPanel" class="ai-panel no-print hidden">
-        <h3>Ask about this sub-strand <span class="badge ai">AI · not KICD text</span></h3>
-        <p class="ai-note">
-          Answered by a local AI model using only this sub-strand's loaded material. It
-          refuses rather than guessing, but check anything it says before you teach it.
-          This section is never printed.
-        </p>
-        <div class="ai-row">
-          <input id="aiQuestion" type="text" maxlength="300" placeholder="e.g. what does the control unit actually do?" />
-          <button id="aiAsk" type="button">Ask</button>
-        </div>
-        <p id="aiStatus" class="ai-status hidden"></p>
-        <blockquote id="aiAnswer" class="ai-answer hidden"></blockquote>
-      </aside>
-    </section>
-  </main>
-
-  <script src="/app.js"></script>
+<script type="module" src="/js/app.js"></script>
 </body>
 </html>

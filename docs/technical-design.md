@@ -21,11 +21,17 @@ corpus/{grade}/{subject}/{strand-file}.json   <- source of truth, config-driven
 server/corpus.js       -> loads and flattens corpus into chunks + derives {grade,subject,strand} option tree
 server/packBuilder.js  -> assembles ONE lesson pack (timeline + all fields) from a chunk + lesson length
 server/index.js         -> HTTP server: static file serving + /api/options, /api/pack
-public/index.html/.js/.css -> teacher-facing UI: grade/subject/strand/sub-strand/length picker,
+public/index.html + style.css -> teacher-facing UI: grade/subject/strand/sub-strand/length picker,
                               a single "Generate my lesson pack" button, print-styled output
+public/js/api.js       -> the only module that knows the /api/options and /api/pack shapes
+public/js/builder.js   -> cascade rules over the option tree (no DOM, no fetching)
+public/js/pack-view.js -> renders the pack, the sijui refusal, and loading/error states
+public/js/app.js       -> wiring: keeps the five selects in sync, runs the one action
 ```
 
-There is no retrieval engine and no language model anywhere in this version. Both were removed deliberately (see "What changed" below) once the output became a fixed template filled directly from corpus fields — a lookup problem, not a generation problem.
+There is no retrieval engine and no language model in the pack-generation path. Both were removed deliberately (see "What changed" below) once the output became a fixed template filled directly from corpus fields — a lookup problem, not a generation problem.
+
+A local model does exist in the repository, in `server/ai.js`, but it is off unless `AI_ENABLED=1` and it sits entirely outside this path: `/api/pack` does not import it, its output never enters a generated pack, and the panel that surfaces it is excluded from the print stylesheet. See `docs/ai-integration-notes.md` and the amendment note in `CONTRIBUTING.md`.
 
 ### Corpus layer (`corpus/`)
 
@@ -56,7 +62,11 @@ The endpoint does an exact `{grade, subject, strand, subStrand}` match against t
 
 ### Frontend (`public/`)
 
-Plain HTML/CSS/vanilla JS, no build step, no framework. On load, it fetches `/api/options` and populates cascading `grade → subject → strand → subStrand` selects, plus a lesson-length select (`40`/`80` minutes) from `validLengths`. One button, `Generate my lesson pack`, posts the current selection to `/api/pack` and renders the full pack in one pass. A dedicated print stylesheet (`@media print` in `public/style.css`) hides the picker/button/disclosure and leaves only the pack itself, so "Print / save this pack" produces the carryable artifact the brief asks for.
+Plain HTML/CSS/vanilla JS, no build step, no framework, no dependencies — split into ES modules served directly by the static handler. On load, it fetches `/api/options` and populates cascading `grade → subject → strand → subStrand` selects, plus a lesson-length select (`40`/`80` minutes) from `validLengths`. One button, `Generate my lesson pack`, posts the current selection to `/api/pack` and renders the full pack in one pass. A dedicated print stylesheet (`@media print` in `public/style.css`) hides the picker/button/disclosure and leaves only the pack itself, so "Print / save this pack" produces the carryable artifact the brief asks for.
+
+Two constraints shape the presentation layer. There are **no web fonts** — the app makes no network calls, so display type comes from a system serif stack. And the `MIME` map in `server/index.js` covers only `.html/.js/.css/.json`, so every icon and illustration is **inline SVG** (a hidden `<symbol>` sprite in `index.html`) rather than a served `.svg` file; no `server/` change was needed to add artwork. The `<select>` elements are deliberately native, restyled with `appearance: none` and a custom chevron — a bespoke dropdown would cost the keyboard support and the correct mobile picker that native controls give for free.
+
+There is no account UI, because there is no account: no login, no session, no user model (see the constraints table above). The header carries the logo and nothing else.
 
 ## What changed from the first build, and why
 

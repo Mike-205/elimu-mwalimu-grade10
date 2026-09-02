@@ -36,7 +36,9 @@ corpus/{grade}/{subject}/{strand-file}.json   <- curriculum content (JSON, no co
 server/corpus.js       <- loads corpus, derives dropdown options
 server/packBuilder.js  <- assembles one pack from a corpus chunk + lesson length
 server/index.js         <- HTTP server (Node built-ins only, no deps)
-public/                <- frontend: plain HTML/CSS/JS, no build step
+public/index.html      <- markup + inline SVG icon sprite (icons can't be served as .svg; see below)
+public/style.css       <- design tokens, components, responsive layers, print stylesheet
+public/js/*.js         <- ES modules: api / builder (cascade) / pack-view (render) / app (wiring)
 docs/                   <- required deliverable sheets + project writeups
 ```
 
@@ -121,8 +123,19 @@ Open `http://127.0.0.1:4173`. There's no automated test suite — verify by hand
 
 1. Pick every `{grade, subject, strand, subStrand}` combination that should exist and confirm a pack generates with all sections populated (timeline, what to teach, board notes, activity, 5 questions, explainer).
 2. Confirm the "illustrative content" badge and citation appear on every pack.
-3. Try **Print / save this pack** and confirm the printed/saved view hides the picker and disclosure banner, leaving only the pack.
+3. Try **Print / save this pack** and confirm the printed/saved view hides the picker and disclosure banner, leaving only the pack — and that the source note prints expanded rather than collapsed.
 4. If you changed `server/`, also confirm the sijui path still works: POST `/api/pack` with a subject/strand that doesn't exist and check you get back `{ "sijui": true, ... }`, not a fabricated pack or a crash.
+5. If you changed `public/`, also check the states that aren't on the happy path: stop the server and click **Generate** (should show a retryable error, never a silent no-op or a half-built pack); reload with the server down (selects disabled with an explanation); change a dropdown after generating (the pack on screen is marked as belonging to the previous selection). And tab through the page — skip link, disclosure toggle, five selects, then the button, each with a visible focus ring.
+
+### If you're working on `public/` (the `ui-polish` branch)
+
+Three constraints are easy to trip over, and all three come from promises made elsewhere in the project:
+
+- **No dependencies and no build step.** The README's pitch is "no install step, no npm dependencies." A framework, a UI library, an icon package or a CSS toolchain would all break that claim.
+- **No web fonts.** The app makes no network calls, ever. Display type comes from a system serif stack; anything fetched from a CDN would silently fail offline, which is the only way this app is ever used.
+- **No new file types in `public/`.** The `MIME` map in `server/index.js` covers `.html/.js/.css/.json` only, and `server/` is frozen. An `.svg`, `.woff2` or `.png` file would be served as `application/octet-stream` and refused by the browser. Icons and illustrations go in the inline `<symbol>` sprite in `index.html` instead.
+
+Also: keep the `<select>` elements native. They are restyled with `appearance: none` and a custom chevron, but the element itself is the real thing — a hand-built dropdown would cost the keyboard support and the correct mobile picker that we currently get for free.
 
 ## Docs branch specifics
 
