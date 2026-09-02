@@ -23,19 +23,41 @@ const MODEL = process.env.OLLAMA_MODEL || 'llama3.2:3b';
 const MAX_TOKENS = Number(process.env.AI_MAX_TOKENS || 120);
 const TIMEOUT_MS = Number(process.env.AI_TIMEOUT_MS || 90000);
 
-// ponytail: calibration knob, and the one number in this file that must be re-measured
-// if the model changes. What fraction of an answer's content words must also appear in
-// the chunk.
+// ponytail: calibration knob. What fraction of an answer's content words must also
+// appear in the chunk. Re-measure with server/ai.calibrate.js if the model changes.
 //
-// Measured against real llama3.2:3b output on this corpus:
-//   grounded answers      0.50 - 0.72
-//   plausible fabrications 0.00 - 0.40   (worst case 0.40: inventing materials for a
-//                                         no-materials activity — the dangerous kind)
-// 0.45 sits in the gap. An earlier guess of 0.6 was wrong in the direction that matters
-// least for safety but most for usefulness: it refused correct, fully grounded answers.
-// Re-run the calibration before raising it — a threshold above 0.50 starts discarding
-// good answers, and a teacher who is refused three times stops asking.
-const MIN_OVERLAP = Number(process.env.AI_MIN_OVERLAP || 0.45);
+// Deliberately loose. Measured over 96 real llama3.2:3b answers on the full 31-sub-strand
+// corpus, overlap turned out to be a WEAK discriminator — grounded answers ran 0.26-1.00
+// and uncovered-question answers 0.22-1.00, and every threshold traded roughly one good
+// answer for one bad one. It was a decent signal on the old 4-sub-strand corpus and got
+// worse as chunks grew richer, because a bigger chunk gives any fluent answer more
+// vocabulary to match by accident.
+//
+// So it is kept only as a cheap backstop against genuinely off-topic vocabulary — text
+// that shares almost no words with the chunk, which is what a prompt failure looks like —
+// and set low enough to stop punishing paraphrase: 0.30 keeps 98% of grounded answers and
+// rejects none of the uncovered ones that reach it. Every higher value tested discarded
+// good answers and caught nothing extra.
+//
+// The work of rejecting plausible-but-ungrounded answers is done by EXTERNAL_CLAIM below.
+// Do not raise this expecting it to help with that; it does not.
+const MIN_OVERLAP = Number(process.env.AI_MIN_OVERLAP || 0.3);
+
+// The failure mode overlap cannot see, and the reason this gate exists.
+//
+// A small model asked something the chunk does not cover rarely invents new vocabulary.
+// It reassembles the chunk's own words into a claim the chunk never made — "the previous
+// year likely taught...", "the school should buy a walkie-talkie for the message relay
+// activity", "learners from other countries may think...". Every content word is from the
+// chunk, so overlap scores high and waves it through, and the claim is still false. The
+// walkie-talkie one is the clearest harm: it invents a purchase for an activity the brief
+// requires to need no materials.
+//
+// What those answers share is a speculative or outside-the-chunk framing, and a grounded
+// answer restating loaded material has no reason to hedge. Measured on the same 96
+// answers: 0 of 46 grounded answers matched this pattern, against 28 of the 31 uncovered
+// answers that had passed every other gate.
+const EXTERNAL_CLAIM = /\b(likely|probably|might (think|assume|have)|may (think|assume|have)|should (buy|bring|consider|purchase|invest|obtain|acquire)|previous year|last year|next year|textbook page|national exam|other (countries|counties)|typically taught|commonly taught)\b/i;
 
 const REFUSAL = 'Sijui — that is not in the loaded curriculum material for this sub-strand.';
 
@@ -53,6 +75,13 @@ const words = (s) =>
 const contentWords = (s) => words(s).filter((w) => w.length > 2 && !STOP.has(w));
 
 const numbers = (s) => String(s).match(/\d+(?:\.\d+)?/g) || [];
+
+// The model likes to format answers as "1. ... 2. ...". Those ordinals are formatting,
+// not claims, and the chunk has no reason to contain them — left in, they get flagged as
+// invented numbers and a perfectly grounded answer is thrown away. Strip line-leading
+// list markers only; a digit anywhere else in the sentence is still a claim and still
+// checked, so "1. The answer is 42 marks" still trips on 42.
+const claimNumbers = (s) => numbers(String(s).replace(/(?:^|\n)[ \t]*\d+[.)][ \t]/g, '\n'));
 
 /** Everything the model is allowed to know, flattened. Also what answers are checked against. */
 function chunkText(chunk) {
@@ -82,13 +111,17 @@ function checkGrounded(answer, chunk) {
   if (/\b(i (do not|don't) (know|have)|not (mentioned|provided|specified|in the (context|text)))\b/i.test(text))
     return { ok: false, reason: 'model declined in prose' };
 
+  // Runs before the vocabulary checks precisely because these answers pass them.
+  const speculation = text.match(EXTERNAL_CLAIM);
+  if (speculation) return { ok: false, reason: `claim outside the chunk: "${speculation[0]}"` };
+
   const source = chunkText(chunk);
 
   // Numbers are where a small model invents most confidently, and a wrong mark
   // allocation or wrong angle is worse than no answer. Every number in the answer must
   // already appear in the chunk.
   const known = new Set(numbers(source));
-  const invented = numbers(text).filter((n) => !known.has(n));
+  const invented = claimNumbers(text).filter((n) => !known.has(n));
   if (invented.length) return { ok: false, reason: `numbers not in source: ${invented.join(', ')}` };
 
   const answerWords = contentWords(text);

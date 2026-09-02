@@ -60,6 +60,25 @@ check('accepts a number that IS in the chunk', () => {
   assert.ok(v.ok, `expected ok, got: ${v.reason}`);
 });
 
+check('treats numbered-list ordinals as formatting, not claims', () => {
+  // The model likes to answer with "1. ... 2. ...". Those ordinals are not in the chunk,
+  // and before they were stripped a perfectly grounded list answer was refused as
+  // containing invented numbers. Seen live, and twice in the calibration sample.
+  const listed = checkGrounded(
+    'The parts of the CPU are:\n1. control unit\n2. registers\n3. arithmetic and logic unit',
+    chunk
+  );
+  assert.ok(listed.ok, `list-formatted grounded answer refused: ${listed.reason}`);
+
+  // But only the marker is exempt — a number inside the text is still a claim.
+  const smuggled = checkGrounded(
+    'The parts of the CPU are:\n1. control unit\n2. registers running at 42 gigahertz',
+    chunk
+  );
+  assert.ok(!smuggled.ok, 'invented number inside a list item was accepted');
+  assert.match(smuggled.reason, /42/);
+});
+
 check('rejects the model self-refusing with the agreed token', () => {
   const v = checkGrounded('SIJUI', chunk);
   assert.ok(!v.ok);
@@ -83,25 +102,59 @@ check('rejects an off-corpus answer', () => {
 });
 
 check('rejects invented materials for a no-materials activity', () => {
-  // The closest fabrication to the threshold in calibration (0.40 against 0.45), and the
-  // one with real consequences: the brief requires an activity needing no materials, so
-  // a model telling a teacher to bring beads and cards defeats the point of the pack.
-  const v = checkGrounded(
+  // The brief requires an activity needing no materials, so a model telling a teacher to
+  // buy or bring equipment defeats the point of the pack. Overlap cannot catch this —
+  // every content word is lifted from the chunk — which is why EXTERNAL_CLAIM exists.
+  for (const answer of [
     'Learners should bring coloured beads and a set of place-value cards to model each element.',
-    chunk
-  );
-  assert.ok(!v.ok, 'invented-materials answer was accepted');
-  assert.match(v.reason, /overlap/);
+    'The school should buy a walkie-talkie so learners can act out the fetch decode execute cycle.'
+  ]) {
+    const v = checkGrounded(answer, chunk);
+    assert.ok(!v.ok, `invented-materials answer accepted: ${answer}`);
+    assert.match(v.reason, /outside the chunk/);
+  }
 });
 
-check('accepts a grounded answer that sits near the threshold', () => {
-  // Real llama3.2:3b output scored ~0.5 in calibration. Guards the other direction:
-  // if someone raises MIN_OVERLAP past the grounded floor, this fails loudly.
-  const v = checkGrounded(
-    'Write the structural elements on the board so learners can see that the control unit fetches and the ALU computes.',
-    chunk
-  );
-  assert.ok(v.ok, `grounded near-threshold answer refused: ${v.reason}`);
+check('rejects claims about things outside the chunk', () => {
+  // Measured failure mode: the model reassembles the chunk's own vocabulary into a claim
+  // the chunk never made. High overlap, still false. 28 of 31 such answers in calibration
+  // carried one of these framings.
+  for (const answer of [
+    'The previous year likely taught that the control unit fetches instructions.',
+    'Learners from other countries may think the ALU stores data.',
+    'This is covered on the textbook page dealing with the control unit and registers.'
+  ]) {
+    const v = checkGrounded(answer, chunk);
+    assert.ok(!v.ok, `external claim accepted: ${answer}`);
+    assert.match(v.reason, /outside the chunk/);
+  }
+});
+
+check('the external-claim gate does not fire on grounded answers', () => {
+  // The other direction. In calibration this pattern matched 0 of 46 grounded answers;
+  // if someone widens the regex carelessly, this fails loudly.
+  for (const answer of [
+    'The control unit fetches instructions and the arithmetic and logic unit does the sums.',
+    'Learners can act out the fetch decode execute cycle at the front of the class.',
+    'The CPU is basically a supervisor and a worker: one fetches instructions, the other adds and compares.'
+  ]) {
+    const v = checkGrounded(answer, chunk);
+    assert.ok(v.ok, `grounded answer wrongly refused as an external claim: ${v.reason}`);
+  }
+});
+
+check('accepts grounded answers that paraphrase rather than quote', () => {
+  // Guards MIN_OVERLAP from creeping back up. Two correct answers were lost to paraphrase
+  // at 0.40 during calibration, which is why the threshold sits at 0.30. These three
+  // score 0.40-0.50 against this fixture and must survive.
+  for (const answer of [
+    'Think of the control unit as a supervisor telling everyone what to do, while the ALU quietly adds and compares numbers.',
+    'The registers sit inside the CPU alongside the buses and hold values during the cycle.',
+    'In simple terms the CPU repeats one loop forever: fetch, decode, execute.'
+  ]) {
+    const v = checkGrounded(answer, chunk);
+    assert.ok(v.ok, `paraphrased grounded answer refused: ${v.reason}`);
+  }
 });
 
 check('rejects empty and whitespace answers', () => {

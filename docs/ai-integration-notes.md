@@ -45,59 +45,104 @@ branch that returns partial or best-effort text.
 ## The checker
 
 A model cannot be trusted to obey "only use the context", so obedience is verified after
-the fact, in four cheap checks:
+the fact. Gates run in this order, cheapest and most decisive first:
 
 1. **Self-refusal** — the agreed `SIJUI` token, or a refusal phrased as prose.
-2. **Invented numbers** — every number in the answer must already appear in the chunk.
-   This is the highest-value check: a wrong mark allocation or wrong angle handed to a
-   teacher is worse than no answer at all.
-3. **Content-word overlap** — the fraction of the answer's content words present in the
-   chunk must clear a threshold.
-4. **Shape** — non-empty, has content words, question within length bounds.
+2. **Claim outside the chunk** — speculative or external framing. Does the heavy lifting;
+   see below.
+3. **Invented numbers** — every number in the answer must already appear in the chunk.
+   Line-leading list ordinals are stripped first: `1.` and `2.` are formatting, not
+   claims, and flagging them threw away grounded answers. A digit anywhere else is still
+   checked.
+4. **Content-word overlap** — a loose floor, kept only as a backstop.
+5. **Shape** — non-empty, has content words, question within length bounds.
 
-### Calibration — re-measure this if the model changes
+## What calibration actually found — read this before tuning anything
 
-`MIN_OVERLAP` is the one tuned number here. Measured against real `llama3.2:3b` output:
+96 real `llama3.2:3b` answers over 12 sub-strands spanning all 6 strands. Two question
+sets per chunk: **grounded** (answerable from the chunk) and **adjacent** (plausible for
+the subject, not covered by that chunk — previous year's teaching, textbook page, what
+equipment to buy). Saved to `server/ai.calibrate.jsonl`, so thresholds re-score offline
+in milliseconds:
 
-| | Overlap |
+```bash
+node server/ai.calibrate.js            # ~4 minutes, calls the model, rewrites the jsonl
+node server/ai.calibrate.js --replay   # instant, re-scores the saved answers
+```
+
+### Overlap alone does not work, and got worse as the corpus grew
+
+| | Grounded | Adjacent |
+|---|---|---|
+| Overlap range | 0.26 – 1.00 | 0.22 – 1.00 |
+
+The distributions sit on top of each other. Every threshold traded roughly one good
+answer for one bad one — at 0.60, keeping 81% of grounded answers still let 50% of
+adjacent ones through.
+
+This **reversed** the earlier reading. On the old 4-sub-strand corpus, grounded answers
+scored 0.50–0.72 and fabrications 0.00–0.40, a clean gap. The expectation was that richer
+chunks would allow a *stricter* threshold. The opposite happened: a bigger chunk gives any
+fluent answer more vocabulary to match by accident, so the signal degrades as the corpus
+improves. Worth remembering before trusting a threshold measured on a thin corpus.
+
+### The failure mode overlap cannot see
+
+Inspecting the answers that passed every gate explains why. A small model asked something
+its chunk does not cover rarely invents new vocabulary — it reassembles the chunk's own
+words into a claim the chunk never made:
+
+> "The **previous year likely taught** that a well-designed network should have five
+> qualities: performance, security, scalability, reliability and availability."
+>
+> "The school **should buy** a walkie-talkie for the whole-class message relay activity."
+>
+> "**Learners from other countries may think** that all computer storage is internal."
+
+Every content word is from the chunk, so overlap scores these *high*. The walkie-talkie
+one is the clearest harm: it invents a purchase for an activity the brief requires to
+need no materials. No threshold can catch this, because the vocabulary is not the problem.
+
+What they share is a speculative or outside-the-chunk framing — and a grounded answer
+restating loaded material has no reason to hedge. Measured on the same 96 answers:
+
+| | matched the pattern |
 |---|---|
-| Grounded answers | 0.50 – 0.72 |
-| Plausible fabrications | 0.00 – 0.40 |
+| Grounded answers | **0 / 46** |
+| Adjacent answers that had passed every other gate | **28 / 31** |
 
-Threshold set at **0.45**, in the gap. The first guess of 0.6 was wrong: it refused
-correct, fully grounded answers, and a teacher refused three times stops asking.
+That became the `EXTERNAL_CLAIM` gate.
 
-The worst fabrication scored **0.40** — telling a teacher to bring coloured beads and
-place-value cards for an activity the brief requires to need *no materials*. It is
-pinned as a test case, because it is both the closest to the threshold and the one with
-real classroom consequences.
+### Result
 
-## Measured behaviour
+| | Before the gate | After |
+|---|---|---|
+| Grounded questions answered | 46/48 (96%) | **47/48 (98%)** |
+| Uncovered questions answered | 31/48 (65%) | **3/48 (6%)** |
 
-Off-corpus questions — the World Cup, quantum entanglement, a recipe for ugali — were all
-caught by the **model self-declining**, never reaching the overlap check. That is worth
-knowing: on this model the overlap gate is a backstop, not the primary defence. It earns
-its place for the case where the model confabulates confidently instead of declining,
-which the invented-materials example shows it will do.
+The three that still get through are benign: the model ignored the unanswerable question
+and restated correct chunk content — the LAN/WAN/PAN list, the probability range. Nothing
+false is asserted. The remainder split 42 blocked as external claims and 3 self-refused.
 
-## The real constraint: speed
-
-**~6 tokens/sec on CPU.** A 120-token answer is roughly 20 seconds; short ones came back
-in 1–3s once the model was warm. `num_predict` is capped at 120 for that reason, which is
-also a correctness feature — shorter answers have less room to drift.
-
-This rules out anything long-form in the request path. Pack translation or full-text
-rewriting are not viable interactively at this speed; they would need to be background
-work. The UI tells the teacher the wait is coming rather than leaving a dead button.
+`MIN_OVERLAP` therefore sits at **0.30**, low enough to stop punishing paraphrase. Every
+higher value tested discarded good answers and caught nothing extra — the three survivors
+score 0.84–1.00, so raising the threshold is pure cost. Do not raise it expecting it to
+help with ungrounded claims; that is `EXTERNAL_CLAIM`'s job.
 
 ## Known gaps
 
-- **The threshold is corpus-sensitive.** It was calibrated on the sub-strands loaded at
-  the time. Re-run the measurement after `corpus-content` merges, since 31 richer chunks
-  will shift overlap upward and may allow a stricter threshold.
+- **`EXTERNAL_CLAIM` is a phrase list, so it is evadable.** It catches the framings this
+  model actually produced, not the category in general. A different model that hedges
+  differently would need it re-derived — rerun the calibration and inspect what gets
+  through, rather than assuming the current list transfers.
+- **Both gates are lexical, not semantic.** A false claim stated flatly, in the chunk's
+  own vocabulary, with no hedge and no number, passes everything. Nothing here understands
+  the answer; the defence is that a small model rarely writes that way.
 - **No conversation.** One question, one answer, no history. Deliberate — multi-turn
   gives the model room to drift from the chunk across turns.
 - **Overlap is lexical, not semantic.** A correctly grounded answer that paraphrases
   heavily will score low and be refused. That is the intended direction of failure, but
   it is a real source of false refusals.
 - **Not tested against a second model.** Every number here is `llama3.2:3b` on CPU.
+- **The sample is 12 of 31 sub-strands.** Run `--all` for the full corpus if a decision
+  rests on it.
