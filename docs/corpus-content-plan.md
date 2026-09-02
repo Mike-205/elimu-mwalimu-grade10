@@ -208,7 +208,7 @@ only sub-strands that appear in the PDFs. Sub-strand count will *drop* — that 
 server needed editing, stop and raise it — `CONTRIBUTING.md` says the schema is missing
 something.
 
-### M4 — Software Development (6 sub-strands)
+### M4 — Software Development (6 sub-strands) ✅ done
 
 3.1 Computer Programming Concepts · 3.2 Program development · 3.3 Identifiers and
 Operators · 3.4 Control Structures · 3.5 Containers · 3.6 Functions

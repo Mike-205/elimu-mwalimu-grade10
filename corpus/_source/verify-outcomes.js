@@ -16,7 +16,11 @@ for (const chunk of loadCorpus()) {
       if (src[start] !== want[0]) continue;
       let wi = 0, si = start;
       while (si < src.length && wi < want.length && si - start < 400) {
-        if (src[si] === want[wi]) wi++;
+        // pdftotext splits a word hyphenated across a line break into one token
+        // ("user-defined" -> "userdefined"), so let one source token absorb two
+        // outcome words before falling back to a plain match.
+        if (wi + 1 < want.length && src[si] === want[wi] + want[wi + 1]) wi += 2;
+        else if (src[si] === want[wi]) wi++;
         si++;
       }
       if (wi === want.length && (!best || si - start < best)) best = si - start;
