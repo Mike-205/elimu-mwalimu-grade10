@@ -255,7 +255,7 @@ the subject.
 
 Largest milestone by count. Split across commits if it helps; the "done when" is the same.
 
-### M7 — Statistics and Probability (2 sub-strands)
+### M7 — Statistics and Probability (2 sub-strands) ✅ done
 
 3.1 Statistics I · 3.2 Probability 1
 
