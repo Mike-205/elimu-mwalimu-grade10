@@ -1,0 +1,110 @@
+{
+  "grade": "Grade 10",
+  "subject": "Mathematics",
+  "pathway": "Compulsory core (all pathways)",
+  "strand": "Statistics and Probability",
+  "sourceNote": "Strand and sub-strand names, lesson allocations and every entry's learningOutcomes are taken verbatim from the official KICD Grade 10 Mathematics Curriculum Design, 'STRAND 3.0: STATISTICS AND PROBABILITY' (28 lessons across the two sub-strands). The extracted text is committed at corpus/_source/mathematics-grade10-kicd.txt. The body of the design gathers both sub-strands under a single section heading, 'Sub Strand 1: Statistics and Probability', but numbers them separately within it as 3.1 Statistics I and 3.2 Probability 1, matching the index page; the numbered forms are used here. The strand's own capitalisation varies in the document between 'Statistics and Probability' and 'Statistics and probability'; the index form is used. Board notes follow the sub-topic lists the design prints beside each sub-strand — collection of data, frequency distribution table, mean mode and median of grouped and ungrouped data, representation and interpretation of data, then experimental probability, probability space, mutually exclusive and independent events, laws of probability and probability tree diagrams. Board notes, activity, assessment questions and explainer are NOT from the design — it specifies what a learner must be able to do, not what a teacher writes on the board or how to mark it. Those fields are illustrative teaching content written to serve the quoted outcomes, and every pack says so.",
+  "subStrands": [
+    {
+      "id": "math-statistics-statistics-i",
+      "subStrand": "Statistics I",
+      "citation": "KICD Grade 10 Mathematics Curriculum Design — Strand 3.0 Statistics and Probability — Sub Strand 3.1 Statistics I (16 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "collect data from real-life sources",
+        "draw a frequency distribution table for grouped and ungrouped data",
+        "determine mean, mode and median of grouped and ungrouped data",
+        "represent data using histograms and frequency polygons",
+        "interpret data from histograms and frequency polygons",
+        "promote data collection, organisation and representation for informed decision making"
+      ],
+      "boardNotes": [
+        "Frequency distribution table: value or class in one column, tally in the next, frequency in the last",
+        "UNGROUPED — mean = sum of values / number of values. MODE = most frequent. MEDIAN = middle value when ordered",
+        "For an even count, the median is the average of the two middle values",
+        "GROUPED — use the class MIDPOINT x. Mean = sum of (fx) / sum of f",
+        "MODAL CLASS is the class with the highest frequency, not a single number",
+        "HISTOGRAM: bars touch, because the horizontal axis is a continuous scale. A bar chart's bars do not",
+        "FREQUENCY POLYGON: join the midpoints of the tops of the histogram bars with straight lines"
+      ],
+      "activity": {
+        "description": "Collect one real data set from the class in under three minutes — the number of people in each learner's household, called out and tallied on the board. Learners copy the tally into a frequency distribution table, then each computes the mean, mode and median from it. Three learners give their three answers and the class discusses why they differ and which one best describes the class. Finish by having everyone sketch the histogram, checking that their bars touch.",
+        "materialsNeeded": "None — the class itself is the data source; the tally goes on the board and the table in exercise books."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Find the mean, mode and median of the following data: 4, 7, 5, 7, 2, 9, 7.",
+          "markingScheme": "4 marks — 1 for mean 5.857 or 41/7, 1 for mode 7, 2 for median 7 with the values shown correctly reordered. Award 1 of the 2 if the data is ordered but the middle value is misread."
+        },
+        {
+          "question": "State one difference between a histogram and a bar chart.",
+          "markingScheme": "1 mark for the bars of a histogram touching because the data is continuous, while a bar chart has gaps because the data is in separate categories."
+        },
+        {
+          "question": "Explain what is meant by the modal class of a grouped frequency distribution.",
+          "markingScheme": "2 marks for the class interval having the highest frequency; 1 mark for 'the most common class' with no reference to frequency."
+        },
+        {
+          "question": "The classes 1-5, 6-10 and 11-15 have frequencies 4, 10 and 6. Estimate the mean.",
+          "markingScheme": "4 marks — 1 for midpoints 3, 8 and 13, 1 for sum of fx = 12 + 80 + 78 = 170, 1 for sum of f = 20, 1 for mean 8.5."
+        },
+        {
+          "question": "A class computes a mean of 8.5 from grouped data but the true mean of the original values is 8.3. Explain why the grouped calculation gives only an estimate.",
+          "markingScheme": "3 marks — 1 for grouping discarding the individual values, 1 for the calculation assuming every value in a class sits at the class midpoint, 1 for that assumption rarely being exactly true so the result is an approximation."
+        }
+      ],
+      "explainer": "Statistics at this level is three questions asked of one set of numbers: what is typical, how do I lay it out, and what does the picture tell me. Mean, mode and median are three different answers to 'what is typical', and the useful teaching point is that they disagree — a class with one very large household will pull the mean up while the median stays put, and noticing that is more valuable than computing either. Grouped data adds one idea: once values are bundled into classes you no longer have them, so you assume everything sits at the class midpoint and accept that the mean you get is an estimate. Histograms and frequency polygons are just the table drawn, and the one detail to insist on is that histogram bars touch, because the scale underneath is continuous."
+    },
+    {
+      "id": "math-statistics-probability-i",
+      "subStrand": "Probability 1",
+      "citation": "KICD Grade 10 Mathematics Curriculum Design — Strand 3.0 Statistics and Probability — Sub Strand 3.2 Probability 1 (12 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "perform experiments involving probabilities in different situations",
+        "identify the range of probability in different situations",
+        "generate probability space of different events",
+        "determine the probability of mutually exclusive and independent events",
+        "apply the laws of probability in different situations",
+        "determine the probability of independent events using tree diagrams",
+        "appreciate the application of probability in real life situations"
+      ],
+      "boardNotes": [
+        "Probability of an event = number of favourable outcomes / total number of possible outcomes",
+        "Range: 0 <= P(E) <= 1. P = 0 is impossible, P = 1 is certain. P(not E) = 1 - P(E)",
+        "EXPERIMENTAL probability comes from actually trying it; THEORETICAL comes from counting outcomes",
+        "PROBABILITY SPACE: the list of all possible outcomes. Tossing two coins: HH, HT, TH, TT — four outcomes",
+        "MUTUALLY EXCLUSIVE — cannot both happen. ADDITION law: P(A or B) = P(A) + P(B)",
+        "INDEPENDENT — one does not affect the other. MULTIPLICATION law: P(A and B) = P(A) x P(B)",
+        "TREE DIAGRAM: multiply ALONG the branches, add ACROSS the final outcomes"
+      ],
+      "activity": {
+        "description": "Every learner tosses a coin ten times using any coin available, or flips an exercise book that has been marked on one cover, and records heads and tails. Tally the class totals on the board and compute the experimental probability of a head, then compare it with the theoretical 0.5 and discuss why they differ and what would close the gap. Learners then draw the tree diagram for two tosses in their exercise books and use it to find the probability of exactly one head.",
+        "materialsNeeded": "None — a learner's exercise book with one cover marked works as the coin if no coins are available."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "State the range of values a probability can take, and what a probability of 0 means.",
+          "markingScheme": "2 marks — 1 for from 0 to 1 inclusive, 1 for the event being impossible."
+        },
+        {
+          "question": "A bag contains 3 red and 5 blue balls. Find the probability of picking a red ball.",
+          "markingScheme": "2 marks for 3/8; 1 mark for 3/5, the common error of dividing by the wrong total."
+        },
+        {
+          "question": "List the probability space when two coins are tossed together.",
+          "markingScheme": "2 marks for HH, HT, TH, TT; 1 mark if HT and TH are treated as one outcome, giving only three."
+        },
+        {
+          "question": "State the difference between mutually exclusive events and independent events, giving one example of each.",
+          "markingScheme": "4 marks — 1 for mutually exclusive events not being able to occur together, 1 for a valid example such as rolling a 2 and rolling a 5 on one die, 1 for independent events where one occurring does not change the probability of the other, 1 for a valid example such as two separate coin tosses."
+        },
+        {
+          "question": "A die is thrown and a coin is tossed. Using a tree diagram or otherwise, find the probability of getting a 6 and a head, and explain why the two probabilities are multiplied rather than added.",
+          "markingScheme": "4 marks — 1 for P(6) = 1/6, 1 for P(head) = 1/2, 1 for 1/12, 1 for explaining that both must happen so the events are independent and the multiplication law applies, whereas addition would be used only if either one or the other were required."
+        }
+      ],
+      "explainer": "Probability is counting, dressed up. The probability of something is how many ways it can happen divided by how many things can happen in total, and every value must land between 0 and 1 — if a learner's answer is 1.5, the arithmetic is wrong and they should notice without being told. The distinction that carries the most marks is between mutually exclusive and independent events, and the shortcut is the word in the question: 'or' means add, 'and' means multiply. Tree diagrams make the multiplication visible, and the rule is to multiply along the branches and add across the outcomes at the end. Run the coin experiment first. Learners expect exactly five heads in ten tosses, do not get it, and that surprise is the opening for the difference between experimental and theoretical probability."
+    }
+  ]
+}

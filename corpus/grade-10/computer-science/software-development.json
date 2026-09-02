@@ -1,0 +1,300 @@
+{
+  "grade": "Grade 10",
+  "subject": "Computer Science",
+  "pathway": "STEM Pathway (elective)",
+  "strand": "Software Development",
+  "sourceNote": "Strand and sub-strand names, lesson allocations and every entry's learningOutcomes are taken verbatim from the official KICD Grade 10 Computer Science Curriculum Design, 'STRAND 3.0: SOFTWARE DEVELOPMENT' (92 lessons, the largest strand in the subject). The extracted text of that design is committed at corpus/_source/computer-science-grade10-kicd.txt so any quotation here can be checked offline. Two naming notes: the design's index page calls sub-strand 3.5 'Containers' while the body heading calls it 'Data Structures' — the index name is used here, and both terms appear in the board notes since the outcomes themselves say 'containers'. The strand is also capitalised 'Software development' in the body and 'Software Development' on the index page; the index form is used. The design names nine acceptable languages (Python, C, C++, C#, Java, Ruby, Scratch, Swift, Go) without mandating one, so board notes use Python, which is listed first and has the least syntax for a teacher to write on a blackboard. Board notes, activity, assessment questions and explainer are NOT from the design — it specifies what a learner must be able to do, not what a teacher writes on the board or how to mark it. Those fields are illustrative teaching content written to serve the quoted outcomes, and every pack says so.",
+  "subStrands": [
+    {
+      "id": "cs-software-programming-concepts",
+      "subStrand": "Computer Programming Concepts",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 3.0 Software Development — Sub Strand 3.1 Computer Programming Concepts (14 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "explain the terminologies used in programming languages",
+        "describe evolution of programming languages in software development",
+        "categorise the programming languages according to the paradigms",
+        "create simple instructions to simulate low level programming languages",
+        "acknowledge the evolution of programming languages in software development"
+      ],
+      "boardNotes": [
+        "Terms: programming, programming language, syntax, source code, machine code",
+        "Translators — ASSEMBLER (assembly to machine code), COMPILER (whole program at once), INTERPRETER (line by line)",
+        "IDE (Integrated Development Environment): editor + translator + debugger in one program",
+        "Two levels: LOW level (machine code, assembly — close to hardware) and HIGH level (Python, Java — close to English)",
+        "Paradigms: structured, procedural, object oriented, functional, logic, event driven",
+        "Assembly example: LOAD A / ADD B / STORE C — one instruction does one tiny thing",
+        "Software development lifecycle: the stages a program passes through from idea to maintenance"
+      ],
+      "activity": {
+        "description": "Give the class one everyday task, such as making tea, and ask for it as a single sentence — that is high level. Then require it again using only instructions of three words or fewer, with each step doing exactly one physical action. Learners write both versions in their exercise books, count the lines in each, and write one sentence explaining why a machine needs the second version and a person prefers the first.",
+        "materialsNeeded": "None — spoken prompt and learners' exercise books."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "State the difference between a compiler and an interpreter.",
+          "markingScheme": "2 marks — 1 for a compiler translating the whole program before it runs, 1 for an interpreter translating and executing it line by line."
+        },
+        {
+          "question": "Define the terms source code and machine code.",
+          "markingScheme": "2 marks — 1 for source code being the program as written by the programmer in a programming language, 1 for machine code being the binary instructions the processor actually executes."
+        },
+        {
+          "question": "Name any four programming paradigms.",
+          "markingScheme": "4 marks, 1 each for any of structured, procedural, object oriented, functional, logic, event driven."
+        },
+        {
+          "question": "Give two reasons why a programmer would choose a high level language over assembly language.",
+          "markingScheme": "2 marks, 1 each for any of: easier to read and write, fewer lines for the same task, faster to develop, easier to find errors, portable across different machines, does not require knowledge of the specific processor."
+        },
+        {
+          "question": "Explain why machine code written for one type of processor will usually not run on another.",
+          "markingScheme": "2 marks for explaining that machine code is the specific set of binary instructions that one processor's instruction set understands, and a different processor family decodes different patterns; 1 mark for stating only that processors are different."
+        }
+      ],
+      "explainer": "The whole of this sub-strand rests on one gap: people think in sentences and processors only understand numbers, so something has to translate. Everything else is vocabulary for that translation. An assembler does the easy version of the job, a compiler does the whole program in advance, an interpreter does it as it goes. High level and low level describe which end of the gap a language sits at. Paradigms are just different opinions about how a program should be organised, and at this level learners need to name them and give an example, not master them. If you have never programmed, teach the tea-making activity first — it makes the gap physical before any code appears."
+    },
+    {
+      "id": "cs-software-program-development",
+      "subStrand": "Program development",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 3.0 Software Development — Sub Strand 3.2 Program development (15 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "describe stages of program development in computer programming",
+        "write a pseudocode to illustrate the logical flow of an algorithm",
+        "represent the logical flow of an algorithm using a flowchart",
+        "design an algorithm to solve a real life problem",
+        "appreciate the importance of using algorithms in problem solving"
+      ],
+      "boardNotes": [
+        "Program development cycle: problem definition, program design, coding, testing, implementation, documentation, maintenance",
+        "Algorithm characteristics: input, output, finite, definite, effective",
+        "Pseudocode keywords: START, VARIABLES, INPUT, PROCESSING, OUTPUT, END",
+        "Pseudocode example: START / INPUT length, width / area = length * width / OUTPUT area / END",
+        "Flowchart symbols — oval = start/stop, parallelogram = input/output, rectangle = process, diamond = decision, arrow = flow",
+        "A diamond always has ONE arrow in and TWO out, labelled Yes and No",
+        "Finite means it must stop. An algorithm that never ends is not an algorithm"
+      ],
+      "activity": {
+        "description": "Learners write pseudocode for finding the largest of three numbers, using only the six keywords on the board. They then swap exercise books with a neighbour and trace their partner's pseudocode by hand with the numbers 7, 12 and 4, writing down what it outputs. Any pair whose traced answer is not 12 works out together which line is wrong. Finish by drawing the same algorithm as a flowchart, checking that every diamond has two labelled exits.",
+        "materialsNeeded": "None — blackboard for the keywords and symbols, learners' exercise books for the pseudocode and flowchart."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "List, in order, any five stages of the program development cycle.",
+          "markingScheme": "5 marks, 1 each in correct relative order from: problem definition, program design, coding, testing, implementation, documentation, maintenance. Deduct 1 if all five are named but badly out of order."
+        },
+        {
+          "question": "State the five characteristics of an algorithm.",
+          "markingScheme": "5 marks, 1 each for input, output, finite, definite, effective."
+        },
+        {
+          "question": "Name the flowchart symbol used for a decision and state how many exits it has.",
+          "markingScheme": "2 marks — 1 for the diamond or rhombus, 1 for two exits, labelled Yes and No or True and False."
+        },
+        {
+          "question": "Write pseudocode that reads two numbers and outputs their average.",
+          "markingScheme": "4 marks — 1 for START and END, 1 for INPUT of both numbers, 1 for computing the sum divided by 2, 1 for OUTPUT of the result. Accept any consistent keyword style."
+        },
+        {
+          "question": "A learner writes an algorithm that keeps asking for a number and never stops. State which characteristic of an algorithm it violates and explain why that characteristic matters.",
+          "markingScheme": "3 marks — 1 for finiteness, 2 for explaining that an algorithm must terminate after a definite number of steps or it never produces a result and the program hangs; 1 of the 2 for saying only that it must stop."
+        }
+      ],
+      "explainer": "This is the sub-strand that teaches thinking before typing, and it is the one a teacher without programming experience can deliver most confidently, because none of it requires a computer. An algorithm is a recipe: it takes something in, it always finishes, and every step is unambiguous. Pseudocode writes that recipe in structured English, and a flowchart draws the same recipe as boxes. Both say the same thing, and being able to move between them is the actual skill. The trick that makes marking easy is tracing: give the algorithm real numbers and follow it line by line with a pen. If the answer comes out wrong, the algorithm is wrong, and learners can find their own errors without you."
+    },
+    {
+      "id": "cs-software-identifiers-operators",
+      "subStrand": "Identifiers and Operators",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 3.0 Software Development — Sub Strand 3.3 Identifiers and Operators (18 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "describe the elementary elements of a computer program",
+        "declare variables and constants in a programming language",
+        "use input and output statements in a programming language",
+        "use operators in a programming language",
+        "appreciate the role of identifiers and operators in programming"
+      ],
+      "boardNotes": [
+        "Identifier: the name a programmer gives a variable, constant or function. Reserved word: a name the language keeps for itself",
+        "Variable = a named box whose value can change. Constant = a named box whose value must not",
+        "Data types: integer (whole), float (decimal), string (text), boolean (True/False)",
+        "Python: age = 15  |  PI = 3.142  |  name = \"Amina\"  |  passed = True",
+        "Input and output: name = input(\"Enter name: \")  then  print(\"Hello\", name)",
+        "Arithmetic operators: + - * / // (whole-number divide) % (remainder) ** (power)",
+        "Relational: == != < > <= >=   Logical: and or not.  Note = assigns, == compares"
+      ],
+      "activity": {
+        "description": "Write eight proposed variable names on the board, some valid and some not — 2ndterm, total_marks, class, my name, PI, print, average1, student-age. Learners copy them into their exercise books, mark each valid or invalid, and give a reason for every invalid one. Then each learner writes three lines of Python declaring their own name, age and whether they take Computer Science, choosing the right data type for each, and states which of the three should be a constant.",
+        "materialsNeeded": "None — blackboard and learners' exercise books; code is written by hand, not typed."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "State the difference between a variable and a constant.",
+          "markingScheme": "2 marks — 1 for a variable holding a value that may change while the program runs, 1 for a constant holding a value that must not change once set."
+        },
+        {
+          "question": "Give the most suitable data type for each of the following: a learner's name, the number of learners in a class, a learner's average mark, whether a learner passed.",
+          "markingScheme": "4 marks, 1 each — string, integer, float, boolean."
+        },
+        {
+          "question": "State why 2ndterm is not a valid identifier in most programming languages.",
+          "markingScheme": "1 mark for an identifier not being allowed to begin with a digit."
+        },
+        {
+          "question": "Give the value of each expression: 17 // 5, 17 % 5, 2 ** 3.",
+          "markingScheme": "3 marks, 1 each for 3, 2, 8."
+        },
+        {
+          "question": "Explain the difference between = and == and state what happens if a programmer uses the wrong one in a condition.",
+          "markingScheme": "3 marks — 1 for = assigning a value to a variable, 1 for == testing whether two values are equal, 1 for explaining that using = in a condition either causes a syntax error or silently overwrites the variable being tested, so the condition no longer checks what was intended."
+        }
+      ],
+      "explainer": "Despite the intimidating title, this sub-strand is about naming things and doing arithmetic with them. A variable is a labelled box: the label is the identifier, the contents are the value, and the data type says what kind of thing is allowed in the box. Reserved words are names the language has already claimed, which is why a variable cannot be called print or class. The operators are mostly the ones learners already know from Mathematics, with three additions worth drilling — // for whole-number division, % for the remainder, and the difference between = and ==, which is the single most common beginner error and is worth a whole lesson on its own. All of it can be written and marked by hand."
+    },
+    {
+      "id": "cs-software-control-structures",
+      "subStrand": "Control Structures",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 3.0 Software Development — Sub Strand 3.4 Control Structures (17 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "describe control structures in programming",
+        "select program control structure for a given situation",
+        "use control structures in programming",
+        "appreciate the application of control structures in programming"
+      ],
+      "boardNotes": [
+        "Three control structures: SEQUENCE (one after another), SELECTION (choose a path), ITERATION (repeat)",
+        "Selection in Python: if mark >= 50:  print(\"Pass\")  elif mark >= 40:  print(\"Retake\")  else:  print(\"Fail\")",
+        "Iteration, known count: for i in range(1, 6):  print(i)   — runs 5 times, i is 1 to 5",
+        "Iteration, unknown count: while total < 100:  total = total + n",
+        "Use FOR when you know how many times. Use WHILE when you repeat until something becomes true",
+        "break exits the loop immediately. continue skips to the next repetition",
+        "Indentation is what marks the body of an if or a loop in Python — get it wrong and the wrong lines repeat"
+      ],
+      "activity": {
+        "description": "Write a five-line program on the board containing a loop and an if, using marks and a pass threshold. Read out four learners' marks one at a time and have the whole class trace the program by hand in their exercise books, writing the value of every variable after each pass through the loop and what gets printed. Then change one thing on the board — swap >= for > — and have them trace it again, and say which learner's result changed and why.",
+        "materialsNeeded": "None — blackboard for the program, learners' exercise books for the trace table."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Name the three control structures used in programming.",
+          "markingScheme": "3 marks, 1 each for sequence, selection, iteration. Accept repetition for iteration and decision for selection."
+        },
+        {
+          "question": "State when a for loop is more suitable than a while loop.",
+          "markingScheme": "2 marks for when the number of repetitions is known in advance or a fixed range or collection is being worked through; 1 mark for 'when you know how many times' with no elaboration."
+        },
+        {
+          "question": "State the difference between break and continue.",
+          "markingScheme": "2 marks — 1 for break ending the loop entirely, 1 for continue skipping the rest of the current repetition and going on to the next."
+        },
+        {
+          "question": "Write a program segment that prints the numbers 1 to 10, each on its own line.",
+          "markingScheme": "3 marks — 2 for a correct loop over the range 1 to 10 inclusive, 1 for printing inside the loop. Deduct 1 for an off-by-one that prints 1 to 9 or 2 to 10."
+        },
+        {
+          "question": "A program uses while count < 5 but never changes count inside the loop. State what happens when the program runs and explain why.",
+          "markingScheme": "3 marks — 1 for it running forever or hanging, 2 for explaining that the condition is re-tested each pass but nothing in the body can ever make it false, so the loop has no exit; 1 of the 2 for saying only that the condition stays true."
+        }
+      ],
+      "explainer": "Every program ever written is built from exactly three shapes: do this then that, choose between paths, and do something repeatedly. That is the whole of control structures, and saying it plainly at the start saves a lot of confusion later. The choice between for and while is the one decision learners get wrong, and the rule is short — a for loop when you know the count, a while loop when you are waiting for a condition. Teach this by tracing, not by running code: a trace table with a column per variable, filled in by hand for each pass through the loop, shows exactly what the machine does and is easy to mark. The infinite loop question is worth setting every time, because understanding why it hangs is understanding what a loop is."
+    },
+    {
+      "id": "cs-software-containers",
+      "subStrand": "Containers",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 3.0 Software Development — Sub Strand 3.5 Containers, titled 'Data Structures' in the body of the design (14 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "describe types of containers in programming",
+        "use containers in programming",
+        "apply sorting and searching techniques in data structures",
+        "embrace the use of containers in programming"
+      ],
+      "boardNotes": [
+        "Container (data structure): one name holding many values. Types: lists, arrays, dictionaries, sets, tuples, classes",
+        "Python list: marks = [45, 72, 60, 38]   Access by position: marks[0] is 45 — counting starts at 0",
+        "Tuple = a list that cannot be changed: point = (3, 7).  Set = no duplicates: {2, 5, 9}",
+        "Dictionary = key and value pairs: learner = {\"name\": \"Juma\", \"age\": 16}, accessed by key not position",
+        "Two-dimensional list = a table: seats = [[1, 2], [3, 4]], so seats[1][0] is 3",
+        "Searching — SEQUENTIAL checks every item from the start; BINARY halves a SORTED list each time",
+        "Sorting — insertion, selection, bubble, quick. Bubble repeatedly swaps neighbours until no swaps remain"
+      ],
+      "activity": {
+        "description": "Six learners stand at the front holding up a number written large in an exercise book, in random order. The class sorts them by bubble sort, calling out each comparison and telling the two learners to swap places or stay, and counting the passes until nobody swaps. Then re-order them and run a sequential search for a value, counting comparisons; sort them and run a binary search on the same value, counting again. Seated learners record both counts and write one sentence on why the second search needed fewer.",
+        "materialsNeeded": "None — learners hold numbers written in their own exercise books and stand in a line."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Name four types of container used in programming.",
+          "markingScheme": "4 marks, 1 each for any of list, array, dictionary, set, tuple, class."
+        },
+        {
+          "question": "Given marks = [45, 72, 60, 38], state the value of marks[2] and explain why it is not 72.",
+          "markingScheme": "3 marks — 1 for 60, 2 for explaining that positions are counted from 0, so marks[0] is 45 and marks[2] is the third item; 1 of the 2 for saying only that counting starts at zero."
+        },
+        {
+          "question": "State one difference between a list and a tuple.",
+          "markingScheme": "1 mark for a list being changeable after creation while a tuple is not. Accept differences in bracket notation as a second-best answer worth the mark."
+        },
+        {
+          "question": "State the one condition that must be true before a binary search can be used.",
+          "markingScheme": "1 mark for the list must already be sorted."
+        },
+        {
+          "question": "A list holds 1000 names. State roughly how many comparisons a sequential search needs in the worst case and how many a binary search needs, and explain the difference.",
+          "markingScheme": "4 marks — 1 for 1000, 1 for about 10, 2 for explaining that sequential search checks each item in turn while binary search discards half the remaining list at every step; 1 of the 2 for saying only that binary search is faster."
+        }
+      ],
+      "explainer": "A container solves an obvious problem: forty learners cannot each have their own variable. One list called marks holds all forty, and each value is reached by its position — starting at 0, which is the detail that trips everybody up and is worth stating three times. The different container types are just different rules about what is allowed inside: a tuple refuses to be changed, a set refuses duplicates, a dictionary is reached by a name rather than a number. Sorting and searching sound like advanced topics but they are the most physical thing in the whole subject: get six learners to stand in a line holding numbers and the class can run bubble sort and binary search with no computer in the room at all."
+    },
+    {
+      "id": "cs-software-functions",
+      "subStrand": "Functions",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 3.0 Software Development — Sub Strand 3.6 Functions (14 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "discuss types of function used in modular programming",
+        "use built-in and user-defined functions to create a modular program",
+        "discuss the scope of variables and parameter passing between functions",
+        "appreciate the importance of modularity in programming"
+      ],
+      "boardNotes": [
+        "Function: a named block of code that does one job and can be called whenever needed",
+        "Two types — BUILT-IN, supplied by the language (print, input, len), and USER-DEFINED, written by the programmer",
+        "General syntax: return type, function name, parameter list, function body",
+        "Python: def area(length, width):  return length * width   then call it: a = area(5, 3)",
+        "Formal parameters are the names in the definition (length, width). Actual parameters are the values passed in (5, 3)",
+        "Scope — a LOCAL variable exists only inside its function; a GLOBAL variable is visible throughout the program",
+        "Modularity: one job per function, so a program is easier to read, test, reuse and repair"
+      ],
+      "activity": {
+        "description": "Write a twelve-line program on the board in which the same three lines calculating an area appear three times with different numbers. Learners copy it, then rewrite it in their exercise books as one function called three times, and count how many lines they saved. Underneath, each learner marks every variable in their version as local or global and writes one sentence saying what would break if the function tried to use a variable that only exists inside another function.",
+        "materialsNeeded": "None — blackboard for the repetitive program and learners' exercise books for the rewrite."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "State the difference between a built-in function and a user-defined function, giving one example of each.",
+          "markingScheme": "4 marks — 1 for built-in being supplied with the language, 1 for a valid example such as print, input or len, 1 for user-defined being written by the programmer, 1 for any named example of their own."
+        },
+        {
+          "question": "Name the four parts of the general syntax of a function.",
+          "markingScheme": "4 marks, 1 each for return type, function name, parameter list, function body."
+        },
+        {
+          "question": "State the difference between a formal parameter and an actual parameter.",
+          "markingScheme": "2 marks — 1 for the formal parameter being the name used in the function definition, 1 for the actual parameter being the value supplied when the function is called."
+        },
+        {
+          "question": "State the difference between a local variable and a global variable.",
+          "markingScheme": "2 marks — 1 for a local variable existing only inside the function where it is declared, 1 for a global variable being accessible anywhere in the program."
+        },
+        {
+          "question": "Give two reasons why breaking a long program into functions is better than writing it as one block.",
+          "markingScheme": "2 marks, 1 each for any of: the same code can be reused instead of repeated, each part can be tested on its own, the program is easier to read, a fault is easier to locate, several people can work on different functions, changing one job does not risk breaking the others."
+        }
+      ],
+      "explainer": "A function is a job you name once and can then ask for by name as often as you like — exactly like a recipe in a cookbook. Learners meet built-in functions from their first lesson without noticing, because print and input are functions, so start there before defining any. Parameters are the ingredients handed in each time the job is done, which is why the same function can compute the area of any rectangle rather than just one. Scope is the part worth going slowly on: a variable created inside a function is thrown away when the function finishes, and that surprises people until they see it. The reason the whole topic exists is repetition — show learners three copies of the same three lines and the argument for functions makes itself."
+    }
+  ]
+}

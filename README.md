@@ -24,4 +24,8 @@ There is no free-text box, no menu of five separate questions, and no chat inter
 
 ## Corpus honesty
 
-Every corpus file (`corpus/**/*.json`) carries a `sourceNote` explaining exactly what's verified fact vs. illustrative gap-fill content, and why (KICD's official curriculum-design downloads are JS-rendered and couldn't be scraped in the build window; one alternate copy of the real Grade 10 Core Mathematics PDF was located but is a scanned image with no extractable text). The app surfaces this in the UI via the "illustrative content" badge on every generated pack. Replacing a corpus file with real extracted KICD text requires no code changes.
+Every corpus file (`corpus/**/*.json`) carries a `sourceNote` explaining exactly which fields are quoted from the official KICD curriculum design and which are teacher-authored, and every generated pack carries the same statement as a badge.
+
+The split is the same in all 31 sub-strands. **Learning outcomes are verbatim** from the sub-strand's "Specific Learning Outcomes" list in the official Grade 10 Computer Science and Mathematics curriculum designs — the extracted text of both is committed under `corpus/_source/`, so any quotation can be checked without internet. **Board notes, the activity, the five assessment questions and the explainer are illustrative** teacher-authored content: the design says what a learner must be able to do, not what to write on a board or how to mark it.
+
+`corpus/_source/verify-outcomes.js` enforces this rather than promising it — it checks every quoted outcome against the source designs and fails if one has drifted. Earlier versions of this README said the KICD designs could not be obtained as machine-readable text; text-layer copies of both were subsequently located, and `pdftotext` alone extracts them, so no OCR is involved. See `docs/corpus-content-plan.md` for provenance and the two places where a design contradicts itself.
