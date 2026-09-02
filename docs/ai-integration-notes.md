@@ -59,14 +59,15 @@ the fact. Gates run in this order, cheapest and most decisive first:
 
 ## What calibration actually found — read this before tuning anything
 
-96 real `llama3.2:3b` answers over 12 sub-strands spanning all 6 strands. Two question
-sets per chunk: **grounded** (answerable from the chunk) and **adjacent** (plausible for
-the subject, not covered by that chunk — previous year's teaching, textbook page, what
-equipment to buy). Saved to `server/ai.calibrate.jsonl`, so thresholds re-score offline
-in milliseconds:
+248 real `llama3.2:3b` answers over **all 31 sub-strands**. Two question sets per chunk:
+**grounded** (answerable from the chunk) and **adjacent** (plausible for the subject, not
+covered by that chunk — previous year's teaching, textbook page, misconceptions elsewhere,
+what equipment to buy). Saved to `server/ai.calibrate.jsonl`, appended per answer so a run
+that dies at call 240 is not lost, and re-scorable offline in milliseconds:
 
 ```bash
-node server/ai.calibrate.js            # ~4 minutes, calls the model, rewrites the jsonl
+node server/ai.calibrate.js --all      # ~15 min, all 31 sub-strands, rewrites the jsonl
+node server/ai.calibrate.js            # ~4 min, 12-sub-strand sample
 node server/ai.calibrate.js --replay   # instant, re-scores the saved answers
 ```
 
@@ -74,10 +75,10 @@ node server/ai.calibrate.js --replay   # instant, re-scores the saved answers
 
 | | Grounded | Adjacent |
 |---|---|---|
-| Overlap range | 0.26 – 1.00 | 0.22 – 1.00 |
+| Overlap range | 0.25 – 1.00 | 0.22 – 1.00 |
 
-The distributions sit on top of each other. Every threshold traded roughly one good
-answer for one bad one — at 0.60, keeping 81% of grounded answers still let 50% of
+The distributions sit on top of each other. Every threshold traded roughly one good answer
+for one bad one — at 0.60, keeping 85% of grounded answers still let 90% of the surviving
 adjacent ones through.
 
 This **reversed** the earlier reading. On the old 4-sub-strand corpus, grounded answers
@@ -99,35 +100,50 @@ words into a claim the chunk never made:
 >
 > "**Learners from other countries may think** that all computer storage is internal."
 
-Every content word is from the chunk, so overlap scores these *high*. The walkie-talkie
-one is the clearest harm: it invents a purchase for an activity the brief requires to
-need no materials. No threshold can catch this, because the vocabulary is not the problem.
+Every content word is from the chunk, so overlap scores these *high*. The walkie-talkie one
+is the clearest harm: it invents a purchase for an activity the brief requires to need no
+materials. No threshold can catch this, because the vocabulary is not the problem.
 
 What they share is a speculative or outside-the-chunk framing — and a grounded answer
-restating loaded material has no reason to hedge. Measured on the same 96 answers:
+restating loaded material has no reason to hedge. That became the `EXTERNAL_CLAIM` gate.
 
-| | matched the pattern |
-|---|---|
-| Grounded answers | **0 / 46** |
-| Adjacent answers that had passed every other gate | **28 / 31** |
+### Result, full corpus
 
-That became the `EXTERNAL_CLAIM` gate.
+124 answerable questions and 124 uncovered ones:
 
-### Result
-
-| | Before the gate | After |
+| | Without the gate | With it |
 |---|---|---|
-| Grounded questions answered | 46/48 (96%) | **47/48 (98%)** |
-| Uncovered questions answered | 31/48 (65%) | **3/48 (6%)** |
+| Answerable questions answered | 121/124 (98%) | **121/124 (98%)** |
+| Uncovered questions answered | 96/124 (77%) | **10/124 (8%)** |
 
-The three that still get through are benign: the model ignored the unanswerable question
-and restated correct chunk content — the LAN/WAN/PAN list, the probability range. Nothing
-false is asserted. The remainder split 42 blocked as external claims and 3 self-refused.
+It costs nothing on the grounded side and removes seven eighths of the uncovered answers.
+The rest split 105 blocked as external claims and 9 self-refused.
+
+**All 10 survivors were inspected and none asserts anything false.** In every case the
+model ignored the unanswerable question and restated correct chunk content — the
+LAN/WAN/PAN list, the physical-versus-logical topology distinction, the cone and sphere
+volume formulas, the probability range. One was asked what equipment the school should buy
+and answered with the topology definitions, recommending no purchase at all. The residual
+failure is a non-answer, not a fabrication.
 
 `MIN_OVERLAP` therefore sits at **0.30**, low enough to stop punishing paraphrase. Every
-higher value tested discarded good answers and caught nothing extra — the three survivors
-score 0.84–1.00, so raising the threshold is pure cost. Do not raise it expecting it to
-help with ungrounded claims; that is `EXTERNAL_CLAIM`'s job.
+higher value tested discarded good answers and caught nothing worth having — the survivors
+score 0.54–1.00, and reaching even one of them costs 8% of the grounded set. Do not raise
+it expecting it to help with ungrounded claims; that is `EXTERNAL_CLAIM`'s job.
+
+The 12-sub-strand sample run beforehand gave 98% grounded and 6% uncovered, within a
+couple of points of the full corpus. The fast sample is trustworthy for routine re-checks;
+`--all` is only needed when a decision rests on it.
+
+## The other real constraint: speed
+
+**~6 tokens/sec on CPU.** A 120-token answer is roughly 20 seconds; short ones came back in
+1–4s once the model was warm. `num_predict` is capped at 120 for that reason, which is also
+a correctness feature — shorter answers have less room to drift.
+
+This rules out anything long-form in the request path. Pack translation or full-text
+rewriting are not viable interactively at this speed and would have to be background work.
+The UI tells the teacher the wait is coming rather than leaving a dead button.
 
 ## Known gaps
 

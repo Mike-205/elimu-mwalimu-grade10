@@ -119,14 +119,18 @@ const fmt = (n) => n.toFixed(2);
 
     console.log(`model ${MODEL} | ${sample.length} sub-strands | ${sample.length * (GROUNDED.length + ADJACENT.length)} calls\n`);
     rows = [];
+    // Appended per answer rather than written at the end: a --all run is ~250 calls and
+    // twenty minutes, and losing all of it to a crash on the last one is avoidable.
+    fs.writeFileSync(LOG, '');
     for (const chunk of sample)
       for (const [set, questions] of [['G', GROUNDED], ['A', ADJACENT]])
         for (const question of questions) {
           const answer = (await ask(chunk, question)).trim();
-          rows.push({ id: chunk.id, set, question, answer });
+          const row = { id: chunk.id, set, question, answer };
+          rows.push(row);
+          fs.appendFileSync(LOG, JSON.stringify(row) + '\n');
           process.stdout.write('.');
         }
-    fs.writeFileSync(LOG, rows.map((r) => JSON.stringify(r)).join('\n') + '\n');
     console.log(`\nsaved ${rows.length} answers to ${path.basename(LOG)}\n`);
   }
 
