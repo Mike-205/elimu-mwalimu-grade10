@@ -1,5 +1,7 @@
 node_modules/
 *.log
 .DS_Store
-.claude/
+.claude/*
+# but project skills are shared tooling, not harness noise — see .claude/skills/
+!.claude/skills/
 .impeccable/
