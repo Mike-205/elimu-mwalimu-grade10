@@ -18,14 +18,6 @@ function loadCorpus() {
   for (const file of walk(CORPUS_ROOT)) {
     const doc = JSON.parse(fs.readFileSync(file, 'utf8'));
     for (const sub of doc.subStrands) {
-      const searchText = [
-        doc.grade, doc.subject, doc.strand, sub.subStrand,
-        ...(sub.learningOutcomes || []),
-        ...(sub.boardNotes || []),
-        sub.suggestedActivity || '',
-        sub.explainer || ''
-      ].join(' ').toLowerCase();
-
       chunks.push({
         id: sub.id,
         grade: doc.grade,
@@ -38,10 +30,9 @@ function loadCorpus() {
         sourceNote: doc.sourceNote,
         learningOutcomes: sub.learningOutcomes || [],
         boardNotes: sub.boardNotes || [],
-        suggestedActivity: sub.suggestedActivity || '',
-        assessmentRubric: sub.assessmentRubric || {},
-        explainer: sub.explainer || '',
-        searchText
+        activity: sub.activity || { description: '', materialsNeeded: '' },
+        assessmentQuestions: sub.assessmentQuestions || [],
+        explainer: sub.explainer || ''
       });
     }
   }
@@ -68,4 +59,8 @@ function getOptions(chunks) {
   }));
 }
 
-module.exports = { loadCorpus, getOptions };
+function findChunk(chunks, { grade, subject, strand, subStrand }) {
+  return chunks.find(c => c.grade === grade && c.subject === subject && c.strand === strand && c.subStrand === subStrand);
+}
+
+module.exports = { loadCorpus, getOptions, findChunk };

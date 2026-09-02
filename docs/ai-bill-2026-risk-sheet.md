@@ -10,8 +10,8 @@ The Bill defines a **high-risk AI system** as one that "poses significant risks 
 
 - **Who touches it:** only the teacher. No learner ever logs in, is identified, or interacts with the system directly.
 - **What data it holds:** none, persistently. No learner names, learner work, or session history is stored; nothing survives a restart.
-- **What it decides:** nothing about a person. It surfaces curriculum reference material (learning outcomes, board notes, a suggested activity, an assessment rubric) that the teacher reads and chooses whether to use. It does not grade, rank, admit, flag, or make any determination about a learner.
-- **How it answers:** only from a loaded, cited curriculum chunk. If nothing in the loaded material matches the question with reasonable confidence, it refuses ("sijui") instead of generating an answer — enforced in code (`server/retrieval.js` confidence gate; `server/ollama.js` prompt instructs refusal over guessing), not just as a policy statement.
+- **What it decides:** nothing about a person. It assembles one lesson pack (learning outcomes, board notes, one no-materials activity, five marked questions) that the teacher reads and chooses whether to use. It does not grade, rank, admit, flag, or make any determination about a learner.
+- **How it answers:** only from a loaded, cited curriculum chunk, and only via a fixed template — there is no language model anywhere in this system. `server/packBuilder.js` copies fields directly from a matched corpus entry into the output; `server/index.js`'s `/api/pack` refuses outright ("sijui") if the exact `{grade, subject, strand, subStrand}` requested isn't loaded, rather than assembling anything. This is a stronger guarantee than "the model was instructed to refuse" — there is no generative step capable of producing a sentence that wasn't already in the corpus file.
 - **Where it runs:** offline, on the teacher's own device, no network calls at request time.
 
 ## Self-assessment: Limited Risk, with High-Risk-style safeguards adopted anyway
@@ -26,7 +26,7 @@ Because of that uncertainty, the build already implements several protections th
 - **Human oversight / human centricity:** every output is advisory to the teacher; nothing reaches a learner without the teacher acting.
 - **Transparency and notification:** the app discloses "AI is involved in this session" and its limitations on every screen, before any answer is shown.
 - **Traceability:** every non-refused answer carries a citation to the specific curriculum chunk it came from, plus an explicit `verified` flag distinguishing confirmed strand facts from illustrative gap-fill content (see corpus source notes).
-- **Refuse-over-guess:** the retrieval confidence gate and the model prompt both refuse rather than fabricate when the loaded material doesn't support an answer.
+- **Refuse-over-guess, structurally:** the exact-match gate in `/api/pack` refuses rather than fabricate when the requested combination isn't loaded — and because pack assembly is template-filling rather than generation, there is no code path in this system that can produce content beyond what a corpus file already contains.
 
 ## What would push this into High Risk
 

@@ -3,7 +3,7 @@
   "subject": "Core Mathematics",
   "pathway": "Compulsory core (all pathways)",
   "strand": "Sequences and Series",
-  "sourceNote": "We located the genuine 2024-edition KICD 'Grade 10 Core Mathematics Curriculum Design' PDF (13.3MB, 69 pages) at a third-party teacher resource mirror, but it is a scanned image document with no extractable text layer (confirmed via pdftotext: zero characters recovered) and OCR tooling was not available in the build environment within the time budget. Strand naming below follows the standard CBE Grade 10 Mathematics structure reported by multiple teacher-resource sites. Sub-strand detail (learning outcomes, board notes, activities, rubrics) is illustrative content written in the style of a KICD curriculum design, NOT verbatim official text. Replace this file with the real KICD PDF's extracted/OCR'd text when available; the app's retrieval and citation logic does not change.",
+  "sourceNote": "We located the genuine 2024-edition KICD 'Grade 10 Core Mathematics Curriculum Design' PDF (13.3MB, 69 pages) at a third-party teacher resource mirror, but it is a scanned image document with no extractable text layer (confirmed via pdftotext: zero characters recovered) and OCR tooling was not available in the build environment within the time budget. Strand naming below follows the standard CBE Grade 10 Mathematics structure reported by multiple teacher-resource sites. Sub-strand detail (learning outcomes, board notes, activity, assessment questions) is illustrative content written in the style of a KICD curriculum design, NOT verbatim official text. Replace this file with the real KICD PDF's extracted/OCR'd text when available; the app's pack-assembly logic does not change.",
   "subStrands": [
     {
       "id": "math-seq-arithmetic",
@@ -21,13 +21,17 @@
         "Sum of first n terms: Sn = n/2 [2a + (n-1)d]",
         "Example: 2, 5, 8, 11, ... has a=2, d=3"
       ],
-      "suggestedActivity": "Learners each count off a number in a line (1,2,3...), then the class builds a real arithmetic sequence by skip-counting (e.g. by 3s) out loud, identifying a and d before finding T10 together.",
-      "assessmentRubric": {
-        "BE": "Recognises a sequence has a pattern but cannot state the rule.",
-        "AE": "Finds the common difference and the next term with guidance.",
-        "ME": "Calculates the nth term of a given arithmetic sequence independently.",
-        "EE": "Calculates both the nth term and the sum of n terms, and applies this to a real-life context (e.g. savings that increase by a fixed amount each month)."
+      "activity": {
+        "description": "Learners each count off a number in a line (1,2,3...), then the class builds a real arithmetic sequence by skip-counting (e.g. by 3s) out loud, identifying a and d before finding T10 together.",
+        "materialsNeeded": "None — spoken/whole-class activity only."
       },
+      "assessmentQuestions": [
+        { "question": "What is the common difference of 4, 7, 10, 13?", "markingScheme": "1 mark for 3." },
+        { "question": "Find the 6th term of the sequence 2, 5, 8, 11, ...", "markingScheme": "2 marks for 17 with formula shown; 1 mark for correct method, arithmetic slip." },
+        { "question": "Write the formula for the nth term of an arithmetic sequence.", "markingScheme": "1 mark for Tn = a + (n-1)d." },
+        { "question": "Find the sum of the first 5 terms of 3, 6, 9, 12, 15.", "markingScheme": "2 marks for 45; 1 mark for correct setup with an arithmetic error." },
+        { "question": "A sequence has a = 5 and d = -2. Find the 4th term.", "markingScheme": "2 marks for -1; 1 mark for correct substitution with a sign error." }
+      ],
       "explainer": "An arithmetic sequence just keeps adding (or subtracting) the same number each time. If you know the first term and how much it changes by each step, you can jump straight to any term without listing them all — that's what the nth-term formula does."
     },
     {
@@ -46,13 +50,17 @@
         "Sum of first n terms (r != 1): Sn = a(1 - r^n) / (1 - r)",
         "Example: 3, 6, 12, 24, ... has a=3, r=2"
       ],
-      "suggestedActivity": "Tell the classic 'rice grains doubling on a chessboard' story (1,2,4,8...) and have learners predict how large the number gets by square 10 versus square 20, then check with the formula.",
-      "assessmentRubric": {
-        "BE": "Recognises multiplication is involved but cannot state the ratio.",
-        "AE": "Finds the common ratio and next term with guidance.",
-        "ME": "Calculates the nth term of a geometric sequence independently.",
-        "EE": "Calculates the nth term and sum of n terms, and explains why geometric growth becomes large much faster than arithmetic growth."
+      "activity": {
+        "description": "Tell the classic 'rice grains doubling on a chessboard' story (1,2,4,8...) and have learners predict how large the number gets by square 10 versus square 20, then check with the formula.",
+        "materialsNeeded": "None — spoken storytelling activity only."
       },
+      "assessmentQuestions": [
+        { "question": "What is the common ratio of 2, 6, 18, 54?", "markingScheme": "1 mark for 3." },
+        { "question": "Find the 5th term of the sequence 3, 6, 12, 24, ...", "markingScheme": "2 marks for 48; 1 mark for correct method, arithmetic slip." },
+        { "question": "Write the formula for the nth term of a geometric sequence.", "markingScheme": "1 mark for Tn = a r^(n-1)." },
+        { "question": "A sequence has a = 2 and r = 3. Find the 4th term.", "markingScheme": "2 marks for 54; 1 mark for correct substitution with an arithmetic error." },
+        { "question": "Explain in one sentence why geometric growth eventually outpaces arithmetic growth.", "markingScheme": "2 marks for referencing repeated multiplication vs repeated addition; 1 mark for a vaguer 'it grows faster' answer." }
+      ],
       "explainer": "A geometric sequence keeps multiplying by the same number. This is why it grows much faster than an arithmetic sequence — doubling something ten times gives you far more than adding the same amount ten times."
     }
   ]

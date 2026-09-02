@@ -47,7 +47,7 @@ h1 { margin-bottom: 0.1rem; }
   gap: 0.25rem;
 }
 
-select, input[type=text] {
+select {
   font-size: 1rem;
   padding: 0.5rem;
   border: 1px solid var(--border);
@@ -55,50 +55,52 @@ select, input[type=text] {
   background: white;
 }
 
-.questions {
-  display: grid;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.questions button {
-  text-align: left;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--accent);
-  background: white;
-  color: var(--accent);
-  border-radius: 8px;
-  font-size: 0.95rem;
-  cursor: pointer;
-}
-
-.questions button:hover { background: #eafaf3; }
-
-.freeform {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.freeform input { flex: 1; }
-.freeform button, .questions button + button { cursor: pointer; }
-#askFree {
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
+.generate-btn {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1.05rem;
+  font-weight: 700;
   border: none;
-  background: var(--ink);
+  border-radius: 8px;
+  background: var(--accent);
   color: white;
   cursor: pointer;
+  margin-bottom: 1.5rem;
 }
 
-.result {
+.generate-btn:hover { background: #095c41; }
+
+.result.hidden { display: none; }
+
+.pack-actions { margin-bottom: 1rem; }
+#printPack {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--ink);
+  background: white;
+  cursor: pointer;
+}
+
+.sijui-box.hidden, .pack.hidden { display: none; }
+
+.sijui-box {
+  border: 1px solid #7a1f2b;
+  background: #f8d7da;
+  color: #7a1f2b;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.pack {
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 1rem 1.25rem;
+  padding: 1.25rem 1.5rem;
   background: white;
 }
 
-.result.hidden { display: none; }
+.pack h3 { margin-top: 1.25rem; margin-bottom: 0.4rem; }
 
 .badge {
   display: inline-block;
@@ -108,10 +110,9 @@ select, input[type=text] {
   border-radius: 999px;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
+  background: #ffe4b5;
+  color: #7a4a00;
 }
-
-.badge.illustrative { background: #ffe4b5; color: #7a4a00; }
-.badge.sijui { background: #f8d7da; color: #7a1f2b; }
 
 .citation {
   font-size: 0.82rem;
@@ -119,7 +120,20 @@ select, input[type=text] {
   font-style: italic;
 }
 
-details summary { cursor: pointer; font-size: 0.85rem; color: #666; }
+.materials {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+details summary { cursor: pointer; font-size: 0.85rem; color: #666; margin-top: 1rem; }
 details p { font-size: 0.85rem; color: #444; }
 
-ul.plain { margin: 0.25rem 0; padding-left: 1.25rem; }
+ul.plain, #packQuestions { margin: 0.25rem 0; padding-left: 1.25rem; }
+#packQuestions li { margin-bottom: 0.6rem; }
+
+@media print {
+  .disclosure, .picker, .generate-btn, .no-print { display: none !important; }
+  body { background: white; }
+  .pack { border: none; padding: 0; }
+}
