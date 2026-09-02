@@ -18,7 +18,24 @@ Then open `http://127.0.0.1:4173` in a browser. Everything runs on localhost; no
 
 The app works fully without this — the five structured questions are always answered directly from the curriculum corpus, and free-text questions fall back to showing the closest grounded curriculum material with its citation.
 
-If an Ollama server is running locally (`ollama serve`, default port 11434) with a pulled model, free-text questions will additionally be answered by that model — strictly constrained to the retrieved curriculum chunk, instructed to say `SIJUI` rather than guess. Set `ELIMU_MODEL` env var to override the default model name (`llama3.2:3b`).
+If an Ollama server is running locally (default port 11434) with a pulled model, free-text questions will additionally be answered by that model — strictly constrained to the retrieved curriculum chunk, instructed to say `SIJUI` rather than guess. Set `ELIMU_MODEL` env var to override the default model name (`llama3.2:3b`).
+
+No root access is required. If you don't have Ollama installed system-wide, a user-space install works:
+
+```
+mkdir -p ~/.local/ollama
+curl -fsSL -o /tmp/ollama.tar.zst \
+  "https://github.com/ollama/ollama/releases/latest/download/ollama-linux-amd64.tar.zst"
+tar --zstd -xf /tmp/ollama.tar.zst -C ~/.local/ollama
+
+export OLLAMA_MODELS=~/.local/ollama/models
+~/.local/ollama/bin/ollama serve &          # starts the local server on :11434
+
+export PATH="$HOME/.local/ollama/bin:$PATH"
+ollama pull llama3.2:3b                     # ~2GB, one-time, needs internet
+```
+
+Once pulled, the model runs fully offline — no network access needed at inference time. Everything above only needs to happen once, while internet is available; classroom use afterwards is entirely offline.
 
 ## How the "sijui" rule is enforced (not just promised)
 
