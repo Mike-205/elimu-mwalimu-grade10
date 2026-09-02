@@ -97,18 +97,26 @@ export function renderPack(container, pack) {
   // --- head
   const head = el('header', 'pack__head');
 
-  const badge = el(
-    'p',
-    meta.verified === 'illustrative' ? 'badge badge--illustrative' : 'badge badge--official'
-  );
-  badge.appendChild(icon(meta.verified === 'illustrative' ? 'alert' : 'check', 'badge__icon'));
+  // Anything whose `verified` string mentions illustrative content is badged as
+  // illustrative, not just the exact value 'illustrative'. The corpus now uses a
+  // sentence — "learning outcomes verbatim from the KICD design; teaching content
+  // illustrative" — and an equality check against the old value badged that as
+  // official, with a tick, on content that is partly written for this project.
+  // Erring toward the alert badge is the only safe direction here.
+  const verified = meta.verified || '';
+  const partlyIllustrative = verified === '' || /illustrative/i.test(verified);
+
+  const badge = el('p', partlyIllustrative ? 'badge badge--illustrative' : 'badge badge--official');
+  badge.appendChild(icon(partlyIllustrative ? 'alert' : 'check', 'badge__icon'));
   badge.appendChild(
     el(
       'span',
       null,
-      meta.verified === 'illustrative'
+      // The bare legacy value gets the sentence it used to render; anything else is
+      // already written as a sentence and is shown as the corpus wrote it.
+      verified === 'illustrative'
         ? 'Illustrative content — verify against official KICD PDF'
-        : meta.verified || ''
+        : verified
     )
   );
   head.appendChild(badge);

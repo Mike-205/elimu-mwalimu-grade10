@@ -1050,6 +1050,108 @@ main {
 }
 
 /* --------------------------------------------------------------------------
+   11b. AI panel — optional, off unless AI_ENABLED=1, and deliberately not styled
+   like the pack. Amber rather than forest, dashed rather than solid: a teacher
+   should never mistake model output for cited KICD material. Never printed.
+   -------------------------------------------------------------------------- */
+
+.ai-panel {
+  margin-top: var(--s-8);
+  padding: var(--s-5) var(--s-6);
+  border: 1px dashed var(--amber-100);
+  border-radius: var(--r-lg);
+  background: var(--amber-050);
+}
+
+.ai-panel__head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+}
+
+.ai-panel__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.ai-panel__flag {
+  padding: 2px var(--s-2);
+  border-radius: var(--r-pill);
+  background: var(--warn);
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ai-panel__note {
+  margin: var(--s-2) 0 var(--s-4);
+  max-width: 62ch;
+  color: var(--ink-muted);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.ai-panel__row {
+  display: flex;
+  gap: var(--s-2);
+  flex-wrap: wrap;
+}
+
+.ai-panel__input {
+  flex: 1 1 18rem;
+  min-width: 0;
+  padding: 10px var(--s-3);
+  border: 1px solid var(--amber-100);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9375rem;
+}
+
+.ai-panel__input:focus-visible {
+  outline: 2px solid var(--warn);
+  outline-offset: 1px;
+}
+
+.ai-panel__ask {
+  padding: 10px var(--s-5);
+  border: 1px solid var(--warn);
+  border-radius: var(--r-sm);
+  background: var(--warn);
+  color: #fff;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+  transition: filter 0.15s var(--ease);
+}
+
+.ai-panel__ask:hover { filter: brightness(1.08); }
+.ai-panel__ask[disabled] { opacity: 0.6; cursor: progress; }
+
+.ai-panel__status {
+  margin: var(--s-3) 0 0;
+  color: var(--ink-muted);
+  font-size: 0.8125rem;
+}
+
+.ai-panel__answer {
+  margin: var(--s-2) 0 0;
+  padding: var(--s-3) var(--s-4);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
    12. Responsive — each breakpoint is a deliberate layout, not a shrink
    -------------------------------------------------------------------------- */
 

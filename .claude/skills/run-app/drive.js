@@ -143,25 +143,51 @@ async function main() {
   // parent still reports its own display, so computed style alone says "visible" for
   // things nobody can see. getClientRects() is empty whenever any ancestor hides it.
   const state = await evaluate(`(() => {
-    const shown = (id) => {
-      const el = document.getElementById(id);
-      return el ? el.getClientRects().length > 0 : null;
-    };
-    const count = (id) => document.getElementById(id)?.children.length ?? null;
+    const shown = (el) => (el ? el.getClientRects().length > 0 : null);
+    const q = (sel) => document.querySelector(sel);
+    const pack = document.getElementById('pack');
+    const section = (heading) => [...document.querySelectorAll('.pack__section')]
+      .find(s => (s.querySelector('.pack__heading')?.textContent || '').toLowerCase().includes(heading));
+    const items = (heading) => section(heading)?.querySelectorAll('.pack__list > li').length ?? null;
     return JSON.stringify({
-      packShown: shown('packBox'),
-      sijuiShown: shown('sijuiBox'),
-      aiPanelShown: shown('aiPanel'),
+      packShown: shown(pack),
+      sijuiShown: shown(q('.sijui')) || shown(q('[class*=sijui]')),
+      aiPanelShown: shown(document.getElementById('aiPanel')),
       title: document.getElementById('packTitle')?.textContent,
-      outcomes: count('packOutcomes'),
-      boardNotes: count('packBoard'),
-      questions: count('packQuestions'),
-      timeline: [...(document.getElementById('packTimeline')?.children ?? [])].map(li => li.textContent.trim()),
-      badge: document.getElementById('verifiedBadge')?.textContent
+      badge: q('.badge')?.textContent?.trim(),
+      badgeKind: q('.badge')?.className,
+      outcomes: items('what to teach'),
+      boardNotes: items('board notes'),
+      questions: section('understanding')?.querySelectorAll('li').length ?? null,
+      sections: [...document.querySelectorAll('.pack__heading')].map(h => h.textContent.trim())
     }, null, 1);
   })()`);
   console.log('state:', state);
   await shot('02-pack');
+
+  // Optional: exercise the AI panel end to end. Only meaningful with AI_ENABLED=1.
+  const ASK = arg('ask', null);
+  if (ASK) {
+    const ready = await evaluate("!!document.getElementById('aiAsk')");
+    if (!ready) {
+      console.log('ask: skipped — no AI panel (feature off or no model)');
+    } else {
+      await evaluate(`(() => {
+        document.getElementById('aiQuestion').value = ${JSON.stringify(ASK)};
+        document.getElementById('aiAsk').click();
+      })()`);
+      // A 3B model on CPU is slow; poll for the button to re-enable rather than guess.
+      for (let i = 0; i < 120; i++) {
+        if (await evaluate("!document.getElementById('aiAsk').disabled")) break;
+        await sleep(1000);
+      }
+      console.log('ask:', await evaluate(`JSON.stringify({
+        status: document.getElementById('aiStatus')?.textContent,
+        answer: document.getElementById('aiAnswer')?.hidden ? null : document.getElementById('aiAnswer')?.textContent
+      }, null, 1)`));
+      await shot('04-ai-answer');
+    }
+  }
 
   // What the teacher actually carries. Anything visible here must be corpus-sourced.
   await send('Emulation.setEmulatedMedia', { media: 'print' });
@@ -169,12 +195,18 @@ async function main() {
   const inPrint = await evaluate(`(() => {
     const shown = (el) => (el ? el.getClientRects().length > 0 : null);
     return JSON.stringify({
-      pack: shown(document.getElementById('packBox')),
+      pack: shown(document.getElementById('pack')),
       aiPanel: shown(document.getElementById('aiPanel')),
-      picker: shown(document.getElementById('pickerForm')),
+      picker: shown(document.getElementById('builder')),
       disclosure: shown(document.querySelector('.disclosure')),
-      masthead: shown(document.querySelector('.masthead')),
-      printButton: shown(document.getElementById('printPack'))
+      header: shown(document.querySelector('.site-header')),
+      hero: shown(document.querySelector('.hero-band')),
+      printButton: shown(document.getElementById('printPack')),
+      // Eve's beforeprint handler opens <details> so the source note prints expanded.
+      // CDP media emulation does not fire beforeprint, so this reads false here even
+      // though a real Ctrl+P is fine — dispatch it manually to check honestly.
+      sourceNoteOpen: (window.dispatchEvent(new Event('beforeprint')),
+                       !!document.querySelector('#pack details[open]'))
     });
   })()`);
   console.log('visible in print:', inPrint);

@@ -5,6 +5,7 @@
 import { fetchOptions, fetchPack } from './api.js';
 import { gradesIn, subjectsIn, strandsIn, subStrandsIn, fillSelect } from './builder.js';
 import { renderLoading, renderError, renderSijui, renderPack, markStale } from './pack-view.js';
+import { mountAiPanel } from './ai-panel.js'; // no-op unless the server reports AI_ENABLED
 
 const form = document.getElementById('builder');
 const generateButton = document.getElementById('generate');
@@ -120,6 +121,10 @@ async function generate() {
     const heading = article.querySelector('#packTitle');
     heading.focus({ preventScroll: true });
     article.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+
+    // Appended after the pack, never inside it. Resolves to null and adds nothing when
+    // the feature is switched off, so nothing below depends on it.
+    mountAiPanel(result, selection);
   } catch (error) {
     renderedFor = null;
     renderError(result, error && error.message ? error.message : null);
