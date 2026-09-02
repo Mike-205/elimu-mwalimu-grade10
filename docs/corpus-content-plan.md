@@ -199,7 +199,7 @@ only sub-strands that appear in the PDFs. Sub-strand count will *drop* — that 
 
 **Done when:** 7 sub-strands generate full packs at both 40 and 80 minutes.
 
-### M3 — Computer Networking (4 sub-strands)
+### M3 — Computer Networking (4 sub-strands) ✅ done
 
 2.1 Data communication · 2.2 Data Transmission Media · 2.3 Computer Network Elements ·
 2.4 Network Topologies
