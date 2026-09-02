@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elimu — Mwalimu wa Grade 10</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="disclosure">
+    <strong>AI is involved in this session.</strong> This tool runs fully offline on this device, uses no internet, and stores nothing after you close it — no learner names, no learner work, ever. Answers outside the loaded curriculum material are refused, not guessed.
+  </header>
+
+  <main>
+    <h1>Elimu, Mwalimu wa Grade 10</h1>
+    <p class="subtitle">Kwa mwalimu Jane — offline lesson-prep assistant, grounded only in loaded KICD curriculum material.</p>
+
+    <section class="picker">
+      <label>Grade
+        <select id="grade"></select>
+      </label>
+      <label>Subject
+        <select id="subject"></select>
+      </label>
+      <label>Strand
+        <select id="strand"></select>
+      </label>
+      <label>Sub-strand
+        <select id="subStrand"></select>
+      </label>
+    </section>
+
+    <section class="questions">
+      <button data-mode="teach">1. What exactly am I supposed to teach?</button>
+      <button data-mode="board">2. What should I write on the board?</button>
+      <button data-mode="activity">3. What activity can I give students?</button>
+      <button data-mode="assess">4. How do I assess whether they understood?</button>
+      <button data-mode="explain">5. What if I don't know this topic?</button>
+    </section>
+
+    <section class="freeform">
+      <input id="freeQuestion" type="text" placeholder="Or ask anything else about this strand...">
+      <button id="askFree">Ask</button>
+    </section>
+
+    <section id="result" class="result hidden">
+      <div class="badge" id="verifiedBadge"></div>
+      <h2 id="resultLabel"></h2>
+      <div id="resultValue"></div>
+      <p class="citation" id="resultCitation"></p>
+      <details id="sourceNoteWrap">
+        <summary>Source note</summary>
+        <p id="sourceNote"></p>
+      </details>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

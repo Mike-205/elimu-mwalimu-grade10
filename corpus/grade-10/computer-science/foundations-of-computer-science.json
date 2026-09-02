@@ -1,0 +1,59 @@
+{
+  "grade": "Grade 10",
+  "subject": "Computer Science",
+  "pathway": "STEM Pathway (elective)",
+  "strand": "Foundations of Computer Science",
+  "sourceNote": "Strand name, sub-strand groupings and language list verified via public secondary reporting on the 2026 KICD Grade 10 Computer Science curriculum design (programming taught in Python/C/C++/C#/Java/Ruby/Scratch/Swift). The official KICD PDF could not be retrieved as machine-readable text in the time available (KICD's download listings are JS-rendered; the one alternate copy located was a scanned image PDF with no text layer). Sub-strand detail below (learning outcomes, board notes, activities, rubrics) is illustrative content written in the style of a KICD curriculum design, NOT verbatim official text. Replace this file with the real KICD PDF's extracted text when available; the app's retrieval and citation logic does not change.",
+  "subStrands": [
+    {
+      "id": "cs-fcs-data-representation",
+      "subStrand": "Data Representation",
+      "citation": "Grade 10 Computer Science Curriculum Design — Strand: Foundations of Computer Science — Sub-strand: Data Representation (illustrative; verify against official KICD PDF)",
+      "verified": "illustrative",
+      "learningOutcomes": [
+        "Explain how a computer represents numbers, text and images using binary digits",
+        "Convert whole numbers between binary, decimal and hexadecimal",
+        "Describe why computers use binary rather than decimal internally"
+      ],
+      "boardNotes": [
+        "Binary = base 2. Only two digits exist: 0 and 1.",
+        "Each binary digit is called a bit. 8 bits = 1 byte.",
+        "Example: decimal 13 = binary 1101 (8+4+0+1)",
+        "Computers use binary because circuits have two reliable states: on (1) and off (0)."
+      ],
+      "suggestedActivity": "In pairs, learners convert their own age and their house number from decimal to binary by repeated division by 2, then swap books and check each other's working.",
+      "assessmentRubric": {
+        "BE": "Lists the two binary digits but cannot convert a number.",
+        "AE": "Converts a simple decimal number to binary with guidance.",
+        "ME": "Converts decimal to binary and binary to decimal independently.",
+        "EE": "Converts between binary, decimal and hexadecimal and explains why computers use binary."
+      },
+      "explainer": "Binary is just counting using only two symbols instead of ten. Decimal place values go ...100,10,1; binary place values go ...8,4,2,1 — each one double the last. To convert decimal to binary, repeatedly divide by 2 and read the remainders bottom-to-top."
+    },
+    {
+      "id": "cs-fcs-computer-hardware",
+      "subStrand": "Computer Hardware and Components",
+      "citation": "Grade 10 Computer Science Curriculum Design — Strand: Foundations of Computer Science — Sub-strand: Computer Hardware and Components (illustrative; verify against official KICD PDF)",
+      "verified": "illustrative",
+      "learningOutcomes": [
+        "Identify the main hardware components of a computer (CPU, RAM, storage, input/output devices)",
+        "Explain the role of the CPU and RAM in processing tasks",
+        "Distinguish between primary and secondary storage"
+      ],
+      "boardNotes": [
+        "CPU = 'brain' of the computer, executes instructions",
+        "RAM = short-term memory, cleared when power is off (volatile)",
+        "Storage (HDD/SSD) = long-term memory, keeps data when power is off (non-volatile)",
+        "Input devices (keyboard, mouse) -> Processing (CPU+RAM) -> Output devices (screen, speaker)"
+      ],
+      "suggestedActivity": "If a real computer case is not available, learners label a hand-drawn diagram of a computer's components on paper or on the board, then explain the journey of a single keystroke from keyboard to screen.",
+      "assessmentRubric": {
+        "BE": "Names one hardware component.",
+        "AE": "Names several components with guidance on their function.",
+        "ME": "Names components and correctly explains each one's function.",
+        "EE": "Explains how components work together to complete a task, e.g. opening a file."
+      },
+      "explainer": "Think of a computer like a kitchen: the CPU is the cook (does the work), RAM is the counter space (holds what you're using right now), and storage is the pantry (keeps things even when the kitchen is closed)."
+    }
+  ]
+}

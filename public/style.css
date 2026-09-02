@@ -1,0 +1,125 @@
+:root {
+  --ink: #1b1f23;
+  --paper: #faf7f0;
+  --accent: #0b6e4f;
+  --warn: #8a5a00;
+  --border: #d8d0bd;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.disclosure {
+  background: #fff3cd;
+  border-bottom: 2px solid var(--warn);
+  padding: 0.75rem 1.25rem;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+h1 { margin-bottom: 0.1rem; }
+.subtitle { color: #555; margin-top: 0; }
+
+.picker {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.picker label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  font-weight: 600;
+  gap: 0.25rem;
+}
+
+select, input[type=text] {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: white;
+}
+
+.questions {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.questions button {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--accent);
+  background: white;
+  color: var(--accent);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.questions button:hover { background: #eafaf3; }
+
+.freeform {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.freeform input { flex: 1; }
+.freeform button, .questions button + button { cursor: pointer; }
+#askFree {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--ink);
+  color: white;
+  cursor: pointer;
+}
+
+.result {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  background: white;
+}
+
+.result.hidden { display: none; }
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.badge.illustrative { background: #ffe4b5; color: #7a4a00; }
+.badge.sijui { background: #f8d7da; color: #7a1f2b; }
+
+.citation {
+  font-size: 0.82rem;
+  color: #555;
+  font-style: italic;
+}
+
+details summary { cursor: pointer; font-size: 0.85rem; color: #666; }
+details p { font-size: 0.85rem; color: #444; }
+
+ul.plain { margin: 0.25rem 0; padding-left: 1.25rem; }
