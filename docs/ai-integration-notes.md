@@ -18,9 +18,16 @@ refuses otherwise.
 | `public/*` | The panel, its styling, and the availability check |
 
 ```bash
-node server/ai.test.js     # no model needed
-node server/index.js       # panel appears only if a model is reachable
+node server/ai.test.js                 # no model needed
+node server/index.js                   # default: feature absent entirely
+AI_ENABLED=1 node server/index.js      # panel appears if a model is also reachable
 ```
+
+**Off unless asked for.** `CONTRIBUTING.md`'s first rule forbids a second button or a
+free-text box, and this adds both — so it does not exist unless `AI_ENABLED=1` is set. The
+flag is checked twice and fails closed: `isAvailable()` reports unavailable without
+probing, and `askGrounded()` refuses before reaching a model, so a direct POST cannot get
+round the hidden panel.
 
 ## How the guardrails are actually met
 

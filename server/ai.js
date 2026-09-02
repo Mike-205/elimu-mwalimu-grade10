@@ -13,6 +13,15 @@
 
 const http = require('http');
 
+// Off unless explicitly switched on. CONTRIBUTING.md's first rule says the app must have
+// exactly one input and one action, and this feature adds a text box — so it does not
+// exist unless someone asks for it by name. With the flag unset the app is, from the
+// outside, byte-for-byte the single-action tool the brief describes: no panel, no second
+// button, no model call, and /api/ask refuses without probing anything.
+//
+//   AI_ENABLED=1 node server/index.js
+const ENABLED = process.env.AI_ENABLED === '1';
+
 const OLLAMA_HOST = process.env.OLLAMA_HOST || '127.0.0.1';
 const OLLAMA_PORT = Number(process.env.OLLAMA_PORT || 11434);
 const MODEL = process.env.OLLAMA_MODEL || 'llama3.2:3b';
@@ -179,12 +188,14 @@ function ollama(path, body, timeoutMs) {
 
 /** Is a local model reachable right now? Frontend hides the whole feature when false. */
 async function isAvailable() {
+  // Fail closed, and do not even probe: with the flag off there is nothing to offer.
+  if (!ENABLED) return { available: false, enabled: false, model: MODEL, installed: [] };
   try {
     const tags = await ollama('/api/tags', null, 2000);
     const models = (tags.models || []).map((m) => m.name);
-    return { available: models.includes(MODEL), model: MODEL, installed: models };
+    return { available: models.includes(MODEL), enabled: true, model: MODEL, installed: models };
   } catch {
-    return { available: false, model: MODEL, installed: [] };
+    return { available: false, enabled: true, model: MODEL, installed: [] };
   }
 }
 
@@ -194,6 +205,10 @@ async function isAvailable() {
  * for an answer.
  */
 async function askGrounded(chunk, question) {
+  // Second, independent guard. The frontend already hides the panel when disabled, but a
+  // direct POST must not reach a model either.
+  if (!ENABLED) return { sijui: true, message: REFUSAL, reason: 'ai disabled' };
+
   const q = String(question || '').trim();
   if (q.length < 3) return { sijui: true, message: REFUSAL, reason: 'question too short' };
   if (q.length > 300) return { sijui: true, message: REFUSAL, reason: 'question too long' };
@@ -224,4 +239,4 @@ async function askGrounded(chunk, question) {
   };
 }
 
-module.exports = { isAvailable, askGrounded, checkGrounded, chunkText, REFUSAL };
+module.exports = { isAvailable, askGrounded, checkGrounded, chunkText, REFUSAL, ENABLED };

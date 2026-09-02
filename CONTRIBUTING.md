@@ -9,6 +9,26 @@ This project exists to satisfy a fixed brief, and two of its rules are the actua
 
 If a change you're making would violate either rule, it's a design conversation, not a PR. Raise it before writing code.
 
+### One amendment, made deliberately
+
+Rule 2 used to read "there is no language model anywhere in this codebase". There now is
+one, in `server/ai.js`, and this is the design conversation that rule asked for.
+
+It is **off unless `AI_ENABLED=1` is set**. With the flag unset — which is every default
+run, every demo and every clone — the app has no text box, no second button, no model
+call, and `/api/ask` refuses without probing anything. From the outside it is the
+single-action tool the brief describes, unchanged.
+
+Both rules still hold where they matter. Model output never enters a generated pack and is
+excluded from the print stylesheet, so the page a teacher carries into class remains
+entirely corpus-sourced and every field in it still traces to a corpus JSON file. What
+changed is narrower than the old wording: model code exists in the repository, and can be
+switched on for exploration.
+
+If you are adding to the AI path, `docs/ai-integration-notes.md` has the guardrails, the
+measured calibration behind them, and what they still do not catch. If you are working
+anywhere else, the two rules above apply to you unchanged.
+
 ## Project layout
 
 ```
@@ -26,7 +46,7 @@ docs/                   <- required deliverable sheets + project writeups
 - `corpus-content` — add or extend curriculum sub-strands. Pure JSON, no code changes needed.
 - `ui-polish` — visual/UX polish, Kiswahili labels, print-stylesheet tweaks. Touches `public/` only.
 - `docs-review` — tighten the two required sheets (`docs/who-this-helps.md`, `docs/ai-bill-2026-risk-sheet.md`) and the two writeups (`docs/project-overview.md`, `docs/technical-design.md`).
-- `ai-integration` — exploratory local-model work (see below). Not part of the core app; the app must work correctly with this branch never merged.
+- `ai-integration` — exploratory local-model work (see below). Merged, but inert: everything it adds is behind `AI_ENABLED=1` and off by default.
 
 ### Who owns what
 

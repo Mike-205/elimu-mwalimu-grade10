@@ -12,7 +12,13 @@ No install step, no npm dependencies — pure Node.js built-ins.
 node server/index.js
 ```
 
-Then open `http://127.0.0.1:4173` in a browser. Everything runs on localhost; no network calls are made, ever. Pick grade/subject/strand/sub-strand/lesson length, click **Generate my lesson pack**, then **Print / save this pack** — that's the "pack she can carry": a printable page, not a screen she has to keep open.
+Then open `http://127.0.0.1:4173` in a browser.
+
+There is one optional extra, off by default. `AI_ENABLED=1 node server/index.js` adds a
+panel for asking a question about the sub-strand you just generated, answered by a local
+model from that sub-strand's material alone and refusing rather than guessing. It needs
+Ollama and a pulled model, never touches the printed pack, and with the flag unset none of
+it exists. See `docs/ai-integration-notes.md`. Everything runs on localhost; no network calls are made, ever. Pick grade/subject/strand/sub-strand/lesson length, click **Generate my lesson pack**, then **Print / save this pack** — that's the "pack she can carry": a printable page, not a screen she has to keep open.
 
 ## How "one answer, not the answer" is enforced
 
