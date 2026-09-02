@@ -261,7 +261,7 @@ Largest milestone by count. Split across commits if it helps; the "done when" is
 
 **Done when:** Mathematics is whole — 14 sub-strands, no refusals inside the subject.
 
-### M8 — Corpus audit and PR
+### M8 — Corpus audit and PR ✅ done
 
 One pass over everything: duplicate `id`s, question counts, activity materials, marking
 schemes that actually award marks, `sourceNote` honesty on every file, sub-strand strings
@@ -334,6 +334,13 @@ curl -s -X POST http://127.0.0.1:4173/api/pack \
 ## Not in scope on this branch
 
 - Any change under `server/` or `public/` — those belong to `main` and `ui-polish`
+- The three writeups in `docs/` owned by `docs-review` (`project-overview.md`,
+  `technical-design.md`, `who-this-helps.md`), even where this branch has made them
+  factually wrong. Those are flagged in the PR body with line numbers and corrections,
+  not edited here. **One deliberate exception:** `README.md` had no assigned owner and
+  stated as fact that the KICD designs could not be obtained as text. It is the first
+  thing a reader sees, so its "Corpus honesty" section was corrected in M8 rather than
+  left false pending someone else
 - Anything that adds a second thing for the teacher to click
 - Generated, summarized or model-written text of any kind
 - New subjects beyond Computer Science and Mathematics
