@@ -1,0 +1,344 @@
+{
+  "grade": "Grade 10",
+  "subject": "Computer Science",
+  "pathway": "STEM Pathway (elective)",
+  "strand": "Foundation of Computer Science",
+  "sourceNote": "Strand and sub-strand names, lesson allocations and every entry's learningOutcomes are taken verbatim from the official KICD Grade 10 Computer Science Curriculum Design, 'STRAND 1.0: FOUNDATION OF COMPUTER SCIENCE' (56 lessons). The extracted text of that design is committed at corpus/_source/computer-science-grade10-kicd.txt so any quotation here can be checked offline — see that directory's README for provenance and for the pdftotext column-interleaving caveat. Sub-strand names follow the design's 'Summary of Strands and Sub Strands' index page; note that the body of the design titles sub-strand 1.1 'Evolution and Development of Computers' while the index page calls it 'Evolution of Computers'. The board notes, activity, assessment questions and explainer in each entry are NOT from the design — the curriculum design specifies what a learner must be able to do, not what a teacher writes on the board or how to mark it. Those fields are illustrative teaching content written to serve the quoted outcomes, and every pack says so.",
+  "subStrands": [
+    {
+      "id": "cs-foundation-evolution",
+      "subStrand": "Evolution of Computers",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 1.0 Foundation of Computer Science — Sub Strand 1.1 Evolution and Development of Computers (6 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "Identify early computing devices and how they relate to evolution of electronic computers",
+        "describe principle technologies that defined development of computers",
+        "Relate the principle technologies to respective computer generation",
+        "appreciate technological advancement in the development of computers"
+      ],
+      "boardNotes": [
+        "Early computing devices: Abacus, Napier's Bones, Pascaline, Slide Rule, Difference Engine, Analytical Engine, Jacquard loom",
+        "Generation 1 — vacuum tubes. Huge, hot, slow, used a lot of power",
+        "Generation 2 — transistors. Smaller, faster, cooler than valves",
+        "Generation 3 — integrated circuits (IC). Many transistors on one chip",
+        "Generation 4 — large scale IC (LSI). The microprocessor; personal computers appear",
+        "Generation 5 — very large scale IC (VLSI). Millions of components per chip; AI-capable machines",
+        "Pattern to note: each generation makes the switching component smaller, so machines get faster, cheaper and cooler"
+      ],
+      "activity": {
+        "description": "Draw a five-column timeline on the board headed First to Fifth generation. Split the class into five groups, give each group one generation, and have each group send one learner to the board to write their generation's principal technology and one consequence of it (size, speed, cost or heat). The class then reads the completed timeline aloud together and names the trend.",
+        "materialsNeeded": "None — blackboard and chalk only; learners discuss in their seats and write on the board."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Name any three early computing devices that came before the electronic computer.",
+          "markingScheme": "3 marks, 1 each for any of: Abacus, Napier's Bones, Pascaline, Slide Rule, Difference Engine, Analytical Engine, Jacquard loom."
+        },
+        {
+          "question": "State the principal technology used in the second generation of computers.",
+          "markingScheme": "1 mark for transistors. No mark for 'transistor radio' or similar."
+        },
+        {
+          "question": "Match each technology to its generation: integrated circuits, vacuum tubes, very large scale IC.",
+          "markingScheme": "3 marks — 1 for IC = third, 1 for vacuum tubes = first, 1 for VLSI = fifth."
+        },
+        {
+          "question": "Give two ways computers changed as they moved from the first generation to the fourth.",
+          "markingScheme": "2 marks, 1 each for any two of: became smaller, became faster, used less power, produced less heat, became cheaper, became more reliable."
+        },
+        {
+          "question": "Explain why the invention of the integrated circuit mattered more than simply making transistors smaller.",
+          "markingScheme": "2 marks for explaining that an IC puts many transistors on a single chip, so a whole circuit fits in one component rather than being wired by hand; 1 mark for a partial answer that only says 'more transistors' without the single-chip idea."
+        }
+      ],
+      "explainer": "Computers did not appear all at once. People first built machines to help with counting and arithmetic — the abacus, then geared calculators like the Pascaline, then Babbage's engines. Electronic computers came later, and historians group them into five generations by the switching component each one used: valves, then transistors, then integrated circuits, then more and more circuits packed onto a single chip. You do not need to memorise dates. The one idea to teach is that every generation shrank the switch, and shrinking the switch is what made computers faster, cheaper and cool enough to sit on a desk."
+    },
+    {
+      "id": "cs-foundation-architecture",
+      "subStrand": "Computer Architecture",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 1.0 Foundation of Computer Science — Sub Strand 1.2 Computer Architecture (4 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "describe the functional organisation and architecture of a von Neumann computer",
+        "analyse the relationships among functional elements of von Neumann computer",
+        "create a model of a computer architecture depicting the structural elements of a von Neumann computer",
+        "use binary, octal and hexadecimal number systems to represent data in a von Neumann's digital computer"
+      ],
+      "boardNotes": [
+        "von Neumann architecture: Input -> [ CPU: Control Unit + ALU + Registers ] <-> Memory -> Output",
+        "Stored-program idea: instructions and data live in the SAME memory",
+        "Buses carry information between parts: address bus (where), data bus (what), control bus (when)",
+        "Number bases: binary (base 2, digits 0-1), octal (base 8, 0-7), hexadecimal (base 16, 0-9 and A-F)",
+        "13 in decimal = 1101 in binary = 15 in octal = D in hexadecimal",
+        "To convert decimal to binary: divide by 2 repeatedly, read remainders bottom to top"
+      ],
+      "activity": {
+        "description": "Draw the empty von Neumann diagram on the board with the boxes unlabelled. Learners copy it into their exercise books and label the five parts from memory, then draw an arrow showing the route a single number takes from input to output and write one sentence saying what happens at each box it passes.",
+        "materialsNeeded": "None — blackboard and learners' exercise books only."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Name the two components found inside the CPU of a von Neumann computer.",
+          "markingScheme": "2 marks — 1 for control unit, 1 for arithmetic and logic unit (ALU). Accept registers in place of either."
+        },
+        {
+          "question": "What is meant by the stored-program concept?",
+          "markingScheme": "2 marks for stating that both the program instructions and the data are held in the same memory; 1 mark for saying only that the program is stored in memory."
+        },
+        {
+          "question": "Convert the decimal number 25 to binary.",
+          "markingScheme": "2 marks for 11001; 1 mark for correct repeated division shown with an error in reading the remainders."
+        },
+        {
+          "question": "Write the hexadecimal number 2F as a decimal number.",
+          "markingScheme": "2 marks for 47; 1 mark for correctly identifying F = 15 but making an arithmetic slip."
+        },
+        {
+          "question": "State the purpose of the address bus and the purpose of the data bus.",
+          "markingScheme": "2 marks — 1 for address bus carries the location in memory being used, 1 for data bus carries the actual value being read or written."
+        }
+      ],
+      "explainer": "Almost every computer ever built follows one plan, named after John von Neumann. Input comes in, the CPU works on it, memory holds both the data and the list of instructions, and output goes out. That last point is the clever one: the instructions are stored in the same memory as the data, which is why one machine can run a different program tomorrow without being rewired. The number-base part of this sub-strand exists because memory only stores 0s and 1s — binary is how the machine writes numbers, and octal and hexadecimal are just shorthands people use so they do not have to read long strings of bits."
+    },
+    {
+      "id": "cs-foundation-io-devices",
+      "subStrand": "Input/Output (I/O) Devices",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 1.0 Foundation of Computer Science — Sub Strand 1.3 Input/Output (I/O) Devices (12 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "describe types of input devices and output devices used in computer systems",
+        "examine criteria used in selecting input and output devices",
+        "use input and output devices to perform tasks",
+        "appreciate the advancement of input and output devices used in computer systems"
+      ],
+      "boardNotes": [
+        "Input device: puts data INTO the computer. Output device: takes information OUT",
+        "Input examples: keyboard, mouse, scanner, voice input, touch screen, digitizer, digital camera, QR code reader",
+        "Touch screen types: resistive (pressure), capacitive (skin), infra-red (beam broken)",
+        "Scanners: two-dimensional (2D) flatbed, three-dimensional (3D)",
+        "Output examples: printer, monitor, speaker, projector, plotter, actuator",
+        "Choosing a device — ask: cost, speed, quality needed, compatibility, power available, durability"
+      ],
+      "activity": {
+        "description": "Call out a task one at a time — 'record a song', 'print a school report', 'read a price label', 'point at a menu'. For each, learners write in their exercise books which input device and which output device the task needs. After five tasks, learners swap books with a neighbour and mark each other as you read out the answers.",
+        "materialsNeeded": "None — spoken prompts and learners' exercise books only."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Classify each of the following as an input or an output device: plotter, digitizer, speaker, scanner.",
+          "markingScheme": "4 marks, 1 each — plotter = output, digitizer = input, speaker = output, scanner = input."
+        },
+        {
+          "question": "Name the three types of touch screen technology.",
+          "markingScheme": "3 marks, 1 each for resistive, capacitive, infra-red."
+        },
+        {
+          "question": "State three factors a school should consider before buying a printer.",
+          "markingScheme": "3 marks, 1 each for any of: purchase cost, running cost of ink or toner, printing speed, print quality, whether it prints in colour, availability of spares, power consumption."
+        },
+        {
+          "question": "Give one advantage of a QR code over a traditional barcode.",
+          "markingScheme": "1 mark for any of: holds much more data, can be read from any angle, still readable when partly damaged, can store text or a web address, readable by an ordinary phone camera."
+        },
+        {
+          "question": "Explain why a 3D scanner is described as an input device even though it produces a model on screen.",
+          "markingScheme": "2 marks for explaining that the direction of travel is what matters — it takes information from the physical object into the computer, and the on-screen model is the computer's output stage, not the scanner's function; 1 mark for stating only that it sends data into the computer."
+        }
+      ],
+      "explainer": "The easiest way to keep input and output straight is to stand where the computer stands and ask which way the information is travelling. Coming in? Input. Going out? Output. Everything else in this sub-strand is naming examples and learning to choose sensibly between them. The 'criteria' outcome is the one worth spending time on, because it is the practical skill: a school choosing a printer or a scanner is making a real decision about cost, speed and quality, and learners can reason about that without ever touching the device."
+    },
+    {
+      "id": "cs-foundation-storage",
+      "subStrand": "Computer storage",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 1.0 Foundation of Computer Science — Sub Strand 1.4 Computer storage (6 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "identify types of storage used in computer systems",
+        "categorise types of storage used in computer systems",
+        "read data from a computer storage",
+        "write data to a computer storage",
+        "establish criteria used to select computer storage",
+        "acknowledge safety of data in computer storage media"
+      ],
+      "boardNotes": [
+        "Two categories: PRIMARY storage (inside, works with the CPU) and SECONDARY storage (holds data long-term)",
+        "Primary: RAM (loses contents when power goes off) and ROM (keeps contents)",
+        "RAM types: DRAM (needs constant refreshing, cheaper) and SRAM (faster, used for cache, costs more)",
+        "Secondary — internal: hard disk drive (HDD), solid state drive (SSD)",
+        "Secondary — external: DVD/CD, DVD-RAM, Blu-ray disc, USB flash memory, removable hard drive",
+        "Remote storage: data kept on someone else's computer, reached over a network",
+        "Choosing storage — capacity, speed, portability, robustness, cost, data security"
+      ],
+      "activity": {
+        "description": "Draw a two-branch tree on the board labelled Primary and Secondary, with Secondary splitting into Internal and External. Read out storage types one at a time — RAM, SSD, Blu-ray, ROM, flash disk, hard disk — and have learners copy the tree and place each one on the correct branch. Then ask each learner to add one line under their tree naming the storage they would use to carry a project home, and why.",
+        "materialsNeeded": "None — blackboard and learners' exercise books only."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "State one difference between RAM and ROM.",
+          "markingScheme": "1 mark for RAM loses its contents when power is switched off while ROM keeps them. Accept RAM can be written to freely while ROM is normally read only."
+        },
+        {
+          "question": "Categorise the following as internal or external secondary storage: solid state drive, Blu-ray disc, hard disk drive, USB flash memory.",
+          "markingScheme": "4 marks, 1 each — SSD internal, Blu-ray external, HDD internal, USB flash external."
+        },
+        {
+          "question": "Give two differences between DRAM and SRAM.",
+          "markingScheme": "2 marks, 1 each for any two of: DRAM must be refreshed constantly and SRAM need not, SRAM is faster, SRAM costs more per unit, SRAM is used for cache while DRAM is used for main memory."
+        },
+        {
+          "question": "A learner needs to carry a 2 GB project between home and school. State the storage medium you would recommend and give two reasons.",
+          "markingScheme": "3 marks — 1 for a sensible medium (USB flash memory accepted; memory card accepted), 2 for reasons such as portable, cheap, large enough capacity, no power needed, readable on most computers."
+        },
+        {
+          "question": "State two precautions that keep data safe on removable storage media.",
+          "markingScheme": "2 marks, 1 each for any of: keep a backup copy elsewhere, eject or remove safely rather than pulling it out, keep away from heat, water, dust and magnets, do not drop it, use a password or encryption, scan for viruses before opening."
+        }
+      ],
+      "explainer": "Storage confuses learners because 'memory' is used loosely in everyday speech. Split it in two and it becomes simple. Primary storage is what the CPU works with right now — fast, small, and in the case of RAM it forgets everything the moment the power goes. Secondary storage is where things are kept when you are not using them — slower, much bigger, and it survives being switched off. Everything else in the sub-strand fits into that split: RAM and ROM are primary, hard disks and flash disks are secondary, and remote storage is just secondary storage that happens to live in another building."
+    },
+    {
+      "id": "cs-foundation-cpu",
+      "subStrand": "Central Processing Unit (CPU)",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 1.0 Foundation of Computer Science — Sub Strand 1.5 Central Processing Unit (CPU) (6 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "describe structural elements of the CPU of a computer system",
+        "relate structural elements of the CPU to their functions",
+        "examine types of CPUs in computing devices",
+        "appreciate the role of CPU in computing"
+      ],
+      "boardNotes": [
+        "CPU structural elements: Arithmetic and Logic Unit (ALU), Control Unit (CU), Registers, Buses",
+        "ALU — does the sums and the comparisons. CU — fetches instructions and tells everything else what to do",
+        "Registers — very small, very fast stores inside the CPU holding what is being worked on right now",
+        "Fetch - Decode - Execute cycle: fetch instruction from memory, work out what it means, carry it out, repeat",
+        "Instruction set: RISC (few simple instructions) vs CISC (many complex instructions)",
+        "Word length: 16-bit, 32-bit, 64-bit — how much the CPU handles at once",
+        "Core design: single-core, dual-core, quad-core, hexa-core, octa-core, deca-core"
+      ],
+      "activity": {
+        "description": "Run the fetch-decode-execute cycle as a whole-class role play. Four learners stand at the front as Memory, Control Unit, ALU and Register. Give Memory a written instruction such as 'add 4 and 5'. The Control Unit walks to Memory to fetch it, says aloud what it means, hands the numbers to the ALU, and the ALU announces the answer to the Register. Repeat with a second instruction using different learners, then have the seated class write the four steps in order in their books.",
+        "materialsNeeded": "None — spoken role play at the front of the class; learners write the cycle in their exercise books."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Name the three main structural elements of the CPU.",
+          "markingScheme": "3 marks, 1 each for arithmetic and logic unit, control unit, registers."
+        },
+        {
+          "question": "State the function of the control unit.",
+          "markingScheme": "1 mark for fetching and interpreting instructions and directing the other units to carry them out. Accept 'coordinates the operation of the computer'."
+        },
+        {
+          "question": "List the three stages of the machine cycle in the correct order.",
+          "markingScheme": "2 marks for fetch, decode, execute in that order; 1 mark if all three are named but out of order."
+        },
+        {
+          "question": "State one difference between a RISC and a CISC processor.",
+          "markingScheme": "1 mark for RISC uses a small set of simple instructions while CISC uses a larger set of more complex instructions. Accept RISC instructions generally take fewer cycles each."
+        },
+        {
+          "question": "Explain why a quad-core processor is not automatically four times faster than a single-core processor of the same speed.",
+          "markingScheme": "2 marks for explaining that the extra cores only help when work can be split into parts that run at the same time, and many programs cannot be split that way; 1 mark for saying only that it depends on the software."
+        }
+      ],
+      "explainer": "The CPU is the part of the computer that actually does things, and it is easier to teach as a small team than as a chip. The control unit is the supervisor: it collects the next instruction and tells everyone what to do. The ALU is the worker: it adds, subtracts and compares. The registers are the notepad on the desk — tiny, but instantly to hand. That whole team repeats one loop forever: fetch an instruction, decode it, execute it. Once learners can act out that loop, the rest of the sub-strand is just vocabulary for how big and how many the parts are."
+    },
+    {
+      "id": "cs-foundation-operating-system",
+      "subStrand": "Operating System (OS)",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 1.0 Foundation of Computer Science — Sub Strand 1.6 Operating System (OS) (12 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "describe functions of an operating system",
+        "classify operating system according to different attributes",
+        "install an operating system in a computer",
+        "use an operating system to perform a task",
+        "acknowledge the importance of operating systems in computing"
+      ],
+      "boardNotes": [
+        "Operating system: the program that manages the hardware and gives other programs a place to run",
+        "Functions: manages memory, manages processes, manages files, manages input/output devices, controls user access, provides the user interface",
+        "Classify by user interface: command line vs graphical (GUI)",
+        "Classify by number of users: single-user vs multi-user",
+        "Classify by number of tasks: single-tasking vs multi-tasking",
+        "Examples: Microsoft Windows, Macintosh Operating System, Linux, Android",
+        "Installing an OS — back up data first, then boot from the installation medium, partition and format, copy files, install drivers, set up the first user"
+      ],
+      "activity": {
+        "description": "Write the six operating-system functions on the board as headings. Give the class one everyday scenario at a time — 'you open a second program while music is playing', 'you save a file and find it again tomorrow', 'you type a password to log in' — and learners write in their exercise books which function is doing the work in each case, and one sentence saying what would happen if that function did not exist.",
+        "materialsNeeded": "None — blackboard headings, spoken scenarios and learners' exercise books."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "State four functions of an operating system.",
+          "markingScheme": "4 marks, 1 each for any of: memory management, process management, file management, input/output or device management, user access control and security, providing the user interface."
+        },
+        {
+          "question": "Classify an operating system used by many people at once on one computer.",
+          "markingScheme": "1 mark for multi-user."
+        },
+        {
+          "question": "Give two differences between a command line interface and a graphical user interface.",
+          "markingScheme": "2 marks, 1 each for any two of: CLI needs commands typed and memorised while GUI uses icons and pointing, GUI is easier for beginners, CLI uses fewer system resources, CLI is faster for an experienced user, GUI needs a mouse or touch screen."
+        },
+        {
+          "question": "List, in order, any four steps in installing an operating system on a computer.",
+          "markingScheme": "4 marks, 1 each in a sensible order from: back up existing data, boot from the installation medium, partition the disk, format the partition, copy the system files, install device drivers, create the first user account."
+        },
+        {
+          "question": "Explain why a computer cannot run application programs such as a word processor without an operating system.",
+          "markingScheme": "2 marks for explaining that applications do not talk to the hardware directly — they ask the operating system for memory, files and devices, so with no OS there is nothing to grant those requests or to load the program in the first place; 1 mark for stating only that the OS is needed to run programs."
+        }
+      ],
+      "explainer": "An operating system is best described to learners as the manager of the machine rather than as a product name. When a program wants memory, wants to save a file, or wants to use the printer, it does not reach for the hardware itself — it asks the operating system, and the operating system decides and does it. That is why every function in the list is a form of managing something: memory, processes, files, devices, users. Windows, Linux, macOS and Android are just different managers with different habits. The installation outcome sounds like it needs a computer lab, but the steps and the order can be taught, tested and marked entirely on paper."
+    },
+    {
+      "id": "cs-foundation-computer-setup",
+      "subStrand": "Computer setup",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 1.0 Foundation of Computer Science — Sub Strand 1.7 Computer setup (10 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "explain types of ports and cables used in computers",
+        "relate cables to their corresponding ports in a computer",
+        "set up a computer for use",
+        "appreciate following the correct procedure when setting up a computer"
+      ],
+      "boardNotes": [
+        "Port: the socket on the computer. Cable: what plugs into it. Each cable has a matching port shape",
+        "Common ports: USB, HDMI, VGA, Ethernet (RJ45), audio jack, power socket",
+        "USB — devices and data. HDMI and VGA — display. Ethernet — network. Audio jack — sound",
+        "Setup order: position the unit, connect monitor, connect keyboard and mouse, connect network, connect power LAST, then switch on",
+        "Safety: switch off and unplug before connecting, do not force a plug, keep liquids away, use a stable surface, avoid trailing cables"
+      ],
+      "activity": {
+        "description": "Write the setup steps on the board in a scrambled order — connect power, position the system unit, switch on, connect monitor, connect keyboard and mouse. Learners copy them into their exercise books in the correct order, then write beside the power step why it comes last. Finish by having three learners each state one safety precaution aloud without repeating an earlier one.",
+        "materialsNeeded": "None — blackboard and learners' exercise books; no computer required."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Name the port you would use to connect each of the following: a monitor, a network cable, a flash disk.",
+          "markingScheme": "3 marks, 1 each — monitor = HDMI or VGA, network cable = Ethernet or RJ45, flash disk = USB."
+        },
+        {
+          "question": "State the difference between a port and a cable.",
+          "markingScheme": "1 mark for the port being the socket on the computer and the cable being the lead that plugs into it."
+        },
+        {
+          "question": "Arrange these steps in the correct order for setting up a computer: switch on, connect the power cable, connect the monitor, position the system unit.",
+          "markingScheme": "3 marks for position the system unit, connect the monitor, connect the power cable, switch on; 1 mark if only the first and last are correctly placed."
+        },
+        {
+          "question": "State three safety precautions to observe when setting up a computer.",
+          "markingScheme": "3 marks, 1 each for any of: switch off and unplug before connecting parts, do not force a plug into a port, keep liquids away, place the unit on a stable surface, avoid trailing cables, check the power rating before plugging in, do not overload a socket."
+        },
+        {
+          "question": "Explain why the power cable is connected last and switched on only after everything else is in place.",
+          "markingScheme": "2 marks for explaining that connecting or removing parts while the machine is live risks electric shock to the person and damage to the components; 1 mark for naming only one of the two risks."
+        }
+      ],
+      "explainer": "This sub-strand is mostly about doing things in the right order, which is good news if you have no computer to demonstrate on — the order can be taught, drawn and marked on paper. The single rule that ties it together is that power comes last. Every port has one cable that fits it and forcing the wrong one damages both, so learners should be taught to look at the shape rather than push harder. If a machine is available, let learners connect it under supervision; if not, a scrambled-steps exercise on the board assesses exactly the same outcome."
+    }
+  ]
+}

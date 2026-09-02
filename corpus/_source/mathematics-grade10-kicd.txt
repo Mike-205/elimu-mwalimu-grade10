@@ -1,0 +1,3500 @@
+KENYA INSTITUTE OF CURRICULUM DEVELOPMENT
+Nurturing Every Learner’s Potential
+
+SENIOR SCHOOL CURRICULUM DESIGN
+GRADE 10
+
+MATHEMATICS
+JUNE, 2024
+
+First Published in 2024
+
+All rights reserved. No part of this book may be reproduced, stored in a retrieval system or transcribed, in any form or by
+any means, electronic, mechanical, photocopy, recording or otherwise, without the prior written permission of the publisher.
+
+ISBN: 978-9914-52-898-5
+
+Published and printed by Kenya Institute of Curriculum Development
+
+TABLE OF CONTENTS
+NATIONAL GOALS OF EDUCATION ...................................................................................................................................................... ii
+LEARNING OUTCOMES FOR SENIOR SCHOOL .................................................................................................................................. iv
+THE SENIOR SCHOOL IN THE COMPETENCY BASED CURRICULUM (CBC) ................................................................................ v
+PROPOSED LIST OF SUBJECTS AT SENIOR SCHOOL ........................................................................................................................ v
+LESSON DISTRIBUTION AT SENIOR SCHOOL .................................................................................................................................. vii
+ESSENCE STATEMENT ........................................................................................................................................................................... vii
+GENERAL LEARNING OUTCOMES .....................................................................................................................................................viii
+IDENTIFIED STRANDS ...........................................................................................................................................................................viii
+SUMMARY OF STRANDS AND SUB STRANDS ................................................................................................................................... ix
+STRAND 1.0: NUMBERS AND ALGEBRA .............................................................................................................................................. 1
+STRAND 2.0: MEASUREMENTS AND GEOMETRY ............................................................................................................................ 10
+STRAND 3.0: STATISTICS AND PROBABILITY .................................................................................................................................. 46
+
+i
+
+NATIONAL GOALS OF EDUCATION
+Education in Kenya should:
+1.
+Foster nationalism and patriotism and promote national unity.
+Kenya’s people belong to different communities, races and religions, but these differences need not divide them. They must be
+able to live and interact as Kenyans. It is a paramount duty of education to help young people acquire this sense of nationhood
+by removing conflicts and promoting positive attitudes of mutual respect which enable them to live together in harmony and
+foster patriotism in order to make a positive contribution to the life of the nation.
+2.
+
+Promote the social, economic, technological and industrial needs for national development.
+Education should prepare the youth of the country to play an effective and productive role in the life of the nation.
+a) Social Needs
+Education in Kenya must prepare children for changes in attitudes and relationships which are necessary for the smooth
+progress of a rapidly developing modern economy. There is bound to be a silent social revolution following the wake of rapid
+modernisation. Education should assist our youth to adapt to this change.
+b) Economic Needs
+Education in Kenya should produce citizens with the skills, knowledge, expertise and personal qualities that are required to
+support a growing economy. Kenya is building up a modern and independent economy which is in need of an adequate and
+relevant domestic workforce.
+c) Technological and Industrial Needs
+Education in Kenya should provide learners with the necessary skills and attitudes for industrial development. Kenya
+recognises the rapid industrial and technological changes taking place, especially in the developed world. We can only be
+part of this development if our education system is deliberately focused on the knowledge, skills and attitudes that will prepare
+our young people for these changing global trends.
+
+ii
+
+3.
+
+Promote individual development and self-fulfilment
+Education should provide opportunities for the fullest development of individual talents and personality. It should help children
+to develop their potential interests and abilities. A vital aspect of individual development is the building of character.
+
+4.
+
+Promote sound moral and religious values.
+Education should provide for the development of knowledge, skills and attitudes that will enhance the acquisition of sound moral
+values and help children to grow up into self-disciplined, self-reliant and integrated citizens.
+
+5.
+
+Promote social equity and responsibility.
+Education should promote social equality and foster a sense of social responsibility within an education system which provides
+equal educational opportunities for all. It should give all children varied and challenging opportunities for collective activities
+and corporate social service irrespective of gender, ability or geographical environment.
+
+6.
+
+Promote respect for and development of Kenya’s rich and varied cultures.
+Education should instil in the youth of Kenya an understanding of past and present cultures and their valid place in contemporary
+society. Children should be able to blend the best of traditional values with the changing requirements that must follow rapid
+development in order to build a stable and modern society.
+
+7.
+
+Promote international consciousness and foster positive attitudes towards other nations.
+Kenya is part of the international community. It is part of the complicated and interdependent network of peoples and nations.
+Education should therefore lead the youth of the country to accept membership of this international community with all the
+obligations and responsibilities, rights and benefits that this membership entails.
+
+8.
+
+Promote positive attitudes towards good health and environmental protection.
+Education should inculcate in young people the value of good health in order for them to avoid indulging in activities that will
+lead to physical or mental ill health. It should foster positive attitudes towards environmental development and conservation. It
+should lead the youth of Kenya to appreciate the need for a healthy environment.
+iii
+
+LEARNING OUTCOMES FOR SENIOR SCHOOL
+By the end of senior school, the learner should be able to:
+1. Communicate effectively and utilise information and communication technology across varied contexts.
+2. Apply mathematical, logical and critical thinking skills for problem solving.
+3. Apply basic research and scientific skills to manipulate the environment and solve problems.
+4. Exploit individual talents for leisure, self-fulfillment, career growth, further education and training.
+5. Uphold national, moral and religious values and apply them in day to day life.
+6. Apply and promote health care strategies in day to day life.
+7. Protect, preserve and improve the environment for sustainability.
+8. Demonstrate active local and global citizenship for harmonious co-existence.
+9. Demonstrate appreciation of diversity in people and cultures.
+10. Manage pertinent and contemporary issues responsibly.
+
+iv
+
+THE SENIOR SCHOOL IN THE COMPETENCY BASED CURRICULUM (CBC)
+Senior School is the forth level of Basic Education in the Competency Based Curriculum (CBC) that learners shall come
+to after the Pre-Primary, Primary and Junior School (JS). The essence of Senior School is to offer learners a Pre- University/
+Pre- career experience where the learners have an opportunity to choose pathways where they have demonstrated interest
+and/or potential at the earlier levels. Senior school comprises three years of education for learners in the age bracket of 15 to
+18 years and lays the foundation for further education and training at the tertiary level and the world of work. In the CBC vision,
+learners exiting this level are expected to be engaged, empowered and ethical citizens ready to participate in the socioeconomic development of the nation.
+At this level, learners shall take SEVEN (07) learning areas (LAs) as recommended by the Presidential Working Party on
+Educational Reforms (PWPER). These shall comprise Four Compulsory learning areas, and Three learning areas opted for
+by the learner according to their choses Pathway. While English and Kiswahili are indicated as Compulsory, the learners who
+opt for these learning areas as their subjects of specialization shall go through a differentiated curriculum in terms of scope,
+experiences and assessment. Such learners shall; therefore, take Advanced English or Kiswahili Kipevu with additional two
+lessons. It is recommended that AT LEAST TWO learning areas should be from chosen Pathway. In exceptional cases, some
+learners may opt for ONE learning area from the chosen Pathway and a maximum of TWO learning areas from any of the
+three pathways; depending on the learner’s career projections and with guidance by the principals at Senior School.
+
+v
+
+PROPOSED LIST OF SUBJECTS AT SENIOR SCHOOL
+Compulsory Subjects Science, Technology, Engineering &
+Mathematics (STEM)
+1. English
+5. Mathematics/Advanced Mathematics
+2. Kiswahili/KSL
+6. Biology
+3. Community Service 7. Chemistry
+Learning
+8. Physics
+4. Physical Education 9. General Science
+10. Agriculture
+NB: ICT skills will be 11. Computer Studies
+offered to all students 12. Home Science
+to facilitate learning
+13. Drawing and Design
+and enjoyment
+14. Aviation Technology
+15. Building and Construction
+16. Electrical Technology
+17. Metal Technology
+18. Power Mechanics
+19. Wood Technology
+20. Media Technology*
+21. Marine and Fisheries Technology*
+
+Social Sciences
+
+Arts & Sports Science
+
+22.
+23.
+24.
+25.
+
+36.
+
+26.
+27.
+28.
+29.
+30.
+31.
+32.
+33.
+34.
+
+35.
+
+vi
+
+Advanced English
+Literature in English
+Indigenous Language
+Kiswahili Kipevu/Kenya Sign
+Language
+Fasihi ya Kiswahili
+Sign Language
+Arabic
+French
+German
+Mandarin Chinese
+History and Citizenship
+Geography
+Christian Religious
+Education/ Islamic Religious
+Education/Hindu Religious
+Education
+Business Studies
+
+37.
+38.
+39.
+40.
+
+Sports and
+Recreation
+Physical
+Education (C)
+Music and Dance
+Theatre and Film
+Fine Arts
+
+LESSON DISTRIBUTION AT SENIOR SCHOOL
+The number of lessons in each of the compulsory learning areas shall be 4; while the optional areas shall be 6 lessons each. A
+lesson shall be 40 minutes. The "free" lessons shall be used for development of ICT skills, Pastoral Instruction Programme
+(PPI), projects, collaborative study and further reading.
+ESSENCE STATEMENT
+In Senior School, advanced Mathematics course builds on and deepens the competencies acquired by the learner from Junior
+school. It plays an important role in society through developing the learner’s critical, creative and logical reasoning as well as
+analytical skills. Mathematics is critical in supporting other subjects for purposes of acquisition of competencies necessary for
+problem solving in day to day life. Mathematics is an essential element of communication. It enables one to explain, describe,
+illustrate, analyse, evaluate and represent information that bears critical components of populations that helps in decision
+making processes. Specifically, the subject is useful in computations particularly in Calculus, measurements, development of
+algebraic thinking and the study of geometry for the development of spatial relations as well as navigational skills. In addition,
+the course provides one with opportunities to study Statistics and Probability, which are critical in research and in
+understanding different population dynamics and phenomena. The course has explicitly suggested learning activities that focus
+on the mathematical process skills of problem solving, communication, connection, collaboration, reasoning and proof as core
+to acquisition of the desirable competencies. Key Pertinent and Contemporary Issues such as Life Skills, Financial Literacy,
+Citizenship and Education for Sustainable Development as well as Values are integrated into this Mathematics course to
+improve the social and economic wellbeing of the individual and the society.
+The Advanced Mathematics course is a powerful tool in determining career choices in the field of Science, Technology,
+Engineering and Mathematics (STEM), Social Sciences, Sports Science and Arts. These careers spread across medical fields,
+engineering, research, actuarial science, architecture, technology fields, computer and data Science as well as entrepreneurship
+among others. The course is anchored on Sessional Paper no 1 of 2019 on policy framework for education and training for
+sustainable development, Vision 2030, which focuses on knowledge in science, technology and innovation and The
+vii
+
+Constitution of Kenya 2010 that stipulates that every child has a right to education. Further, in line with Africa Agenda 2063,
+the course responds to the African Education Strategy which focuses on strengthening the Science and Mathematics curricula.
+GENERAL LEARNING OUTCOMES
+By the end of the course the learner should be able to:
+a) Develop numerical computational skills, concepts and competencies for continuous learning and application of
+Mathematics,
+b) Collect, analyse and represent data for informed decision-making in real-life situations
+c) Evaluate and make financial decisions and transactions in real-life situations,
+d) Develop spatial skills and model geometric structures in real-life situations,
+e) Use digital technology for Mathematical manipulations, explorations, innovations, navigational skills and for further
+learning,
+f) Develop critical and creative thinking, logical reasoning and analytical skills for problem-solving,
+g) Use Mathematical concepts and skills to support other learning areas for further training, research and career
+development,
+h) Develop confidence and interest in Mathematics as well as the coherence, utility and aesthetic nature of the subject for
+lifelong learning,
+i) Demonstrate appropriate responsiveness to Pertinent and Contemporary Issues in the community and promote values for
+peaceful coexistence.
+IDENTIFIED STRANDS
+1. Numbers and Algebra
+2. Measurements and Geometry
+3. Statistics and Probability
+4. Calculus
+viii
+
+SUMMARY OF STRANDS AND SUB STRANDS
+Strand
+Sub strand
+1
+Numbers and Algebra
+1.1 Real Numbers
+
+2
+
+Measurements and Geometry
+
+3
+
+Statistics and Probability
+
+Lessons
+
+1.2 Indices and Logarithms
+1.3 Quadratic Expressions and Equations 1
+2.1 Similarity and Enlargement
+2.2 Reflection and Congruence
+2.3 Rotation
+2.4 Angle Properties of a Circle
+2.5 Trigonometry 1
+2.6 Area of Polygons
+2.7 Area of a Part of a Circle
+2.8 Surface Area and Volume of Solids
+2.9 Linear Motion
+3.1 Statistics I
+3.2 Probability 1
+
+Note: The suggested number of lessons per Sub Strand may be less or more depending on the context.
+
+ix
+
+6
+10
+15
+12
+12
+10
+15
+15
+14
+12
+16
+15
+16
+12
+180
+
+STRAND 1.0: NUMBERS AND ALGEBRA
+Sub Strand 1: Real Numbers
+Strand
+
+Sub Strand
+
+Specific Learning Outcomes
+
+1.0
+1.1. Real
+By the end of the sub-strand,
+Numbers Numbers
+the learner should be able to:
+and
+(8 lessons)
+a) classify whole numbers as
+Algebra
+odd, even, prime and
+● Classification of
+composite in different
+numbers
+situations,
+b) classify real numbers as
+● Reciprocal of
+rational and irrational in
+numbers.
+different situations,
+c) determine the reciprocal of
+real numbers by division,
+d) determine the reciprocal of
+real numbers by use of
+mathematical tables and
+calculators,
+e) apply reciprocal of real
+numbers in mathematical
+computations,
+
+1
+
+Suggested Learning Experiences
+
+Suggested
+Key Inquiry
+Questions
+
+The learner is guided to:
+● discuss with peers to identify
+and categorise whole numbers
+as odd, even, prime and
+composite.
+● discuss in a group the meaning
+of real numbers,
+● categorise real numbers as
+rational and irrational numbers
+● work out the reciprocal of real
+numbers by division,
+● read the values of the reciprocals
+of real numbers from
+mathematical tables,
+● work out the reciprocal of real
+numbers using a calculator
+● use reciprocal of real numbers to
+work out tasks,
+
+How do we use
+real numbers in
+day-to-day
+activities?
+
+● use digital devices or other
+resources such as books to work
+out the reciprocal of real
+numbers.
+
+f) promote the use of real
+numbers in day-to-day
+activities.
+
+Core Competencies to be developed:
+● Communication and Collaboration: the learner discusses with peers to identify and categorise whole numbers as odd,
+even, prime, composite, rational, and irrational.
+● Critical Thinking and Problem Solving: the learner uses the reciprocal of real numbers to work out mathematical tasks.
+● Digital Literacy: the learner works out the reciprocal of real numbers from calculators and other digital devices.
+Values:
+● Unity: the learner discusses in a group and categorises real numbers as rational and irrational numbers.
+● Responsibility: the learner takes care of calculators and mathematical tables when working out the reciprocal of real
+numbers.
+Pertinent and Contemporary Issues (PCIs):
+Life Skills: Self-esteem: the learner participates in the discussion on the concepts of rational and irrational numbers.
+
+2
+
+Sub Strand 2: Indices and Logarithms
+Strand
+
+Sub Strand
+
+1.0 Numbers 1.2. Indices
+and Algebra and
+Logarithms
+(8 lessons)
+● Indices
+● Logarithms
+to base 10
+● Application
+of indices
+and
+logarithms
+
+Specific Learning Outcomes
+
+Suggested Learning Experiences
+
+Suggested
+Key Inquiry
+Questions
+
+By the end of the sub-strand the
+learner should be able to:
+a) express numbers in index
+form,
+b) derive the laws of indices
+using factors,
+c) apply the laws of indices in
+different situations,
+d) relate index notation to
+logarithm notation to base
+10
+e) determine common
+logarithms of numbers from
+mathematical tables and
+calculators,
+f) apply common logarithms in
+multiplication, division,
+powers and roots of
+numbers,
+
+The learner is guided to:
+• write numbers in terms of bases
+and indices and share them with
+peers.
+• discuss in a group and generate
+the laws of indices.
+• use the laws of indices to work
+out mathematical computations
+• discuss in a group and relate
+index notation to logarithm
+notation to base 10
+• read and obtain common
+logarithms of numbers from
+tables and calculators.
+• use common logarithms of
+numbers to work out
+mathematical tasks.
+• use digital devices or other
+resources to work out
+
+Why do we
+use indices
+and
+logarithms?
+
+3
+
+g) appreciate the use of indices
+and common logarithms in
+mathematical computations.
+
+mathematical tasks involving
+common logarithms.
+
+Core Competencies to be developed:
+• Learning to learn: the learner discusses in a group and generates the laws of indices.
+• Digital literacy: the learner reads and obtains common logarithms of numbers from tables and calculators.
+Values:
+• Responsibility: the learner takes care of mathematical tables and calculators
+• Respect: the learner appreciates the input of others while discussing in a group and relating powers of 10 to common
+logarithms.
+Pertinent and Contemporary Issues (PCIs):
+Life Skills - Self-awareness: the learner discusses in a group and relates powers of 10 to common logarithms and identifies
+the base.
+
+4
+
+Sub Strand 3: Quadratic Expressions and Equations
+Strand
+
+Sub Strand
+
+1.0 Numbers 1.3 Quadratic
+and Algebra Expressions and
+Equations 1
+(14 lessons)
+● Quadratic
+expressions
+● Quadratic
+identities
+● Factorisation of
+quadratic
+expressions
+● formation of
+quadratic
+equations
+● Solution of
+quadratic
+equations by
+factorisation
+● application of
+quadratic
+
+Specific Learning
+Outcomes
+
+Suggested Learning
+Experiences
+
+Suggested Key
+Inquiry
+Questions
+
+By the end of the sub-strand,
+the learner should be able to:
+a) form quadratic
+expressions from
+different situations,
+b) derive the quadratic
+identities from the
+concept of area,
+c) apply quadratic identities
+in numerical cases,
+d) factorise quadratic
+expressions in different
+situations,
+e) form quadratic equations
+in different situations,
+f) solve quadratic equations
+by factorization,
+g) apply quadratic equations
+to real life situations,
+
+The learner is guided to:
+• generate quadratic
+expressions from given
+statements,
+• discuss with peers and come
+up with quadratic identities
+and write them on a chart.
+• discuss and use quadratic
+identities to evaluate
+numerical cases
+• discuss and work out factors
+of quadratic expressions.
+• work with peers to form
+quadratic equations from
+roots, statement and reallife cases,
+• work out factors of
+quadratic equations to
+
+How do we apply
+the concept of
+quadratic
+equations?
+
+5
+
+equations to real
+life situations
+
+h) explore the use of
+quadratic equations in
+real life situations.
+
+•
+
+obtain solutions to the
+equations,
+search on the use of
+quadratic equations using
+digital devices or other
+resources.
+
+Core Competencies to be developed:
+• Critical thinking and problem-solving: the learner interprets real-life cases to form and solve quadratic equations to get
+solutions to real-life cases.
+• Communication and collaboration: the learner discusses with peers and comes up with quadratic identities.
+Values:
+• Unity: the learner works with others to write quadratic identities on a chart.
+• Respect: the learner works with peers to form and solve quadratic equations to get solutions to real-life cases.
+Pertinent and Contemporary Issues (PCIs):
+Socio-economic and environmental issues - Social cohesion: the learner works with peers to form and solve quadratic
+equations to get solutions to real-life cases.
+
+6
+
+Suggested Assessment Rubric: Numbers and Algebra
+Indicators
+
+Exceeds Expectation
+
+Meets Expectation
+
+Approaches
+Expectation
+
+Below Expectation
+
+Ability to classify
+whole numbers as
+odd, even, prime,
+and composite
+numbers, and real
+numbers as rational
+and irrational
+
+The learner correctly and
+consistently classifies
+whole numbers as odd,
+even, prime, and
+composite numbers, and
+real numbers as rational
+and irrational
+
+The learner correctly
+classifies whole
+numbers as odd, even,
+prime, and composite
+numbers, and real
+numbers as rational
+and irrational
+
+The learner correctly
+classifies whole
+numbers as odd, even,
+prime, or composite
+numbers, or real
+numbers as rational
+and irrational
+
+The learner correctly
+classifies whole
+numbers as odd, even,
+prime, or composite
+numbers,
+
+Ability to determine
+the reciprocal of
+real numbers by
+division, tables and
+calculators
+
+The learner consistently
+and accurately
+determines the reciprocal
+of real numbers by
+division, tables and
+calculators
+
+The learner
+accurately determines
+the reciprocal of real
+numbers by division,
+tables and calculators
+
+The learner accurately
+determines the
+reciprocal of real
+numbers by division
+or, tables or
+calculators
+
+The learner partially
+determines the
+reciprocal of real
+numbers by division,
+or tables or calculators
+
+Ability to apply
+reciprocal of real
+numbers in
+mathematical
+computations
+
+The leaner systematically
+and accurately applies the
+reciprocal of real
+numbers in mathematical
+computations
+
+The learner
+accurately applies
+reciprocal of real
+numbers in
+mathematical
+computations
+
+The leaner partially
+accurately applies the
+reciprocal of real
+numbers in
+mathematical
+computations
+
+The leaner partially
+applies the reciprocal
+of real numbers in
+mathematical
+computations with
+prompts
+
+7
+
+Indicators
+
+Exceeds Expectation
+
+Meets Expectation
+
+Approaches
+Expectation
+
+Below Expectation
+
+Ability to derive
+and apply laws of
+indices.
+
+The learner
+systematically and
+accurately derives and
+applies laws of indices
+
+The learner
+accurately derives
+and applies laws of
+indices
+
+The learner accurately
+derives or applies
+laws of indices
+
+The learner partially
+derives or applies laws
+of indices
+
+Ability to determine
+common logarithms
+of numbers from
+mathematical tables
+and calculators
+
+The learner consistently
+and accurately
+determines common
+logarithms of numbers
+from mathematical tables
+and calculators
+
+The learner
+accurately determines
+common logarithms
+of numbers from
+tables and calculators
+
+The learner accurately
+determines common
+logarithms of numbers
+from mathematical
+tables or calculators
+
+The learner partially
+determines common
+logarithms of numbers
+from mathematical
+tables or calculators
+
+Ability to apply
+common logarithms
+in multiplication,
+division, powers,
+and roots of
+numbers
+
+The learner appropriately
+and accurately applies
+common logarithms in
+multiplication, division,
+powers, and roots of
+numbers
+
+The learner
+accurately applies
+common logarithms
+in multiplication,
+division, powers, and
+roots of numbers
+
+The learner accurately
+applies common
+logarithms in
+multiplication or
+division or powers or
+roots of numbers
+
+The learner partially
+applies common
+logarithms in
+multiplication or
+division of powers or
+roots of numbers
+
+Ability to form
+quadratic
+
+The learner consistently
+and correctly forms
+
+The learner correctly
+forms quadratic
+
+The learner partially
+forms quadratic
+
+The learner partially
+forms quadratic
+expressions from
+
+8
+
+Indicators
+
+Exceeds Expectation
+
+Meets Expectation
+
+Approaches
+Expectation
+
+Below Expectation
+
+expressions from
+different situations
+
+quadratic expressions
+from different situations
+
+expressions from
+different situations
+
+expressions from
+different situations
+
+different situations
+with assistance
+
+Ability to derive
+quadratic identities
+from the concept of
+area
+
+The learner consistently
+and correctly derives
+quadratic identities from
+the concept of area
+
+The learner correctly
+derives quadratic
+identities from the
+concept of area
+
+The learner partially
+derives quadratic
+identities from the
+concept of area
+
+The learner partially
+derives quadratic
+identities in from the
+concept of area with
+assistance
+
+Ability to factorise
+quadratic
+expressions in
+different situations
+
+The learner
+systematically and
+correctly factorises
+quadratic expressions in
+different situations
+
+The learner correctly
+factorises quadratic
+expressions in
+different situations
+
+The learner partially
+factorises quadratic
+expressions in
+different situations
+
+The learner partially
+factorises quadratic in
+different situations
+with prompts
+
+Ability to form,
+solve, and apply
+quadratic equations
+in real-life
+situations
+
+The learner
+systematically and
+accurately forms, solves,
+and applies quadratic
+equations in real-life
+situations
+
+The learner
+accurately forms,
+solves, and applies
+quadratic equations in
+real-life situations
+
+The learner partially
+accurately forms
+solves, and applies
+quadratic equations in
+real-life situations
+
+The learner partially
+forms, or solves, or
+applies quadratic
+equations in real-life
+situations
+
+9
+
+STRAND 2.0: MEASUREMENTS AND GEOMETRY
+Sub Strand 1: Similarity and enlargement
+Strand
+
+Sub Strand
+
+Specific Learning
+Outcomes
+
+2.0
+2.1 Similarity
+Measurements and
+and Geometry Enlargement
+
+By the end of the substrand the learner should
+be able to:
+a) determine the centre
+(12 lessons)
+of enlargement and
+● Similarity
+the linear scale factor
+● Enlargement
+for similar figures,
+● Scale
+b) construct the image
+Factors
+of an object under an
+● Application
+enlargement given
+of Similarity
+the centre and the
+and
+linear scale factor,
+Enlargement c) determine the area
+and volume scale
+factor of different
+figures and solids,
+d) relate linear scale
+factor, area scale
+factor, and volume
+10
+
+Suggested Learning Experiences
+
+Suggested Key
+Inquiry
+Questions
+
+The learner is guided to:
+• discuss in a group and review the
+properties of similar figures and
+enlargement,
+• use an object and its image to
+establish the centre of
+enlargement and the ratio of the
+lengths of corresponding sides,
+Linear Scale Factor (L.S.F)
+• discuss in a group and draw on a
+plane surface the images of
+objects under enlargement given
+the centres and linear scale
+factors
+• draw on the Cartesian plane the
+images of objects under
+enlargement given the centres
+and linear scale factors.
+
+How is similarity
+and enlargement
+applied in day-today life?
+
+scale factor in
+enlargements
+e) apply similarity and
+enlargement to reallife situations,
+f) appreciate the use of
+similarity and
+enlargement in reallife situations.
+
+•
+
+•
+
+•
+•
+
+discuss in a group and establish
+Linear Scale Factor (L.S.F) from
+similar plane figures. Work out
+the ratio of the area of similar
+plane figures, Area Scale Factor
+(A.S.F). Work out the ratio of
+volume of similar solids,
+Volume Scale Factor (V.S.F)
+discuss in a group and establish
+the relationship between L.S.F,
+A.S.F and V.S.F using two
+similar solids.
+work out tasks involving
+similarity and enlargements in
+real life situations.
+use digital devices and other
+resources to learn more on the
+use and application of similarity
+and enlargement
+
+Project
+Use and improvise locally available
+materials to make sets of models of
+solids such as cubes, cuboids,
+11
+
+cylinders and spheres of different
+sizes using similarity and
+enlargement to be used as learning
+resources.
+Core Competencies to be developed:
+• Communication and Collaboration: the learner discusses and recognises similar objects from their immediate
+environment.
+• Creativity and Imagination: the learner makes models of solids of different sizes using similarity and enlargement
+concepts.
+Values:
+• Responsibility: the learner collects and takes care of objects from the immediate environment to recognize those that are
+similar and discusses what makes them similar.
+• Integrity: the learner makes models with accurate measurements adhering to the concept of similarity and enlargement.
+Pertinent and Contemporary Issues (PCIs):
+• Social Cohesion: the learner works in a group to create models of various similar solids.
+• Education for Sustainable Development - Environmental Education: the learner collects and uses objects from the
+immediate environment and discusses to recognize those that are similar.
+
+12
+
+Sub Strand 2: Reflection and congruence
+Strand
+
+Sub Strand
+
+Specific Learning
+Outcomes
+
+2.0 Measurements
+and Geometry
+
+2.2 Reflection
+By the end of the suband Congruence strand, the learner should
+(12 Lessons)
+be able to:
+a) identify lines of
+● Symmetry
+symmetry in plane
+● Reflection
+figures,
+● Equations of b) determine the
+Mirror Lines
+properties of
+● Congruence
+reflection in
+different situations
+c) draw an image given
+an object and a
+mirror line on plane
+surface and
+Cartesian plane,
+d) determine the
+equation of the
+mirror line given an
+object and its image,
+e) carry out
+13
+
+Suggested Learning
+Experiences
+
+Suggested Key
+Inquiry
+Questions
+
+The learner is guided to:
+• collect and observe different
+objects from the immediate
+environment and illustrate
+the lines and planes of
+symmetry.
+• use a plane mirror to locate
+the image of an object
+placed at a point in front of
+the mirror.
+• draw a plane figure and a
+mirror line on tracing paper.
+Fold the paper along the
+mirror line and trace out the
+plane figure. Use the two
+plane figures and the mirror
+line to generate the
+properties of reflection.
+
+1. How do we
+use reflection
+in day-to-day
+life?
+2. Where do we
+use
+congruence
+in real life?
+
+congruence tests for
+triangles,
+f) appreciate use of
+reflection and
+congruence in reallife situations.
+
+•
+
+•
+
+•
+
+•
+
+•
+
+14
+
+draw on plain paper a given
+object and a mirror line. Use
+the properties of reflection
+to locate the corresponding
+image
+draw on a Cartesian plane
+given objects and mirror
+lines. Use the properties of
+reflection to draw the
+corresponding images.
+construct a mirror line given
+an object and its image on a
+Cartesian plane. Work out
+the equation of the mirror
+line
+work in a group and make
+paper cutouts of different
+identical shapes. Use the
+shapes to identify direct and
+opposite congruent shapes
+use different triangles to
+establish the congruence
+tests; three sides (SSS), two
+sides and an included
+
+•
+
+angle(SAS), two angles and
+a side (AAS or SAA or
+ASA), and right angle,
+hypotenuse and side (RHS)
+use digital devices to carry
+out reflection of different
+objects to generate images
+
+Core Competencies to be developed:
+• Learning to Learn: the learner applies the properties of reflection to generate the image of an object on a given mirror
+line.
+• Creativity and Imagination: the learner locates the image of an object placed at a point in front of a mirror.
+Values:
+• Responsibility: the learner cautiously takes care of the mirror used in reflecting corresponding images.
+• Respect: the learner recognises the input of every member of the team as they work in groups to make paper cutouts of
+different identical shapes to identify direct or opposite congruent shapes.
+Pertinent and Contemporary Issues (PCIs):
+• Safety and Security: the learner in a group carefully uses the mirror to draw the image of an object given a mirror line.
+• Environment and Technology: the learner selectively and cautiously collects and observes different objects from the
+immediate environment and identifies the lines and planes of symmetry.
+
+15
+
+Sub Strand 3: Rotation
+Strand
+
+Sub Strand
+
+Specific Learning
+Outcomes
+
+Suggested Learning
+Experiences
+
+Suggested
+Key Inquiry
+Questions
+
+2.0 Measurements
+and Geometry
+
+2.3 Rotation
+(10 lessons)
+● Properties of
+rotation
+● Rotation on
+different
+planes
+● Rotational
+Symmetry
+● Rotation and
+Congruence
+
+By the end of the sub-strand
+the learner should be able
+to:
+a) determine the properties
+of rotation in different
+situations,
+b) rotate an object, given
+the centre and angle of
+rotation on a plane
+surface and the
+Cartesian plane,
+c) determine the centre and
+angle of rotation given
+an object and its image,
+d) determine the order
+of rotational symmetry
+of plane figures,
+e) determine the axis and
+order of rotational
+symmetry in solids,
+
+The learner is guided to:
+• demonstrate rotation using
+an actual or improvised
+clock. Discuss and explain
+the movement of the hour
+or minute hand
+• use an object and its image
+on a plane surface to
+discuss and generate the
+properties of rotation.
+• generate an image of an
+object given a centre and
+angle of rotation.
+• carry out rotation on a
+Cartesian plane given the
+object, centre, and angle of
+rotation
+• in a group, use construction
+to find the centre and angle
+
+How is
+rotation
+applied in
+real-life
+situations?
+
+16
+
+f) deduce congruence
+from rotation,
+g) appreciate the
+application of rotation in
+real-life situations.
+•
+
+•
+
+•
+
+•
+
+17
+
+of rotation given the object
+and its image on a plane
+surface and the Cartesian
+plane,
+use paper cutouts of
+different plane figures to
+locate points of symmetry
+and establish the order of
+rotational symmetry
+collect regular solids such
+as pyramids, triangular
+prisms, cones, tetrahedrons
+from the immediate
+environment and identify
+the axis to establish the
+order of rotational
+symmetry
+use different objects and
+their images to identify the
+type of congruence in
+rotation
+use digital devices and
+other resources to learn
+
+more on rotation of plane
+figures and solids
+Core competencies to be developed:
+• Critical thinking and Problem Solving: the learner draws objects and their images and through construction establishes
+the centres and angles of rotation.
+• Communication and Collaboration: the learner discusses using an object and its image on a plane surface to generate the
+properties of rotation.
+Values:
+• Responsibility: the learner takes care of learning resources collected from the immediate environment to establish their
+axis and order of rotational symmetry
+• Respect: learners appreciate each other’s opinion as they discuss and draw the image under a rotation given the object,
+center and angle of rotation
+Pertinent and Contemporary Issues (PCIs):
+• Safety and Security: as the learner observes safety measures while making paper cutouts of different plane figures to
+locate the point and order of rotational symmetry.
+• Environment and Technology: as the learner responsibly collects regular solids from the immediate environment to
+determine the axis and order of rotational symmetry.
+
+Sub Strand 4: Trigonometry 1
+18
+
+Strand
+
+Sub Strand
+
+Specific Learning
+Outcomes
+
+2.0
+Measurements
+and Geometry
+
+2.4 Trigonometry 1 By the end of the sub(15 lessons)
+strand, the learner should
+be able to:
+● Trigonometric
+a) determine the
+ratios of acute
+trigonometric ratios of
+angles
+acute angles from,
+● Sines and
+mathematical tables
+Cosines of
+and calculators,
+complementary b) relate sines and
+angles
+cosines of
+● Trigonometric
+complementary
+ratios of special
+angles,
+angle
+c) relate the sine, cosine
+● Application of
+and tangent of acute
+trigonometric
+angles,
+ratios
+d) determine
+trigonometric ratios of
+special angles: 30o,
+45o, 60o and 90o using
+triangles,
+
+19
+
+Suggested Learning
+Experiences
+
+Suggested Key
+Inquiry
+Questions
+
+The learner is guided to:
+• identify from the
+immediate environment
+shapes that make rightangled triangles.
+• draw right-angled
+triangles and use them to
+define and work out sine,
+cosine, and tangent
+ratios,
+• use mathematical tables
+and calculators to obtain
+trigonometric ratios,
+• generate a table of angles
+and their complements
+and determine their sines
+and cosines. Make
+observations and
+establish the
+
+1. What is
+trigonometry?
+2. How do we
+use
+trigonometry
+in real-life
+situations?
+
+e) apply trigonometric
+ratios to angles of
+elevation and
+depression
+f) reflect on the use of
+trigonometry in reallife situations
+
+•
+
+•
+
+•
+•
+
+20
+
+relationships between the
+sine and cosine ratios,
+work in a group and
+using different acute
+angles, generate a table
+of the ratios of sine,
+cosine, and tangents to
+establish the relationship
+between sine, cosine, and
+tangent,
+work in a group and use
+an isosceles right-angled
+triangle and an
+equilateral triangle to
+generate the
+trigonometric ratios of
+special angles 30o, 45o,
+60o and 90o,
+use trigonometric ratios
+to work out tasks related
+to triangles,
+use a simple clinometer
+to measure the angle of
+elevation and depression
+
+•
+
+•
+
+from a target object in
+the immediate
+environment,
+use trigonometric ratios
+to work out tasks
+involving angles of
+elevation and depression,
+use digital devices and
+other resources such as
+books, manuals, and
+journals to learn more
+about trigonometric
+ratios involving triangles,
+angles of depression, and
+elevation.
+
+Project
+Make a simple clinometer
+using locally available
+materials and use it as a
+learning resource
+
+21
+
+Core Competencies to be developed:
+• Creativity and Imagination: the learner makes a simple clinometer using locally available material and uses it as a
+learning resource
+• Critical Thinking and Problem-Solving: the learner discusses and makes observations about the sine and cosine of
+complementary angles, and applies trigonometric ratios in the solution of triangles
+• Digital literacy: the learner uses digital devices and other resources such as books, manuals, and journals to learn more
+about trigonometric ratios
+Values:
+• Responsibility: the learner takes care of mathematical tables and calculators used in determining trigonometric ratios
+• Unity: the learner works in a group for instance when using an isosceles right-angled triangle and an equilateral
+triangle to generate the trigonometric ratios of special angles 30o, 45o, 60o, and 90o
+Pertinent and Contemporary Issues (PCIs):
+• Environmental Education and Protection: the learner identifies shapes in the immediate environment that have rightangled triangles, and makes a simple clinometer using materials from the immediate environment
+• Parental Engagement and Empowerment: the learner gets support from parents/guardians to get resources to make a
+clinometer.
+
+22
+
+Sub Strand 5: Area of Polygons
+Strand
+
+Sub Strand
+
+Specific
+Outcomes
+
+Learning Suggested Learning Experiences Suggested Key
+Inquiry
+Questions
+
+2.0
+2.5 Area of
+Measurements Polygons
+and Geometry (14 lessons)
+
+By the end of the sub-strand
+the learner should be able to:
+a) derive the formula for
+the area of a triangle
+● Area of a
+given two sides and an
+triangle using
+included angle,
+𝐴𝑟𝑒𝑎 =
+b) work out the area of a
+1
+triangle given two sides
+𝑎𝑏𝑆𝑖𝑛𝐶
+2
+and an included angle,
+● Area of a
+c) determine the area of a
+triangle using
+triangle using Heron’s
+Heron's
+formula,
+formula
+d) determine the area of
+● Area of
+quadrilaterals in
+quadrilaterals
+different situations,
+● Area of
+e) work out the area of
+regular and
+regular polygons of
+irregular
+heptagon and octagon,
+polygons
+
+23
+
+The learner is guided to:
+• discuss in groups and use
+trigonometric ratios to
+generate the formula for the
+area of a triangle given two
+sides and an included angle.
+For example, 𝐴𝑟𝑒𝑎 =
+1
+𝑎𝑏𝑆𝑖𝑛𝐶
+2
+•
+
+•
+
+•
+
+1. How do we
+work out the
+area of
+polygons?
+2. How do we
+apply the
+concept of
+the area of
+polygons in
+use the formula 𝐴𝑟𝑒𝑎 =
+real-life
+1
+𝑎𝑏𝑆𝑖𝑛𝐶
+to
+calculate
+the
+area
+situations?
+2
+of different triangular shapes,
+use the Hero’s Formula
+(Heron’s Formula) to work
+out the areas of various
+triangles,
+identify different
+quadrilaterals and work out
+their areas,
+
+● Application of
+area of
+polygons
+
+f) determine the area of
+irregular polygons in
+different situations,
+g) explore the area of
+polygons as used in
+real-life situations.
+
+•
+
+•
+
+•
+
+identify from the immediate
+environment objects in the
+shape of regular polygons and
+calculate the area of regular
+polygons up to decagons,
+use objects from the
+immediate environment that
+have shapes of irregular
+polygons, discuss and work
+out their area,
+research and discuss in a
+group the use of the area of
+polygons in real-life
+situations.
+
+Core Competencies to be developed:
+• Critical Thinking and Problem Solving: the learner uses trigonometric ratios to generate the formula for a triangle given
+two sides and an included angle
+• Creativity and Imagination: the learner identifies from the immediate environment objects in the shape of regular
+polygons and calculates their area.
+• Learning to Learn: the learners research and discuss the use of the area of polygons in real-life situations
+
+24
+
+Values:
+• Patriotism: the learner uses the objects from the environment and takes care of the environment
+• Responsibility: the learner identifies objects from the immediate environment to use in calculating the area of regular
+polygons
+Pertinent and Contemporary Issues (PCIs):
+Environmental Education: the learner collects objects from the immediate environment to be used as learning materials
+
+25
+
+Sub Strand 6: Area of a Part of a Circle
+Strand
+
+Sub Strand
+
+Specific Learning
+Outcomes
+
+Suggested Learning Experiences
+
+Suggested Key
+Inquiry
+Questions
+
+2.0 Measurements
+and Geometry
+
+2.6 Area of a
+Part of a Circle
+(12 lessons)
+
+By the end of the substrand the learner
+should be able to:
+a) determine the area
+of an annulus in
+different situations,
+b) work out the area of
+a sector of a circle
+in real-life
+situations,
+c) determine the area
+of an annular sector
+in different
+situations,
+d) work out the area of
+a segment of a
+circle,
+e) determine the area
+of common region
+
+The learner is guided to:
+• use circular shapes or objects to
+identify concentric rings formed by
+inner and outer space. Hence work
+out the area of the annulus,
+• work in a group, and use paper
+cutouts to make sectors of circles to
+determine their areas as part of a
+circle,
+• use different examples to illustrate
+and work out the area of an annulus
+sector for example area covered by
+a car wiper blade when cleaning the
+windscreen,
+• draw different segments of a circle
+and calculate their area,
+• draw illustrations of two
+intersecting circles to identify the
+
+How do we use
+the concept of
+the area of a
+part of a circle
+in real life?
+
+●
+●
+●
+●
+●
+
+Area of an
+annulus
+Area of a
+sector of a
+circle
+Area of an
+annular
+sector
+Area of a
+segment
+Area of
+common
+region
+between two
+intersecting
+circles
+
+26
+
+● Application on
+between two
+the use of the
+intersecting circles,
+area of a part f) apply the area of a
+of a circle
+part of a circle in
+real-life situations,
+g) explore the use of
+the area of a part of
+a circle in real-life
+situations.
+
+27
+
+•
+•
+
+common area between the two
+circles, hence work out the area,
+relate and work out the area of a
+part of a circle in real life situations,
+use digital devices and other
+resources to learn more about the
+area of a part of a circle.
+
+Project
+• make a dartboard of different
+numbers of concentric circles from
+locally available materials. Paint
+different colours on the annular
+sectors and the concentric circles.
+Discuss and create rules for playing
+and scoring the game.
+• make necklaces using beading
+techniques of different coloured
+annular sectors.
+
+Core Competencies to be developed:
+• Creativity and Imagination: the learner makes an improvised dartboard of different numbers of concentric circles.
+• Learning to Learn: the learner draws illustrations of two intersecting circles to identify the common area between the two
+circles.
+• Communication and collaboration: the learners engage to improvise locally available materials to make dart boards and
+necklaces
+Values:
+• Responsibility: the learner makes darts board of different numbers of concentric circles from the immediate environment
+• Unity: the learner collaborates in a group and uses paper cutouts to make sectors of circles to determine their areas as part
+of a circle
+Pertinent and Contemporary Issues (PCIs):
+• Parental Engagement and Empowerment: the learner engages parents in using locally available materials for making
+improvised necklaces.
+• Environment Education: the learner sources for locally available materials to make necklaces and dart boards.
+• Learner Support Programmes - Peer Support: the learner works with others to make necklaces using beading techniques of
+different coloured annular sectors.
+
+28
+
+Sub Strand 7: Surface Area and Volume of Solids
+Strand
+
+Sub Strand
+
+Specific
+Outcomes
+
+2.0 Measurements
+and Geometry
+
+2.7 Surface
+Area and
+Volume of
+Solids
+(15 lessons)
+
+By the end of the substrand, the learner should
+be able to:
+a) determine the surface
+area of prisms,
+pyramids, cones,
+frustums, and spheres,
+b) calculate the surface
+area of composite
+solids,
+c) calculate the volume
+of prisms, pyramids,
+cones, frustums, and
+spheres,
+d) determine the volume
+of composite solids,
+e) explore the use of the
+surface area and
+volume of solids in
+real-life situations.
+
+● Surface Area
+of Solids
+● Volume of
+Solids
+
+Learning Suggested Learning Experiences Suggested Key
+Inquiry
+Questions
+
+29
+
+The learner is guided to:
+1.
+• use models and nets of prisms,
+pyramids, cones, frustums,
+and spheres to calculate
+surface areas.
+• identify the components of a
+composite solid, calculate the 2.
+surface area of each
+component and obtain the
+total surface area of the
+composite solid.
+• use models of a cone and a
+cylinder of the same height
+and base area and an
+appropriate substance such as
+sand or water, to demonstrate
+that the volume of the cone is
+a third of the volume of the
+cylinder.
+
+How do we
+determine
+the surface
+area and
+volume of
+solids?
+Why do we
+determine
+the surface
+area and
+volume of
+solids?
+
+•
+
+•
+
+•
+
+•
+
+discuss in a group and work
+out the volume of prisms,
+pyramids, cones, frustums,
+and spheres.
+discuss in a group the
+components of composite
+solids, work out the volume of
+the components and obtain the
+total volume.
+use appropriate containers
+from the local environment to
+work out the volume and
+capacity of the prism,
+pyramid, cone, frustum and
+sphere.
+use digital devices and other
+resources to work out the
+surface area and volume of
+solids
+
+Core Competencies to be developed:
+• Critical Thinking and Problem-Solving: the learner uses a cylinder and a cone of the same radius and height, and a
+substance such as sand or water, to determine the volume of a cone as a third the volume of a cylinder.
+
+30
+
+•
+
+Creativity and Imagination: the learner uses a cylinder and a cone of the same radius and height, and a substance such
+as sand or water, to determine the volume of a cone as a third the volume of a cylinder.
+
+Values:
+• Unity: the learner discusses in a group and establishes the relationship between the volume of a cone and the volume of
+a cylinder.
+• Respect: the learner listens to others’ opinions as they discuss in groups and work out the volumes of prisms, pyramids,
+cones, frustums and spheres.
+Pertinent and Contemporary Issues (PCIs):
+Environment and technology: as the learner collects and uses containers from the immediate environment and uses them
+to discuss and recognize their volumes.
+
+31
+
+Sub Strand 8: Vectors I
+Strand
+Sub Strand
+
+2.0
+Measurements
+and Geometry
+
+Specific Learning
+Outcomes
+
+Suggested Learning
+Experiences
+
+2.8 Vectors I
+(15 lessons)
+•
+•
+•
+•
+•
+•
+•
+•
+
+Vector and
+scalar
+quantities.
+vector notation
+Representation
+of vectors
+Equivalent
+vectors
+Addition of
+vectors
+Multiplication
+of vectors by
+scalar
+Column
+vectors
+Position
+vectors
+
+By the end of the sub strand
+the learner should be able to:
+a) explain vector and scalar
+quantities with
+illustrations
+b) use vector notations in
+different ways
+c) represent vectors
+geometrically in different
+situations
+d) identify equivalent
+vectors in different
+situations
+e) add vectors in different
+situations
+f) multiply vectors by
+scalars
+g) determine column
+vectors in different
+situations
+32
+
+The learner is guided to:
+● search and brainstorm on the
+meaning of the terms vector
+and scalar quantities and
+illustrate giving examples.
+● practice writing vector
+notations using charts
+● illustrate vectors on charts,
+grids and regular plane
+figures,
+● demonstrate equivalent
+vectors using charts, grids and
+Cartesian coordinates
+● illustrate addition of vectors
+using charts and grids to get
+the resultant vector.
+● illustrate multiplication of
+vectors by a scalar using
+charts and grids.
+
+Suggested
+Key Inquiry
+Questions
+1. What are
+vectors?
+2. Where is
+vectors
+used in
+real life
+situations?
+
+•
+•
+•
+
+Magnitude of a
+vector
+Midpoint of a
+vector
+Translation
+vector
+
+h) determine position
+vectors in different
+situations
+i) work out magnitude of a
+vector in different
+situations
+j) determine the midpoint
+of a vector in different
+situations
+k) determine translation
+vector as a
+transformation
+l) appreciate the use of
+vectors in real life
+situations
+
+● express vectors in column
+form from Cartesian planes,
+grids and charts.
+● discuss and illustrate position
+vectors using any arbitrary
+reference points like the
+origin.
+● work out magnitude of
+different vectors
+● find the midpoint of different
+vectors
+● use vectors to illustrate
+translation as a transformation
+● use digital devices to watch
+videos and play games
+involving vectors,
+
+Core competencies to be developed:
+● Learning to learn: As the learner uses charts and grids to practice vector addition.
+● Self-efficacy: As the learner shares and uses resources from the immediate environment such as plane figures or flip
+charts to demonstrate equivalent vectors.
+Values:
+● Responsibility: As the learner uses resources from immediate environment such as plane figures, flip charts and relate
+equivalent vectors
+
+33
+
+● Unity: As the learner searches and brainstorms on the meaning of the terms vector and scalar quantities and illustrates
+giving examples.
+Pertinent and Contemporary Issues (PCIs):
+• Education for sustainable Development - Environmental education as learners practice addition of vectors using charts
+and grids made from resources in the immediate environment.
+• Learner Support Programme - Peer education: learners assist one another as they practice expressing vectors in column
+form from Cartesian planes, grids and charts.
+
+34
+
+Sub Strand 9: Linear Motion
+Strand
+
+Sub Strand
+
+2.0
+Measurements
+and Geometry
+
+2.9 Linear
+Motion
+(15 lessons)
+● Distance,
+displacement,
+speed,
+velocity, and
+acceleration
+● Velocity and
+acceleration
+● Displacement
+time graph
+● Interpretation
+of
+displacementtime graph
+● Velocity time
+graph
+
+Specific Learning
+Outcomes
+By the end of the substrand, the learner should
+be able to:
+a) explain the terms
+distance, displacement,
+speed, velocity and
+acceleration in real life
+situations,
+b) determine velocity and
+acceleration in different
+situations,
+c) draw a displacementtime graph of different
+situations,
+d) interpret displacementtime graph in different
+situations,
+e) draw a velocity-time
+graph from given tables
+in different situations,
+
+35
+
+Suggested Learning
+Experiences
+The learner is guided to:
+• demonstrate motion by
+moving an object from a
+point to another for a
+specified distance and
+direction and state the
+meaning of the terms
+distance, displacement,
+speed, velocity and
+acceleration,
+• participate in a race of a
+specified distance. Record
+time taken by each learner
+and work out the velocity
+and acceleration of different
+learners,
+• work out the velocity and
+acceleration of movement of
+objects from one point
+another
+
+Suggested Key
+Inquiry Questions
+1. What is speed?
+2. How do we use
+displacementtime graphs in
+real life?
+3. How do we use
+velocity-time
+graphs?
+
+● Interpretation f) interpret velocity-time
+•
+of velocity graph in different
+time graph
+situations,
+● Relative
+g) determine relative speed
+speed
+of two moving bodies
+•
+in different situations,
+h) appreciate use of linear
+motion in real life
+situations,
+•
+
+•
+
+•
+
+•
+
+36
+
+use data of displacement and
+time to plot displacementtime graphs on a grid or
+Cartesian plane,
+obtain information from a
+graph and examine it in
+relation to displacement,
+time and velocity,
+use data of velocity and time
+taken to draw a velocitytime graphs on a grid or
+Cartesian plane,
+obtain information from a
+graph and examine it in
+relation to velocity, time and
+acceleration,
+observe two bodies in
+motion such as cars when
+overtaking or moving in
+opposite directions and work
+out the relative speed of
+these two bodies in motion,
+use digital devices and other
+resources to explore more
+
+on linear motion in day-today life.
+Core Competencies to be developed:
+• Communication and Collaboration: the learner discusses different displacement-time graphs
+• Self-Efficacy: the learner participates in a race of a specified distance, record time taken by a learner and work out the
+velocity and acceleration.
+• Critical Thinking and Problem Solving: the learner observes two bodies in motion such as cars when overtaking or
+moving in opposite directions and works out the relative speed of the two bodies in motion.
+Values:
+• Responsibility: as the learner uses objects in motion such as thrown objects and many others to explain distance,
+displacement, speed, velocity and acceleration,
+• Integrity: as the learner participates in a race of a specified distance, records time taken by each learner and accurately
+works out the velocity and acceleration of different learners,
+• Unity: as the learner participates and collaborates in a race to record time taken by each learner and work out the
+velocity and acceleration of different learners.
+Pertinent and contemporary Issues (PCIs):
+• Learner Support Programmes-Sports and Games: the learner participates in a race of a specified distance, records time
+taken by each learner and works out the velocity and acceleration,
+• Socio-Economic and Environmental Issues-Safety and Security: the learner observes the two bodies in motion such as
+cars when overtaking or moving in opposite directions and works out the relative speed of these two bodies in motion.
+
+37
+
+Suggested Assessment Rubric: Measurements and Geometry
+Indicators
+
+Exceeds Expectation
+
+Meets Expectation
+
+Approaches
+Expectation
+Ability to determine The learner systematically The learner determines The learner determines
+the centre of
+determines the centre of the centre of
+the centre of
+enlargement and the enlargement and linear
+enlargement and linear enlargement or linear
+linear scale factor
+scale factor from similar scale factor from
+scale factor from
+from similar figures figures
+similar figures
+similar figures
+Ability to construct
+The learner precisely
+The learner
+The learner partially
+the image of an
+constructs objects and
+constructs objects
+constructs objects and
+object under an
+their images under
+and their images
+their images under
+enlargement given
+enlargement given the
+under enlargement
+enlargement given the
+the centre and the
+centre and the linear
+given the centre and centre and the linear
+linear scale factor
+scale factor
+the linear scale
+scale factor
+factor
+Ability to carry out
+The learner
+The learner carries
+The learner partially
+enlargement on the
+systematically carries
+out enlargement on
+carries out enlargement
+Cartesian plane
+out enlargement on the the Cartesian plane
+on the Cartesian plane
+Cartesian plane
+partly accurately
+Ability to determine The learner precisely
+The learner
+The learner determines
+linear, area and
+determines linear, area
+determines linear,
+either linear or area or
+volume scale
+and volume scale
+area and volume
+volume scale factors
+factors
+factors
+scale factors
+
+38
+
+Below Expectation
+The learner determines
+the centre of
+enlargement or linear
+scale factor from similar
+figures with assistance
+The learner constructs
+objects and their images
+under enlargement
+given the centre and the
+linear scale factor with
+assistance
+The learner carries out
+enlargement on the
+Cartesian plane with
+assistance
+With assistance
+determines linear, area
+and volume scale
+factors
+
+Indicators
+
+Exceeds Expectation
+
+Meets Expectation
+
+Ability to apply
+similarity and
+enlargement to real
+life situations
+
+The learner
+systematically Applies
+similarity and
+enlargement to real
+life situations
+The learner precisely
+and correctly identifies
+lines of symmetry of
+plane figures and
+properties of reflection
+
+The learner applies
+similarity and
+enlargement to
+real life situations
+
+Ability to identify
+lines of symmetry
+of plane figures and
+properties of
+reflection
+Ability to draw an
+image given an
+object and a mirror
+line on a plane
+surface and
+Cartesian plane and
+determine the
+equation of the
+mirror line
+
+The learner
+systematically and
+accurately draws an
+image given an object
+and a mirror line on a
+plane surface and
+Cartesian plane and
+determines the
+equation of the mirror
+line
+
+The learner
+correctly identifies
+lines of symmetry
+of plane figures and
+properties of
+reflection
+The learner
+accurately draws an
+image given an
+object and a mirror
+line on a plane
+surface and
+Cartesian plane and
+determines the
+equation of the
+mirror line
+
+39
+
+Approaches
+Expectation
+The learner partially
+applies similarity and
+enlargement to some
+real life situations
+The learner correctly
+identifies lines of
+symmetry of plane
+figures or properties of
+reflection
+The learner accurately
+draws an image given an
+object and a mirror line
+on a plane surface or
+Cartesian plane or
+determines the equation
+of the mirror line
+
+Below Expectation
+The learner applies
+similarity and
+enlargement to real life
+situations with
+assistance
+The learner partially
+identifies lines of
+symmetry of plane
+figures or properties of
+reflection
+The learner partially
+draws an image given
+an object and a mirror
+line on the plane
+surface or the Cartesian
+plane or determines the
+equation of the mirror
+line
+
+Indicators
+
+Exceeds Expectation
+
+Ability to determine
+the properties of
+rotation and rotate
+an object, given the
+centre and angle of
+rotation
+
+The learner
+comprehensively and
+correctly determines
+the properties of
+rotation and rotates an
+object, given the centre
+and angle of rotation
+The learner
+comprehensively and
+correctly determines
+the order of rotational
+symmetry in solids and
+relates rotation and
+congruence
+The learner
+systematically and
+accurately determines
+the trigonometric
+ratios of acute angles
+from right-angled
+triangles, mathematical
+tables, and calculators
+
+Ability to determine
+the order of
+rotational symmetry
+in solids and relate
+rotation and
+congruence
+Ability to determine
+the trigonometric
+ratios of acute
+angles from rightangled triangles,
+mathematical
+tables, and
+calculators
+
+Meets Expectation
+
+Approaches
+Below Expectation
+Expectation
+The learner
+The learner correctly
+The learner partially
+correctly determines determines the
+determines the
+the properties of
+properties of rotation or
+properties of rotation or
+rotation and rotates
+rotates an object, given
+rotates an object, given
+an object, given the
+the centre and angle of
+the centre and angle of
+centre and angle of
+rotation
+rotation
+rotation
+The learner
+The learner correctly
+The learner partially
+correctly determines determines the order of
+determines the order of
+the order of
+rotational symmetry in
+rotational symmetry in
+rotational symmetry solids or relates rotation solids or relates rotation
+in solids and relates
+and congruence
+and congruence
+rotation and
+congruence
+The learner
+The learner partially
+The learner determines
+accurately
+determines the
+the trigonometric ratios
+determines the
+trigonometric ratios of
+of acute angles from
+trigonometric ratios
+acute angles from rightright-angled triangles,
+of acute angles from angled triangles,
+or mathematical tables,
+right-angled
+mathematical tables, and or calculators with
+triangles,
+calculators
+assistance
+mathematical
+
+40
+
+Indicators
+
+Exceeds Expectation
+
+Meets Expectation
+
+Approaches
+Expectation
+
+Below Expectation
+
+The learner accurately
+relates the sines,
+cosines, of
+complementary angles
+or sines, cosines, or
+tangents of acute angles
+
+The learner partially
+relates the sines,
+cosines, of
+complementary angles
+or sines, cosines, and
+tangents of acute
+angles
+
+The learner accurately
+determines
+trigonometric ratios of
+any two of the special
+angles 30o, 45o, 60o,
+and 90o using triangles,
+
+The learner partially
+determines
+trigonometric ratios of
+any one of the special
+angles 30o, 45o, 60o,
+and 90o using triangles
+
+tables, and
+calculators
+Ability to relate the
+sines, cosines, of
+complementary
+angles and sines,
+cosines, and
+tangents of acute
+angles
+
+The learner logically
+and accurately relates
+the sines, cosines, of
+complementary angles
+and sines, cosines,
+and tangents of acute
+angles
+
+Ability to determine
+trigonometric ratios
+of special angles
+30o, 45o, 60o and
+90o using triangles,
+
+The learner
+systematically and
+accurately determines
+trigonometric ratios of
+special angles 30o,
+45o, 60o, and 90o
+using triangles
+
+The learner
+accurately relates
+the sines, cosines,
+of complementary
+angles and sines,
+cosines, and
+tangents of acute
+angles
+The learner
+accurately
+determines
+trigonometric ratios
+of special angles
+30o, 45o, 60o, and
+90o using triangles
+
+41
+
+Indicators
+
+Exceeds Expectation
+
+Meets Expectation
+
+Ability to apply
+trigonometric ratios
+in the solution of
+triangles, angles of
+elevation, and
+depression
+
+The learner
+appropriately and
+accurately applies
+trigonometric ratios in
+the solution of
+triangles, angles of
+elevation, and
+depression
+The learner
+systematically and
+accurately determines
+the area of
+quadrilaterals,
+heptagons, octagons,
+and irregular polygons
+The learner
+systematically and
+accurately determines
+the area of an annulus,
+sector, annular sector,
+and segment of a circle
+
+The learner
+accurately applies
+trigonometric ratios
+in the solution of
+triangles, angles of
+elevation, and
+depression
+
+Ability to determine
+the area of
+quadrilaterals,
+heptagons,
+octagons, and
+irregular polygons
+Ability to determine
+the area of an
+annulus, sector,
+annular sector, and
+segment of a circle
+
+The learner
+accurately
+determines the area
+of quadrilaterals,
+heptagons,
+octagons, and
+irregular polygons
+The learner
+accurately
+determines the area
+of an annulus,
+sector, annular
+sector, and segment
+of a circle
+
+42
+
+Approaches
+Expectation
+The learner accurately
+applies trigonometric
+ratios in any two of
+either the solution of
+triangles or angles of
+elevation or depression
+
+Below Expectation
+
+The learner accurately
+determines the area of
+quadrilaterals,
+heptagons, octagons, or
+irregular polygons
+
+The learner partially
+determines the area of
+quadrilaterals,
+heptagons, octagons or
+irregular polygons
+
+The learner accurately
+determines the area of
+an annulus, or sector,
+annular sector, or
+segment of a circle
+
+The learner partially
+determines the area of
+an annulus or sector or
+annular sector or
+segment of a circle
+
+The learner partially
+applies trigonometric
+ratios in any one of
+either solution of
+triangles or angles of
+elevation or depression
+
+Indicators
+
+Exceeds Expectation
+
+Ability to determine
+the area of a
+common region
+between two
+intersecting circles
+
+The learner
+systematically and
+correctly determines
+the area of the
+common region
+between two
+intersecting circles
+The learner
+systematically and
+accurately determines
+the surface area of
+prisms, pyramids,
+cones, frustums,
+spheres, and composite
+solids
+The learner
+consistently and
+correctly determines
+the volume of prisms,
+pyramids, cones,
+frustums, spheres, and
+composite solids
+
+Ability to determine
+the surface area of
+prisms, pyramids,
+cones, frustums and
+spheres, and
+composite solids
+
+Ability to determine
+the volume of
+prisms, pyramids,
+cones, frustums,
+spheres, and
+composite solids
+
+Meets Expectation
+
+Approaches
+Expectation
+The learner
+The learner partially
+correctly determines determines the area of
+the area of the
+the common region
+common region
+between two
+between two
+intersecting circles
+intersecting circles
+
+Below Expectation
+
+The learner
+accurately
+determines the
+surface area of
+prisms, pyramids,
+cones, frustums,
+spheres, and
+composite solids
+The learner
+correctly determines
+the volume of
+prisms, pyramids,
+cones, frustums,
+spheres, and
+composite solids
+
+The learner accurately
+determines the surface
+area of prisms,
+pyramids, cones,
+frustums, spheres, or
+composite solids
+
+The learner partially
+determines the surface
+area of prisms,
+pyramids, cones,
+frustums, spheres, or
+composite solids.
+
+The learner correctly
+determines the volume
+of prisms, pyramids,
+cones, frustums,
+spheres, or composite
+solids
+
+The learner partially
+determines the volume
+of prisms, pyramids,
+cones, frustums,
+spheres, or composite
+solids
+
+43
+
+The learner partially
+determines the area of
+the common region
+between two
+intersecting circles with
+prompts
+
+Indicators
+Ability to represent
+vectors
+geometrically
+perform operations
+on vectors and
+determine the
+magnitude of vectors
+Ability to determine
+translation vector
+
+Exceeds Expectation
+
+The learner precisely
+and correctly represents
+vectors geometrically,
+performs operations on
+vectors and determines
+the magnitude of
+vectors
+The learner
+systematically and
+accurately determines
+translation vector
+Ability to determine The learner explicitly
+displacement,
+and correctly
+speed, velocity,
+determines
+acceleration;
+displacement, speed,
+velocity, and
+acceleration
+Ability to draw and
+The learner
+interpret graphs of
+systematically and
+linear motion
+accurately draws and
+interprets graphs of
+linear motion
+
+Meets Expectation
+
+Approaches
+Expectation
+The leaner correctly
+represents vectors
+geometrically performs
+operations on vectors or
+determines the magnitude
+of vectors
+
+The leaner correctly
+represents vectors
+geometrically
+performs operations
+on vectors and
+determines the
+magnitude of vectors
+The learner
+The learner partially
+accurately
+accurately determines
+determines
+translation vector
+translation vector
+The learner
+The learner correctly
+correctly determines determines displacement
+displacement,
+or speed or velocity or
+speed, velocity, and
+acceleration
+acceleration
+The learner
+accurately draws
+and interprets
+graphs of linear
+motion
+
+44
+
+The learner accurately
+draws or interprets
+graphs of linear motion
+
+Below Expectation
+The learner partially
+represents vectors
+geometrically performs
+operations on vectors or
+determines the
+magnitude of vectors
+with assistance
+The learner partially
+determines translation
+vector with assistance
+The learner partially
+determines
+displacement or speed
+or velocity or
+acceleration with
+assistance
+The learner partially
+draws or interprets
+graphs of linear motion
+
+Indicators
+
+Exceeds Expectation
+
+Ability to define
+and solve problems
+involving relative
+speed
+
+The learner correctly
+and accurately defines
+and solves problems
+involving relative
+speed
+
+Meets Expectation
+
+Approaches
+Expectation
+The learner
+The learner correctly
+correctly defines
+defines or solves
+and solves problems problems involving
+involving relative
+relative speed
+speed
+
+45
+
+Below Expectation
+The learner partially
+correctly defines or
+solves problems
+involving relative speed
+
+STRAND 3.0: STATISTICS AND PROBABILITY
+Sub Strand 1: Statistics and Probability
+Strand
+
+Sub Strand
+
+Specific
+Outcomes
+
+3.0 Statistics
+and
+Probability
+
+3.1. Statistics I
+
+By the end of the substrand the learner should
+be able to:
+a) collect data from reallife sources,
+b) draw a frequency
+distribution table for
+grouped and
+ungrouped data,
+c) determine mean, mode
+and median of grouped
+and ungrouped data,
+d) represent data using
+histograms and
+frequency polygons,
+e) interpret data from
+histograms and
+frequency polygons,
+
+(16 lessons
+lessons)
+● Collection of
+Data
+● Frequency
+distribution
+table
+● Mean, Mode
+and Median of
+grouped and
+ungrouped data
+● Representation
+of Data
+● Interpretation
+of Data
+
+Learning Suggested Learning Experiences
+
+46
+
+The learner is guided to:
+• discuss with peers the meaning of
+the term data. Explore data sources
+and use different and appropriate
+methods to collect and record data,
+• use the collected data or any other
+data to prepare a frequency
+distribution table for an ungrouped
+data,
+• group collected data or any other
+data into appropriate classes and
+generate a frequency distribution
+table,
+• discuss in pairs and identify the
+modal class for grouped data,
+• use data collected from different
+sources and work out the mode,
+
+Suggested Key
+Inquiry
+Questions
+1. What is
+statistics?
+2. How do we
+represent
+data?
+3. How do we
+use statistics
+in day to day
+life?
+
+f) promote data
+collection,
+organisation and
+representation for
+informed decision
+making.
+
+•
+
+•
+•
+
+median and mean for grouped and
+ungrouped data,
+work in a group and use collected
+data to draw histograms (with equal
+and unequal class-width) and
+frequency polygons,
+use the histograms and frequency
+polygons to examine data to make
+conclusions,
+use digital devices and other
+resources to draw histograms and
+frequency polygons.
+
+Project
+- Identify a situation in the school or
+community that can be used for data
+collection, organisation and
+representation to guide the school or
+community to make informed
+decisions. Present and share findings
+to different groups of people such as
+school administrators, parents or
+local community leaders.
+
+47
+
+Core Competencies to be developed:
+● Critical thinking and problem solving: the learner uses the histograms and frequency polygons to examine data and make
+conclusions.
+● Self-Efficacy: the learner discusses with peers the meaning of the term data and explores data sources.
+● Digital literacy: the learner uses digital devices to draw histograms and frequency polygons to make conclusions.
+● Communication and collaboration: learner presents and shares findings from data to different groups of people such as school
+administrators, parents or local community leaders.
+Values:
+• Integrity: the learner collects and records data accurately.
+• Unity: the learner works in groups and uses collected data to draw histograms and frequency polygons.
+Pertinent and Contemporary Issues (PCIs):
+• Life Skills - Decision Making: the learner makes informed decisions from data interpretation from histograms and
+frequency polygons.
+• Parental Engagement and Empowerment: the learner seeks support and guidance from parents or guardians to collect,
+organise and present data on an identified situation in the school or community.
+
+48
+
+Strand
+
+Sub Strand
+
+3.0 Statistics
+and probability 3.2 Probability 1
+(12 lessons)
+● Experimental
+probability
+● Probability
+space
+● Mutually
+exclusive and
+independent
+events
+● Laws of
+Probability
+● probability tree
+diagrams
+
+Specific Learning
+Outcomes
+
+Suggested Learning Experiences Suggested Key
+Inquiry
+Questions
+How is
+By the end of the sub strand
+The learner is guided to:
+probability
+the learner should be able to: • carry out experiments in a
+applied in real
+a) perform experiments
+group such as tossing coins or life situations?
+involving probabilities in
+throwing dice to illustrate
+different situations,
+experimental probability,
+b) identify the range of
+• discuss in a group the
+probability in different
+probabilities of events and
+situations,
+show the range of probability.
+c) generate probability
+• list down all the possible
+space of different events
+outcomes of different events
+d) determine the probability
+in real life situations
+of mutually exclusive and • work out in pairs the
+independent events
+probability of mutually
+e) apply the laws of
+exclusive events and
+probability in different
+independent events.
+situations,
+• work out probability of events
+f) determine the probability
+using addition and
+of independent events
+multiplication law
+using tree diagrams
+• in pairs use tree diagram to
+g)
+appreciate the
+work out probability of two
+application of
+49
+
+probability in real life
+situations.
+
+•
+•
+
+independent and mutually
+events
+discuss, create and play games
+related to probability.
+use digital devices and other
+resources to learn more on
+probability
+
+Core competencies to be developed:
+• Communication and collaboration: the learner carries out experiments such as tossing coins or throwing dice to illustrate
+experimental probability.
+• Citizenship: the learner acknowledges Kenyan currency as they carry out experiments of tossing coins.
+• Self-efficacy: the learner appreciates his/her ability to play games related to probability.
+Values:
+• Responsibility: the learner carefully tosses coins or throws dice to illustrate experimental probability.
+• Social justice: the learner plays games where they accept there is winning or losing and acknowledging honest outcomes.
+Pertinent and Contemporary Issues (PCIs):
+• Social Cohesion: the learner interacts with others freely as they discuss, create and play games related to probability.
+• Life skills and values education: the learner uses different experimental events and lists down all the possible outcomes
+which assist in decision making.
+
+50
+
+Suggested Assessment Rubric: Statistics and Probability
+Indicators
+Ability to draw a
+frequency
+distribution table
+for grouped and
+ungrouped data
+and determine
+mean, mode, and
+median
+Ability to
+represent and
+interpret grouped
+data using
+histograms and
+frequency
+polygons
+Ability to perform
+experiments
+involving
+probabilities and
+identify the range
+of probability
+
+Exceeds Expectation
+The learner accurately
+and systematically
+draws a frequency
+distribution table for
+grouped and
+ungrouped data and
+determines mean,
+mode, and median
+The learner
+systematically and
+accurately represents
+and interprets grouped
+data using histograms
+and frequency
+polygons
+The learner
+systematically and
+accurately performs
+experiments involving
+probabilities and
+identifies the range of
+probability
+
+Meets Expectation
+The learner
+accurately draws a
+frequency
+distribution table
+for grouped and
+ungrouped data and
+determines mean,
+mode, and median
+The learner
+accurately
+represents and
+interprets grouped
+data using
+histograms and
+frequency polygons
+The learner
+accurately performs
+experiments
+involving
+probabilities and
+identifies the range
+of probability
+51
+
+Approaches Expectation
+The learner accurately
+draws a frequency
+distribution table for
+grouped or ungrouped data
+or determines mean, mode,
+and median
+
+Below Expectation
+The learner partially
+draws a frequency
+distribution table for
+grouped or ungrouped
+data or determines
+mean, mode or median
+
+The learner accurately
+represents or interprets
+grouped data using
+histograms or frequency
+polygons
+
+The learner partially
+represents or interprets
+grouped data using
+histograms or
+frequency polygons
+
+The learner accurately
+performs experiments
+involving probabilities or
+identifies the range of
+probability
+
+The learner partially
+performs experiments
+involving probabilities
+or identifies the range
+of probability
+
+Indicators
+Ability to
+generate
+probability space
+of different events
+and determine the
+probability of
+mutually exclusive
+and independent
+events
+Ability to apply
+the laws of
+probability and
+determine the
+probability of
+independent
+events using tree
+diagrams
+
+Exceeds Expectation
+The learner
+systematically and
+accurately generates
+probability space of
+different events and
+determines the
+probability of
+mutually exclusive
+independent events
+The learner precisely
+and correctly applies
+the laws of probability
+and determines the
+probability of
+independent events
+using tree diagrams
+
+Meets Expectation
+The learner
+accurately
+generates
+probability space of
+different events and
+determines the
+probability of
+mutually exclusive
+independent events
+The learner
+precisely and
+correctly applies the
+laws of probability
+and determines the
+probability of
+independent events
+using tree diagrams
+
+52
+
+Approaches Expectation
+The learner accurately
+generates the probability
+space of different events or
+determines the probability
+of mutually exclusive or
+independent events
+
+Below Expectation
+The learner partially
+generates probability
+space of different
+events or determines
+the probability of
+mutually exclusive or
+independent events
+
+The learner correctly
+applies the laws of
+probability or determines
+the probability of
+independent events using
+tree diagrams
+
+The learner partially
+applies the laws of
+probability or
+determines the
+probability of
+independent events
+using tree diagrams
+
+53
+
+

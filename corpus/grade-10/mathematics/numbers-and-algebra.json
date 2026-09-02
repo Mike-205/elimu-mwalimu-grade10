@@ -1,0 +1,162 @@
+{
+  "grade": "Grade 10",
+  "subject": "Mathematics",
+  "pathway": "Compulsory core (all pathways)",
+  "strand": "Numbers and Algebra",
+  "sourceNote": "Strand and sub-strand names, lesson allocations and every entry's learningOutcomes are taken verbatim from the official KICD Grade 10 Mathematics Curriculum Design, 'STRAND 1.0: NUMBERS AND ALGEBRA'. The extracted text of that design is committed at corpus/_source/mathematics-grade10-kicd.txt so any quotation here can be checked offline — see that directory's README for provenance and for the pdftotext column-interleaving caveat. Note the subject is titled 'Mathematics' in the design, not 'Core Mathematics'; earlier corpus files in this repository used the latter and were retired. The design's own spelling is preserved in the outcomes, including 'factorization' with a z in sub-strand 1.3 where the rest of the document uses -isation. Board notes follow the sub-topic lists the design prints beside each sub-strand (classification of numbers, reciprocals, indices, logarithms to base 10, quadratic identities, factorisation), and retain mathematical tables alongside calculators because the design requires both. The notes themselves, the activity, the assessment questions and the explainer are NOT from the design — it specifies what a learner must be able to do, not what a teacher writes on the board or how to mark it. Those fields are illustrative teaching content written to serve the quoted outcomes, and every pack says so.",
+  "subStrands": [
+    {
+      "id": "math-numbers-real-numbers",
+      "subStrand": "Real Numbers",
+      "citation": "KICD Grade 10 Mathematics Curriculum Design — Strand 1.0 Numbers and Algebra — Sub Strand 1.1 Real Numbers (8 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "classify whole numbers as odd, even, prime and composite in different situations",
+        "classify real numbers as rational and irrational in different situations",
+        "determine the reciprocal of real numbers by division",
+        "determine the reciprocal of real numbers by use of mathematical tables and calculators",
+        "apply reciprocal of real numbers in mathematical computations",
+        "promote the use of real numbers in day-to-day activities"
+      ],
+      "boardNotes": [
+        "Whole numbers: EVEN divisible by 2; ODD not; PRIME has exactly two factors, 1 and itself; COMPOSITE has more than two",
+        "1 is neither prime nor composite. 2 is the only even prime",
+        "RATIONAL: can be written a/b with b not 0. Includes all fractions, terminating and recurring decimals",
+        "IRRATIONAL: cannot be written as a fraction. Examples: root 2, root 3, pi. Decimal never ends and never repeats",
+        "Reciprocal of x is 1/x. Reciprocal of 4 is 0.25; reciprocal of 2/5 is 5/2. Number times its reciprocal = 1",
+        "Zero has no reciprocal — division by zero is undefined",
+        "Reciprocal tables give 1/x directly; look up 2.5 to read 0.4000"
+      ],
+      "activity": {
+        "description": "Call out twelve numbers one at a time — 17, 0.75, root 2, 9, 22/7, pi, 2, 100, 0.333..., 13, 1, 0.6 — and learners write each into a four-column table headed Odd, Even, Prime, Composite where it applies, then mark each one R for rational or I for irrational. Learners swap books and mark each other as you read the answers, arguing out loud about the three deliberately tricky entries: 1, 2 and 22/7.",
+        "materialsNeeded": "None — spoken numbers and learners' exercise books; the table is drawn by hand."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "From the list 2, 9, 15, 23, 1, identify the prime numbers.",
+          "markingScheme": "2 marks for 2 and 23 only; 1 mark if 2 and 23 are given but 1 is wrongly included."
+        },
+        {
+          "question": "State whether each of the following is rational or irrational: 0.25, root 2, 7/3, pi.",
+          "markingScheme": "4 marks, 1 each — rational, irrational, rational, irrational."
+        },
+        {
+          "question": "Find the reciprocal of 5 and the reciprocal of 3/8.",
+          "markingScheme": "2 marks — 1 for 1/5 or 0.2, 1 for 8/3."
+        },
+        {
+          "question": "Use reciprocals to evaluate 1 divided by 0.4, showing your method.",
+          "markingScheme": "2 marks for 2.5; 1 mark for correctly writing it as the reciprocal of 0.4 with an arithmetic slip."
+        },
+        {
+          "question": "Explain why 22/7 is rational even though it is commonly used in place of pi, which is irrational.",
+          "markingScheme": "3 marks — 1 for 22/7 being a ratio of two whole numbers and therefore rational by definition, 1 for pi not being expressible as any such ratio, 1 for noting that 22/7 is only an approximation to pi and the two are not the same number."
+        }
+      ],
+      "explainer": "The word 'real' makes this sound harder than it is — real numbers are simply every number a learner has met so far, and this sub-strand sorts them into groups. The split that matters is rational against irrational, and the test is one question: can it be written as one whole number over another? Fractions can, terminating decimals can, and so can recurring ones. Root 2 and pi cannot, which is why their decimals run forever without repeating. The reciprocal half of the sub-strand is easier still: flip the number over. The only thing to be firm about is that zero has no reciprocal, and that 22/7 is a rational approximation to pi, not pi itself — learners meet both symbols in the same week and conflate them."
+    },
+    {
+      "id": "math-numbers-indices-logarithms",
+      "subStrand": "Indices and Logarithms",
+      "citation": "KICD Grade 10 Mathematics Curriculum Design — Strand 1.0 Numbers and Algebra — Sub Strand 1.2 Indices and Logarithms (8 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "express numbers in index form",
+        "derive the laws of indices using factors",
+        "apply the laws of indices in different situations",
+        "relate index notation to logarithm notation to base 10",
+        "determine common logarithms of numbers from mathematical tables and calculators",
+        "apply common logarithms in multiplication, division, powers and roots of numbers",
+        "appreciate the use of indices and common logarithms in mathematical computations"
+      ],
+      "boardNotes": [
+        "Index form: 8 = 2 to the power 3. Here 2 is the base, 3 is the index or power",
+        "Laws of indices: a^m x a^n = a^(m+n) | a^m / a^n = a^(m-n) | (a^m)^n = a^(mn)",
+        "a^0 = 1 for any a not zero. a^(-n) = 1/a^n. a^(1/2) = root a",
+        "Logarithm is the index put the other way round: if 10^x = y then log y = x, base 10",
+        "So log 100 = 2, because 10^2 = 100. log 1 = 0. log 10 = 1",
+        "Laws of logarithms: log(AB) = log A + log B | log(A/B) = log A - log B | log(A^n) = n log A",
+        "Multiplication becomes addition, division becomes subtraction — that is the whole point of logarithms"
+      ],
+      "activity": {
+        "description": "Write six index statements on the board with one part blank each, such as 2^? = 32 and 10^3 = ?. Learners fill them in, then rewrite every one as a logarithm statement in the facing column of their exercise books. Next, work 43.2 x 1.86 twice on the board as a class — once by long multiplication and once by adding logarithms read from four-figure tables — and have learners write one sentence on why the second method was invented before calculators existed.",
+        "materialsNeeded": "None — blackboard and exercise books. Four-figure mathematical tables if the class has them; if not, the log values can be read out from the board."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Express 81 in index form with base 3.",
+          "markingScheme": "1 mark for 3^4."
+        },
+        {
+          "question": "Simplify, leaving your answer in index form: 2^5 x 2^3 divided by 2^4.",
+          "markingScheme": "2 marks for 2^4; 1 mark for reaching 2^8 in the numerator with an error in the final subtraction."
+        },
+        {
+          "question": "Evaluate 5^0 and 4^(-2).",
+          "markingScheme": "2 marks — 1 for 1, 1 for 1/16 or 0.0625."
+        },
+        {
+          "question": "Write log 1000 = 3 in index form, and state the value of log 1.",
+          "markingScheme": "2 marks — 1 for 10^3 = 1000, 1 for log 1 = 0."
+        },
+        {
+          "question": "Given that log 2 = 0.3010 and log 3 = 0.4771, find log 6 without using tables, and explain which law of logarithms you used.",
+          "markingScheme": "3 marks — 1 for 0.7781, 1 for showing log 6 = log 2 + log 3, 1 for naming the law that the logarithm of a product is the sum of the logarithms."
+        }
+      ],
+      "explainer": "Indices and logarithms are the same fact written two ways, and saying that on the first day saves weeks of confusion. If 10^2 = 100, then log 100 = 2 — the logarithm is just the index, moved to the other side of the sentence and given a different name. The laws of indices come from counting factors: 2^3 x 2^2 is three twos times two twos, which is five twos, so you add the indices. Every other law is the same argument. Logarithms exist for one historical reason worth telling learners, because it makes the topic make sense: before calculators, multiplying two large numbers by hand was slow, and logarithms turn multiplication into addition. Work one example both ways on the board and the point lands immediately."
+    },
+    {
+      "id": "math-numbers-quadratic-expressions",
+      "subStrand": "Quadratic Expressions and Equations 1",
+      "citation": "KICD Grade 10 Mathematics Curriculum Design — Strand 1.0 Numbers and Algebra — Sub Strand 1.3 Quadratic Expressions and Equations 1 (14 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "form quadratic expressions from different situations",
+        "derive the quadratic identities from the concept of area",
+        "apply quadratic identities in numerical cases",
+        "factorise quadratic expressions in different situations",
+        "form quadratic equations in different situations",
+        "solve quadratic equations by factorization",
+        "apply quadratic equations to real life situations",
+        "explore the use of quadratic equations in real life situations"
+      ],
+      "boardNotes": [
+        "Quadratic expression: highest power of the variable is 2. General form ax^2 + bx + c",
+        "The three identities: (a+b)^2 = a^2 + 2ab + b^2 | (a-b)^2 = a^2 - 2ab + b^2 | (a+b)(a-b) = a^2 - b^2",
+        "Each identity is an area: a square of side (a+b) splits into a^2, two ab rectangles and b^2",
+        "Identities as a shortcut: 51^2 = (50+1)^2 = 2500 + 100 + 1 = 2601",
+        "Factorising ax^2 + bx + c: find two numbers multiplying to ac and adding to b, split the middle term, group",
+        "Example: x^2 + 7x + 12. Need 12 and 7, so 3 and 4. (x+3)(x+4)",
+        "Solving: if (x+3)(x+4) = 0 then x = -3 or x = -4. A product is zero only if a factor is zero"
+      ],
+      "activity": {
+        "description": "Draw a square of side (a+b) on the board and cut it with one horizontal and one vertical line into four regions. Learners copy it, label each region's area, and add them to derive (a+b)^2 for themselves rather than being told it. They then use the result to work out 21^2, 99^2 and 102^2 in their heads, writing only the split they used. Finish by having each learner form one quadratic expression from a sentence you read out, such as a rectangle whose length is three metres more than its width.",
+        "materialsNeeded": "None — blackboard diagram and learners' exercise books."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Expand (x + 5)^2.",
+          "markingScheme": "2 marks for x^2 + 10x + 25; 1 mark for x^2 + 25, the common error of omitting the middle term."
+        },
+        {
+          "question": "Use the difference of two squares to evaluate 103^2 minus 97^2.",
+          "markingScheme": "3 marks for 1200; 2 marks for correctly writing it as (103+97)(103-97) with an arithmetic slip; 1 mark for the correct identity quoted but not applied."
+        },
+        {
+          "question": "Factorise x^2 + 9x + 20.",
+          "markingScheme": "2 marks for (x+4)(x+5); 1 mark for identifying the pair 4 and 5 without completing the factorisation."
+        },
+        {
+          "question": "Solve the equation x^2 - 5x + 6 = 0 by factorisation.",
+          "markingScheme": "3 marks — 1 for factorising to (x-2)(x-3), 2 for both roots x = 2 and x = 3. Award 1 of the 2 if only one root is given."
+        },
+        {
+          "question": "A rectangular plot is 4 metres longer than it is wide and has an area of 96 square metres. Form a quadratic equation for the width and solve it, stating why one of your two answers must be rejected.",
+          "markingScheme": "5 marks — 1 for letting the width be w and the length w+4, 1 for the equation w^2 + 4w - 96 = 0, 1 for factorising to (w+12)(w-8), 1 for the roots w = -12 and w = 8, 1 for rejecting w = -12 because a length cannot be negative and giving the width as 8 metres."
+        }
+      ],
+      "explainer": "A quadratic is any expression where the variable is squared and no higher, and almost everything in this sub-strand is one skill practised in different directions: turning a situation into ax^2 + bx + c, and turning ax^2 + bx + c back into two brackets. The design asks for the identities to be derived from area, which is worth doing exactly as written — draw the square, cut it in four, add the pieces, and (a+b)^2 stops being a formula to memorise. Factorising is the part learners find fiddly, and the reliable method is to look for two numbers that multiply to give ac and add to give b. Solving then rests on one fact: if two things multiply to zero, one of them must be zero. The real-life questions almost always produce a negative root that has to be thrown away, and learners must say why, not just cross it out."
+    }
+  ]
+}

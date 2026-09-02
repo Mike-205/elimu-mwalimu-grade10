@@ -32,13 +32,18 @@ It is deliberately narrow:
 
 ## Why Jane specifically, and why two subjects
 
-Kenyan secondary teachers routinely carry more than one subject and more than one class — Jane teaching Computer Science *and* Core Mathematics is the norm, not an edge case invented for this pitch. The tool reflects that directly: a teacher picks which grade, subject and strand she's dealing with right now, and switches between "confident, this is my subject" and "one lesson ahead of my students" inside the same tool, in the same day.
+Kenyan secondary teachers routinely carry more than one subject and more than one class — Jane teaching Computer Science *and* Mathematics is the norm, not an edge case invented for this pitch. The tool reflects that directly: a teacher picks which grade, subject and strand she's dealing with right now, and switches between "confident, this is my subject" and "one lesson ahead of my students" inside the same tool, in the same day.
 
 ## Where the content came from — stated plainly
 
-We tried to get the official KICD Grade 10 curriculum design PDFs directly. KICD's own website lists them behind a JavaScript-driven download system that couldn't be scraped in the time available. We did locate one genuine copy of the official Grade 10 Core Mathematics curriculum design elsewhere online, but it turned out to be a scanned image document with no extractable text — there was literally no text to pull out of it without OCR software, which wasn't available in the build environment.
+The official KICD Grade 10 curriculum designs for both of Jane's subjects sit in this repository as extracted text, under `corpus/_source/`. Getting them took two attempts, and the first one failed: KICD's own site serves its downloads through a JavaScript-driven system that couldn't be scraped, and the one copy located elsewhere at the time was a scanned image with no text layer at all. An earlier version of this document stopped there and said the designs were unobtainable. That turned out to be wrong. Text-layer copies of both the Computer Science and the Mathematics design were subsequently found, and `pdftotext` alone extracts them — 68 and 65 pages, no OCR, no extra tooling.
 
-So, honestly: the strand and topic *names* used in this build are real and verifiably reported (e.g. Computer Science's strands — Foundations of Computer Science, Software Development, Computer Networking — and the programming languages it teaches). The detailed content underneath each topic (the board notes, the no-materials activity, the five marked questions) is illustrative material written in the style of a real KICD curriculum design, clearly labelled as such inside every generated pack, not presented as verbatim official text. Swapping in the real document's text later requires no change to how the tool works — only to what's loaded into it.
+So the honest position is now a split, and it is the same split in all 31 sub-strands:
+
+- **What a learner must be able to do is quoted.** Every `learningOutcomes` entry is verbatim from that sub-strand's "Specific Learning Outcomes" list in the official design. All 175 of them are checked against the source text by `corpus/_source/verify-outcomes.js`, which fails if any has drifted from the wording KICD published.
+- **How to teach it is ours, and labelled as ours.** The board notes, the no-materials activity, the five marked questions and the plain-language explainer are written for this project. The design specifies outcomes, not what a teacher writes on a blackboard or how many marks a question is worth — so that is where the source genuinely ends, and the pack says so on its face.
+
+Two places where the designs contradict themselves are worth stating rather than quietly resolving. The Mathematics design's contents page lists a sub-strand, "Angle Properties of a Circle", that appears nowhere in the body of the document, which instead carries a full "Vectors I" section the contents page omits. We followed the body and do not offer Angle Properties at all, because there are no published outcomes to quote for it. And one lesson allocation is illegible in the extraction; rather than infer a number, that entry omits it and says why. Both decisions, and the reasoning, are recorded in `docs/corpus-content-plan.md`.
 
 ## A course correction worth being honest about
 

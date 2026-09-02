@@ -1,0 +1,204 @@
+{
+  "grade": "Grade 10",
+  "subject": "Computer Science",
+  "pathway": "STEM Pathway (elective)",
+  "strand": "Computer Networking",
+  "sourceNote": "Strand and sub-strand names, lesson allocations and every entry's learningOutcomes are taken verbatim from the official KICD Grade 10 Computer Science Curriculum Design, 'STRAND 2.0: COMPUTER NETWORKING' (32 lessons). The extracted text of that design is committed at corpus/_source/computer-science-grade10-kicd.txt so any quotation here can be checked offline — see that directory's README for provenance and for the pdftotext column-interleaving caveat. Board notes draw their vocabulary from the design's own Suggested Learning Experiences column (for example the data-flow modes simplex, half-duplex and full-duplex, and the topology list star, ring, bus, mesh, tree, hybrid), but the notes themselves, the activity, the assessment questions and the explainer are NOT from the design — the curriculum design specifies what a learner must be able to do, not what a teacher writes on the board or how to mark it. Those fields are illustrative teaching content written to serve the quoted outcomes, and every pack says so.",
+  "subStrands": [
+    {
+      "id": "cs-networking-data-communication",
+      "subStrand": "Data communication",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 2.0 Computer Networking — Sub Strand 2.1 Data communication (6 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "define basic data communications concepts",
+        "describe characteristics of data communication in computer networking",
+        "analyse the components of data communication system",
+        "simulate modes of data flow in communication systems",
+        "acknowledge the significance of data communication systems in networking"
+      ],
+      "boardNotes": [
+        "Data communication: moving data from one device to another over a transmission medium",
+        "Five components: SENDER -> MESSAGE -> MEDIUM -> RECEIVER, all governed by a PROTOCOL",
+        "Protocol: the agreed rules both sides follow. No shared protocol, no communication",
+        "Modes of data flow: simplex (one way only), half-duplex (both ways, one at a time), full-duplex (both ways at once)",
+        "Simplex = radio broadcast. Half-duplex = walkie-talkie. Full-duplex = phone call",
+        "Signals: analog (continuous wave) and digital (discrete 0s and 1s)",
+        "Data rate = bits per second. Baud rate = signal changes per second. Bandwidth = capacity of the channel"
+      ],
+      "activity": {
+        "description": "Run a whole-class message relay. Learner A at the back writes a short sentence and whispers it to a chain of four learners who pass it to learner B at the front, who says it aloud. Repeat with one rule changed each time: first everyone may only pass forward (simplex), then any two neighbours may talk but only one at a time (half-duplex), then both may speak together (full-duplex). After each round, the class names the five components in what just happened — who was sender, message, medium, receiver, and what the protocol was.",
+        "materialsNeeded": "None — spoken whole-class relay; learners write the five components in their exercise books afterwards."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Name the five components of a data communication system.",
+          "markingScheme": "5 marks, 1 each for sender, message, medium (transmission medium), receiver, protocol."
+        },
+        {
+          "question": "State the three modes of data flow and give one example of each.",
+          "markingScheme": "6 marks — 1 for each mode named (simplex, half-duplex, full-duplex) and 1 for a valid example of each, such as radio or television broadcast, walkie-talkie, telephone call."
+        },
+        {
+          "question": "Define the term protocol as used in data communication.",
+          "markingScheme": "2 marks for a set of agreed rules governing how devices exchange data; 1 mark for 'rules' alone with no mention of agreement between the communicating devices."
+        },
+        {
+          "question": "State one difference between an analog signal and a digital signal.",
+          "markingScheme": "1 mark for analog being a continuous varying wave while digital takes discrete values, usually 0 and 1."
+        },
+        {
+          "question": "A radio station broadcasts to listeners who cannot reply. Identify the mode of data flow and explain why full-duplex would be unsuitable here.",
+          "markingScheme": "3 marks — 1 for identifying simplex, 2 for explaining that full-duplex requires a return channel and equipment at every receiver capable of transmitting back, which broadcasting neither needs nor could support for thousands of listeners; 1 of the 2 for a partial answer that says only 'listeners cannot send'."
+        }
+      ],
+      "explainer": "Data communication is just the postal system written in electronics. Something has to be sent, someone has to send it, something has to carry it, someone has to receive it — and both ends must have agreed in advance what the message will look like, which is what a protocol is. Teach the five components first and everything else attaches to them. The three modes are worth acting out rather than defining: once a class has physically experienced only-one-direction, one-at-a-time, and both-at-once, they never confuse simplex, half-duplex and full-duplex again."
+    },
+    {
+      "id": "cs-networking-transmission-media",
+      "subStrand": "Data Transmission Media",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 2.0 Computer Networking — Sub Strand 2.2 Data Transmission Media (8 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "define basic concepts used in data transmission",
+        "describe types of transmission media used in computer networks",
+        "connect digital devices used in data communication",
+        "establish factors that affect communication over a computer network",
+        "appreciate the role of transmission media in computer networking"
+      ],
+      "boardNotes": [
+        "Transmission medium: the path the signal travels along between sender and receiver",
+        "GUIDED (cable): twisted pair, coaxial cable, fibre optic. UNGUIDED (wireless): radio, microwave, infrared, satellite",
+        "Key terms: encoding (message into signal), decoding (signal back into message)",
+        "Modulation puts data onto a carrier wave; demodulation takes it off again — this is what a MODEM does",
+        "Multiplexing: several signals share one medium. Demultiplexing: separating them again at the far end",
+        "Transmission impairment — the three causes: attenuation (signal weakens with distance), distortion (signal changes shape), noise (unwanted signal added)",
+        "Fixes: repeaters to boost, shielding against noise, fibre optic for long distance and no electrical interference"
+      ],
+      "activity": {
+        "description": "Write the three impairments — attenuation, distortion, noise — as headings on the board. Read out six everyday situations one at a time, such as a voice fading as someone walks away, two people talking over each other, and an echo in a hall. Learners write each situation under the heading it matches and add the medium involved. Finish by having each learner name, in one line, which transmission medium they would run between two school blocks 300 metres apart and why.",
+        "materialsNeeded": "None — blackboard headings, spoken scenarios and learners' exercise books."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "Classify each of the following as guided or unguided transmission media: fibre optic, microwave, twisted pair, satellite.",
+          "markingScheme": "4 marks, 1 each — fibre optic guided, microwave unguided, twisted pair guided, satellite unguided."
+        },
+        {
+          "question": "State what a modem does, using the terms modulation and demodulation.",
+          "markingScheme": "2 marks — 1 for modulation, placing digital data onto a carrier signal for sending, 1 for demodulation, recovering the data from the received signal."
+        },
+        {
+          "question": "Name the three types of transmission impairment.",
+          "markingScheme": "3 marks, 1 each for attenuation, distortion, noise."
+        },
+        {
+          "question": "Define multiplexing.",
+          "markingScheme": "2 marks for combining several signals so they travel over a single transmission medium at the same time; 1 mark for 'sending many signals together' without the single-medium idea."
+        },
+        {
+          "question": "A school wants to link two buildings 500 metres apart, and there is a generator between them. Recommend a transmission medium and justify your choice with two reasons.",
+          "markingScheme": "3 marks — 1 for fibre optic, 2 for reasons such as it carries signals over long distances with little attenuation, it is immune to the electrical noise the generator produces, and it offers high bandwidth. Accept a wireless link with sound justification, but not twisted pair, which suffers on both distance and interference here."
+        }
+      ],
+      "explainer": "Every network problem eventually comes down to the medium, so this sub-strand is more practical than it sounds. Split the media in two — those with a cable you can point at, and those travelling through open air — and the list becomes manageable. The vocabulary around it describes what happens to the signal on the way: modulation puts it on, multiplexing shares the road, and the three impairments are the three ways a signal arrives worse than it left. If learners can say which impairment is at work in a given situation, they can reason about which medium to choose, which is the outcome the design is actually after."
+    },
+    {
+      "id": "cs-networking-network-elements",
+      "subStrand": "Computer Network Elements",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 2.0 Computer Networking — Sub Strand 2.3 Computer Network Elements (10 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "identify different types of computer networks",
+        "describe elements of a computer network",
+        "evaluate criteria of a computer network",
+        "connect a computing device to available network",
+        "appreciate the role of computer networks in communication"
+      ],
+      "boardNotes": [
+        "Network types by size: PAN (one person), LAN (one building), MAN (one town), WAN (country or wider), WLAN (a wireless LAN)",
+        "Elements: transmission media, DTE (data terminal equipment), DCE (data communication equipment), network software",
+        "Network devices: router, network interface card (NIC), gateway, hub, modem, bridge, repeater",
+        "Network software: network operating system, web browser, search engine, email client",
+        "Protocols: TCP/IP, SMTP, HTTPS — the standards that let different makes of device talk",
+        "Qualities of a good network: performance, security, scalability, reliability, availability",
+        "Connection methods: point-to-point (two devices) and multi-point (many devices sharing one link)"
+      ],
+      "activity": {
+        "description": "Learners draw the school as a network in their exercise books: one box per building or room that has or could have a computer, joined by lines. Each learner then labels the network type it would be (LAN or WLAN), marks where a router and a switch or hub would sit, and writes one sentence on which of the five qualities — performance, security, scalability, reliability, availability — matters most for a school and why. Three learners read theirs out and the class compares choices.",
+        "materialsNeeded": "None — learners' exercise books; the school building itself is the example."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "State what each of the following abbreviations stands for: LAN, WAN, PAN.",
+          "markingScheme": "3 marks, 1 each for local area network, wide area network, personal area network."
+        },
+        {
+          "question": "Name four devices found in a computer network.",
+          "markingScheme": "4 marks, 1 each for any of: router, network interface card, gateway, hub, switch, modem, bridge, repeater."
+        },
+        {
+          "question": "State the function of a router.",
+          "markingScheme": "1 mark for directing data between different networks along the best available path. Accept 'connects two or more networks together'."
+        },
+        {
+          "question": "List five qualities that a well-designed computer network should have.",
+          "markingScheme": "5 marks, 1 each for performance, security, scalability, reliability, availability."
+        },
+        {
+          "question": "A school network works well with 20 computers but slows badly when 60 are connected. Name the network quality that has failed and explain what should have been planned for.",
+          "markingScheme": "3 marks — 1 for scalability, 2 for explaining that the design should have allowed for growth in the number of devices without loss of performance, through adequate bandwidth, switches rather than hubs, or segmenting the network; 1 of the 2 for a partial answer naming only 'more capacity'."
+        }
+      ],
+      "explainer": "A network is only three things: machines, something joining them, and rules they agree on. The long lists in this sub-strand all sort into those three. Network types are about how far apart the machines are — a PAN reaches across a desk, a WAN across a country, and LAN and MAN sit between. Devices are the joining hardware, and each one exists to solve a specific problem: a repeater because signals fade, a router because networks need to reach other networks. The five qualities are the checklist a teacher can use to make the topic concrete, because the school's own network almost certainly fails at least one of them and learners will enjoy saying which."
+    },
+    {
+      "id": "cs-networking-topologies",
+      "subStrand": "Network Topologies",
+      "citation": "KICD Grade 10 Computer Science Curriculum Design — Strand 2.0 Computer Networking — Sub Strand 2.4 Network Topologies (8 lessons). Learning outcomes quoted verbatim; board notes, activity, questions and explainer are illustrative.",
+      "verified": "learning outcomes verbatim from the KICD design; teaching content illustrative",
+      "learningOutcomes": [
+        "differentiate between physical and logical network topologies",
+        "describe types of logical and physical topologies in computer networking",
+        "create a physical network topology for a computer network",
+        "appreciate the use of network topologies in computer networks"
+      ],
+      "boardNotes": [
+        "Topology: the shape of a network. PHYSICAL = how cables actually run. LOGICAL = the path data actually takes",
+        "The two can differ: a network wired as a star can behave logically as a bus",
+        "Physical types: star, ring, bus, mesh, tree, hybrid",
+        "STAR — all devices to one central point. Easy to add to; central point fails, all fail",
+        "BUS — all devices on one shared cable. Cheap; the cable fails, all fail; slows with traffic",
+        "RING — each device to the next in a loop. Predictable; one break can stop the ring",
+        "MESH — every device to every other. Very reliable; costs the most in cable"
+      ],
+      "activity": {
+        "description": "Learners stand and physically form each topology using their arms as links: five learners in a circle for ring, five around one learner for star, five in a line touching the same imaginary cable for bus. For each shape, tap one learner on the shoulder to signal a failure and ask the class who can still communicate. Learners then return to their seats and draw all three in their exercise books, writing under each one the effect of a single failure.",
+        "materialsNeeded": "None — learners themselves form the shapes; drawings go in exercise books."
+      },
+      "assessmentQuestions": [
+        {
+          "question": "State the difference between a physical topology and a logical topology.",
+          "markingScheme": "2 marks — 1 for physical being the actual layout of the cables and devices, 1 for logical being the route the data follows, which need not match the physical layout."
+        },
+        {
+          "question": "Name any four physical network topologies.",
+          "markingScheme": "4 marks, 1 each for any of star, ring, bus, mesh, tree, hybrid."
+        },
+        {
+          "question": "State one advantage and one disadvantage of a star topology.",
+          "markingScheme": "2 marks — 1 for an advantage such as easy to add or remove devices, a single cable fault affects only one device, easy to find faults; 1 for the disadvantage that failure of the central device brings down the whole network."
+        },
+        {
+          "question": "Draw a labelled diagram of a bus topology connecting four computers.",
+          "markingScheme": "3 marks — 2 for four computers all attached to one shared backbone cable, 1 for labelling. Deduct nothing for missing terminators at this level."
+        },
+        {
+          "question": "A hospital needs a network where the failure of any single link must not cut off any machine. Recommend a topology and justify why the other common topologies fail this requirement.",
+          "markingScheme": "4 marks — 1 for mesh, 3 for justification covering that mesh provides more than one path between any two devices, while star fails at the central device, bus fails at the shared cable, and ring can be broken by a single cut. Award 2 of the 3 if only two alternatives are ruled out."
+        }
+      ],
+      "explainer": "Topology is the one networking topic that teaches itself on a blackboard, because it is literally about shape. Draw the shape, then ask the only question that matters: if this one link breaks, who stops talking? That question generates every advantage and disadvantage in the textbook without memorising a table — star dies at its centre, bus dies at its cable, ring dies at any cut, mesh survives almost anything but costs a fortune in cable. The physical-versus-logical distinction confuses learners at first; the short version is that physical is what an electrician sees and logical is what the data experiences, and modern networks routinely differ between the two."
+    }
+  ]
+}
