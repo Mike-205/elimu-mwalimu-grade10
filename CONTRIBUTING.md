@@ -70,7 +70,29 @@ This is the one place in the repo allowed to experiment with a local LLM (e.g. v
 - It must stay **additive and optional**. `main`'s pack-generation flow (`/api/pack`) must keep working, unchanged, with zero setup and no model installed — that's the guaranteed offline demo path, and it doesn't get weaker because this branch exists.
 - Whatever it produces must be clearly labelled as AI-generated and distinct from the grounded, corpus-sourced pack content — don't blur the two together in the UI, since the whole compliance argument in `docs/ai-bill-2026-risk-sheet.md` rests on being able to say precisely what is template-filled from a cited source versus what a model produced.
 - If it can't say "sijui" / refuse cleanly when it's unsure, it isn't ready to be offered to a teacher — refuse-over-guess applies here too, it just has to be enforced in a prompt/response-checking layer instead of by construction.
-- Local setup (no root needed):
+
+### Setting up Ollama
+
+**Check whether you already have it before installing anything.** More than one person
+here has followed the user-space instructions below on a machine that already had a
+system-wide install, ended up with two locations and an empty model directory, and
+concluded the model had failed to download when it was sitting there the whole time.
+
+```
+which ollama          # /usr/local/bin/ollama = system install, nothing to do
+ollama --version
+ollama list           # llama3.2:3b listed = you are ready
+pgrep -af "ollama serve"
+```
+
+If `ollama list` shows `llama3.2:3b`, you are done — skip to "Running it" below. If the
+binary exists but the model is missing, just `ollama pull llama3.2:3b`.
+
+**Do not set `OLLAMA_MODELS` when using a system install.** It points the server at a
+different directory, so `ollama list` comes back empty and the model looks absent. That
+variable belongs only to the user-space setup, where it has to be set every time.
+
+#### If you have no Ollama at all, and no root
 
 ```
 mkdir -p ~/.local/ollama
@@ -79,10 +101,37 @@ curl -fsSL -o /tmp/ollama.tar.zst \
 tar --zstd -xf /tmp/ollama.tar.zst -C ~/.local/ollama
 
 export OLLAMA_MODELS=~/.local/ollama/models
-~/.local/ollama/bin/ollama serve &
-
 export PATH="$HOME/.local/ollama/bin:$PATH"
+ollama serve &
+
 ollama pull llama3.2:3b   # ~2GB, one-time, needs internet; runs fully offline after
+```
+
+Both exports are per-shell. A new terminal without them will not find the binary, and
+will look at the default model directory rather than yours.
+
+### Running it
+
+The AI feature is off unless you ask for it. Plain `node server/index.js` has no panel,
+no model call, and `/api/ask` refuses without contacting Ollama.
+
+```
+AI_ENABLED=1 node server/index.js
+```
+
+The panel appears under a generated pack only if a model is also reachable. Two things
+that look like breakage and are not:
+
+- **It refuses often, by design.** Anything the chosen sub-strand does not cover comes
+  back "Sijui". Measured across 248 real answers, 116 of 124 uncovered questions are
+  refused. See `docs/ai-integration-notes.md`.
+- **The first answer after a cold start is slow.** Roughly 6 tokens/sec on CPU, plus
+  model load. The panel says so while it waits.
+
+Confirm the model itself is fine, independently of the app:
+
+```
+ollama run llama3.2:3b "Reply with one word: OK"
 ```
 
 ## Adding corpus content (the `corpus-content` branch)
